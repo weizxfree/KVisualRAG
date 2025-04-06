@@ -164,15 +164,15 @@ PDFs are parsed into images and embedded visually via ColQwen2.5, with metadata 
 git clone https://github.com/liweiphys/layra.git
 cd layra
 
-# Set connection parameters in your environment files:
+# Set connection parameters in your environment files and configure the settings file.:
 vim .env
 vim web/.env.local
-# or simply use localhost as the default.
+vim gunicorn_config.py
+# or simply use the default settings.
 
 # Run Milvus Redis, MongoDB, Kafka, and MinIO via Docker Compose.
 cd docker
-sudo docker-compose -f milvus-standalone-docker-compose.yml up -d
-sudo docker-compose -f docker-compose.yml up -d
+sudo docker-compose -f milvus-standalone-docker-compose.yml -f docker-compose.yml up -d
 
 # Run backend
 cd ../
@@ -204,6 +204,7 @@ npm run dev  # http://localhost:3000
 
 # or build nextjs
 cd web
+npm install
 npm run build
 npm start  # http://localhost:3000
 ```

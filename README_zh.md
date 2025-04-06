@@ -148,14 +148,15 @@ PDF 被解析为图像，并通过 ColQwen2.5 进行视觉嵌入，元数据和�
 git clone https://github.com/liweiphys/layra.git
 cd layra
 
-# 设置连接参数
+# 设置数据库连接参数与fastapi配置
 vim .env
-vim web/.env.local # 或者直接使用默认的 localhost
+vim web/.env.local 
+vim gunicorn_config.py
+# 或者直接使用默认的设置
 
 # 通过 Docker Compose 启动 Milvus Redis、MongoDB、Kafka 和 MinIO。
 cd docker
-sudo docker-compose -f milvus-standalone-docker-compose.yml up -d
-sudo docker-compose -f docker-compose.yml up -d
+sudo docker-compose -f milvus-standalone-docker-compose.yml -f docker-compose.yml up -d
 
 # 运行后端
 cd ../
@@ -186,8 +187,9 @@ cd web
 npm install
 npm run dev  # http://localhost:3000
 
-# 或者直接编译前端（推荐）
+# 或者build前端(推荐)
 cd web
+npm install
 npm run build
 npm start  # http://localhost:3000
 ```

@@ -130,6 +130,9 @@ celerybeat.pid
 # alembic
 migrations/
 
+#docker
+docker/volumes/
+
 # Environments
 #.env
 .venv

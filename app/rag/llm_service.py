@@ -120,7 +120,7 @@ class ChatService:
                         collection_name, data=query_embedding[0], topk=top_K
                     )
                     result_score.extend(scores)
-            sorted_score = sort_and_filter(result_score, min_score=12)
+            sorted_score = sort_and_filter(result_score, min_score=10)
             if len(sorted_score) >= top_K:
                 cut_score = sorted_score[:top_K]
             else:

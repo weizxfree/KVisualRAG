@@ -24,7 +24,7 @@ class ColBERTService:
         self.processor = cast(
             ColQwen2_5_Processor,
             ColQwen2_5_Processor.from_pretrained(
-                model_path, size={"shortest_edge": 1, "longest_edge": 61708864}
+                model_path, size={"shortest_edge": 56 * 56, "longest_edge": 28 * 28 * 768}
             ),
         )
 
