@@ -181,13 +181,25 @@ gunicorn -c gunicorn_config.py app.main:app
 # 启动 colbert 服务
 python model_server.py
 
-# 安装前端
+# 开发前端
 cd web
 npm install
 npm run dev  # http://localhost:3000
+
+# 或者直接编译前端（推荐）
+cd web
+npm run build
+npm start  # http://localhost:3000
 ```
 
 > 🧪 注意：Milvus、Redis、MongoDB、Kafka 和 MinIO 需要本地运行或通过 Docker 启动。
+
+#### 🎉 尽情享受吧！
+现在一切都已启动并运行，尽情享受使用 Layra 的过程吧！🚀
+
+### ▶️ 未来部署选项
+
+未来，我们将支持包括 Docker、Kubernetes (K8s) 和其他容器化环境在内的多种部署方式。详细信息将在这些部署选项可用时提供。
 
 ---
 

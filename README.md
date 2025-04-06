@@ -197,13 +197,25 @@ gunicorn -c gunicorn_config.py app.main:app  # http://localhost:8000
 # Start colbert Service
 python model_server.py
 
-# Install frontend
+# develop frontend
 cd web
 npm install
 npm run dev  # http://localhost:3000
+
+# or build nextjs
+cd web
+npm run build
+npm start  # http://localhost:3000
 ```
 
 > 🧪 Note: Milvus, Redis, MongoDB, Kafka, and MinIO are expected to run locally or via Docker.
+
+#### 🎉 Enjoy!
+Now that everything is up and running, enjoy exploring and building with Layra! 🚀
+
+### ▶️ Future Deployment Options
+
+In the future, we will support multiple deployment methods including Docker, Kubernetes (K8s), and other containerized environments. More details will be provided when these deployment options are available.
 
 ---
 
