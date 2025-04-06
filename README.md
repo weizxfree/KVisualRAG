@@ -177,11 +177,6 @@ sudo docker-compose -f docker-compose.yml up -d
 # Run backend
 cd ../
 
-#alembic init migrations 
-alembic init migrations
-alembic revision --autogenerate -m "Add comments"
-alembic upgrade head
-
 # install python == 3.10.6
 # python -m venv venv && source venv/bin/activate
 # or
@@ -189,6 +184,12 @@ conda create --name layra python=3.10
 conda activate layra
 
 pip install -r requirements.txt
+
+#alembic init migrations 
+alembic init migrations
+cp env.py migrations
+alembic revision --autogenerate -m "Init Mysql"
+alembic upgrade head
 
 # Start the application using Gunicorn:
 gunicorn -c gunicorn_config.py app.main:app  # http://localhost:8000

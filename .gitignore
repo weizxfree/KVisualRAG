@@ -50,7 +50,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-
+test/
 # Translations
 *.mo
 *.pot
@@ -126,6 +126,9 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
+
+# alembic
+migrations/
 
 # Environments
 #.env

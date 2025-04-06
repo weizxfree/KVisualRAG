@@ -9,6 +9,7 @@ from tqdm import tqdm
 from app.core.config import settings
 import numpy as np
 
+
 class ColBERTService:
     def __init__(self, model_path):
         self.device = torch.device(get_torch_device("auto"))
@@ -20,7 +21,12 @@ class ColBERTService:
                 "flash_attention_2" if is_flash_attn_2_available() else None
             ),
         ).eval()
-        self.processor = cast(ColQwen2_5_Processor, ColQwen2_5_Processor.from_pretrained(model_path))
+        self.processor = cast(
+            ColQwen2_5_Processor,
+            ColQwen2_5_Processor.from_pretrained(
+                model_path, size={"shortest_edge": 1, "longest_edge": 61708864}
+            ),
+        )
 
     def process_query(self, queries: list) -> List[torch.Tensor]:
         dataloader = DataLoader(
@@ -33,9 +39,11 @@ class ColBERTService:
         qs: List[torch.Tensor] = []
         for batch_query in dataloader:
             with torch.no_grad():
-                batch_query = {k: v.to(self.model.device) for k, v in batch_query.items()}
+                batch_query = {
+                    k: v.to(self.model.device) for k, v in batch_query.items()
+                }
                 embeddings_query = self.model(**batch_query)
-            qs.extend(list(torch.unbind(embeddings_query.to("cpu"))))  
+            qs.extend(list(torch.unbind(embeddings_query.to("cpu"))))
         for i in range(len(qs)):
             qs[i] = qs[i].float().tolist()
         return qs
@@ -58,5 +66,6 @@ class ColBERTService:
         for i in range(len(ds)):
             ds[i] = ds[i].float().tolist()
         return ds
-    
+
+
 colbert = ColBERTService(settings.colbert_model_path)

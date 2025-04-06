@@ -160,11 +160,6 @@ sudo docker-compose -f docker-compose.yml up -d
 # 运行后端
 cd ../
 
-# Mysql数据库初始化
-alembic init migrations
-alembic revision --autogenerate -m "Add comments"
-alembic upgrade head
-
 # 安装 python == 3.10.6 设置虚拟环境
 # python -m venv venv && source venv/bin/activate
 # 或者conda安装
@@ -172,6 +167,12 @@ conda create --name layra python=3.10
 conda activate layra
 
 pip install -r requirements.txt
+
+# Mysql数据库初始化
+alembic init migrations
+cp env.py migrations
+alembic revision --autogenerate -m "Init Mysql"
+alembic upgrade head
 
 # 使用 Gunicorn 启动应用
 gunicorn -c gunicorn_config.py app.main:app
