@@ -7,12 +7,12 @@
   <a href="./README_zh.md">简体中文</a> 
 </p>
 
-# 🌌 LAYRA：超越 OCR 的视觉驱动检索增强生成系统
+# 🌌 LAYRA：超越传统OCR的视觉驱动RAG系统
 
-> **忘记分词，忘记排版丢失。**  
+> **忘记切片，忘记排版丢失。**  
 > 通过纯视觉嵌入，LAYRA像人类一样理解文档 ——逐页，按结构阅读。
 
-**LAYRA** 是一款基于**纯视觉嵌入**的下一代检索增强生成（RAG）系统。它将文档视为具有视觉结构的对象，而不是单纯的标记序列——保留布局、语义和图形元素，如表格、图形和图表。
+**LAYRA** 是一款基于**纯视觉嵌入**的下一代检索增强生成（RAG）系统。它将文档视为具有视觉结构的对象，而不是单纯的token序列——保留布局、语义和图形元素，如表格、图形和图表。
 
 LAYRA 适用于研究探索和企业部署，具备以下特点：
 
@@ -136,6 +136,20 @@ PDF 被解析为图像，并通过 ColQwen2.5 进行视觉嵌入，元数据和�
 | 🔍 **快速向量检索** | 使用 Milvus 提供可扩展的密集向量检索 |
 | 🤖 **灵活的大语言模型后端** | 支持 Qwen2.5-VL 系列，并可扩展至 GPT-4o、Claude 3 等 |
 | 🌐 **现代 Web UI** | 基于 Next.js + TypeScript + TailwindCSS + Zustand 构建 |
+
+---
+
+## 🧰 技术栈
+
+**前端**:  
+- `Next.js`, `TypeScript`, `TailwindCSS`, `Zustand`
+
+**后端**:  
+- `FastAPI`, `Kafka`, `Redis`, `MySQL`, `MongoDB`, `MinIO`, `Milvus`
+
+**模型底座**:  
+- Embedding: `colqwen2.5-v0.2`  
+- LLM Serving: `VLM  (Qwen2.5-VL series)`
 
 ---
 

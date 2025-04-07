@@ -150,8 +150,8 @@ PDFs are parsed into images and embedded visually via ColQwen2.5, with metadata 
 - `FastAPI`, `Kafka`, `Redis`, `MySQL`, `MongoDB`, `MinIO`, `Milvus`
 
 **Models & RAG**:  
-- Embedding: `colqwen2.5`  
-- LLM Serving: `VLLM  (Qwen2.5-VL series)`
+- Embedding: `colqwen2.5-v0.2`  
+- LLM Serving: `VLM  (Qwen2.5-VL series)`
 
 ---
 
