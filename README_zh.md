@@ -260,8 +260,8 @@ npm start  # http://localhost:3000
 
 **liweiphys**  
 📧 liweixmu@foxmail.com  
-🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)
-📺 Bilibili：Biggestbiaoge（主页有LAYRA的视频介绍）
+🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)  
+📺 Bilibili：Biggestbiaoge（主页有LAYRA的视频介绍）  
 💼 *目前开放求职中，欢迎HR联系！*
 
 ---

@@ -262,7 +262,7 @@ This project is licensed under the **Apache License 2.0**. See the [LICENSE](./L
 **liweiphys**  
 📧 liweixmu@foxmail.com  
 🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)  
-📺 Bilibili: Biggestbiaoge 
+📺 Bilibili: Biggestbiaoge  
 💼 *Available for hire — open to new opportunities!*
 
 ---
