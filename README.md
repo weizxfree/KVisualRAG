@@ -233,10 +233,14 @@ In the future, we will support multiple deployment methods including Docker, Kub
 
 - [x] Knowledge Base PDF batch upload and parsing functionality
 - [x] RAG-based dialogue system for querying and answering
-- [ ] Code architecture and modular optimization for scalability
-- [ ] Support for additional large models (e.g., GPT-4o)
-- [ ] Expanded document format support (e.g., Word, PPT, Excel)
-- [ ] Integration of intelligent Agent for multi-hop reasoning
+- [x] Support openai-compatible API interface（ollama、sglang、vllm）  
+- [ ] Code architecture and modular optimization for scalability  
+- [ ] Support for additional large models
+- [ ] Expanded document format support (e.g., Word, PPT, Excel)  
+- [ ] Integration of intelligent Agent for multi-hop reasoning  
+- [ ] Integration with knowledge graph  
+- [ ] Deployment with Docker Compose  
+- [ ] Public Knowledge Base API access  
 
 ---
 
@@ -257,7 +261,9 @@ This project is licensed under the **Apache License 2.0**. See the [LICENSE](./L
 
 **liweiphys**  
 📧 liweixmu@foxmail.com  
-🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)
+🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)  
+📺 Bilibili: Biggestbiaoge 
+💼 *Available for hire — open to new opportunities!*
 
 ---
 
