@@ -160,53 +160,77 @@ PDFs are parsed into images and embedded visually via ColQwen2.5, with metadata 
 ### ▶️ Local Development
 
 ```bash
-# Clone the repository
+# Clone the repo
 git clone https://github.com/liweiphys/layra.git
 cd layra
 
-# Set connection parameters in your environment files and configure the settings file.:
+# Set up database and FastAPI environment configuration
 vim .env
-vim web/.env.local
+vim web/.env.local 
 vim gunicorn_config.py
-# or simply use the default settings.
+# Or use default settings
 
-# Run Milvus Redis, MongoDB, Kafka, and MinIO via Docker Compose.
+# Launch Milvus, Redis, MongoDB, Kafka, and MinIO via Docker Compose.
 cd docker
 sudo docker-compose -f milvus-standalone-docker-compose.yml -f docker-compose.yml up -d
 
-# Run backend
+# Back to project root
 cd ../
 
-# install python == 3.10.6
+# Install Python 3.10.6 and create virtual environment (optional)
 # python -m venv venv && source venv/bin/activate
-# or
+# Or install with conda
 conda create --name layra python=3.10
 conda activate layra
 
+# Install dependencies
 pip install -r requirements.txt
 
-#alembic init migrations 
+# Download ColQwen2.5 model weights
+# ⚠️ If Git LFS not installed, run:
+git lfs install
+
+# Download base model weights
+git clone https://huggingface.co/vidore/colqwen2.5-base
+# For users in China:
+# git clone https://hf-mirror.com/vidore/colqwen2.5-base
+
+# Download LoRA fine-tuned weights
+git clone https://huggingface.co/vidore/colqwen2.5-v0.2
+# For users in China:
+# git clone https://hf-mirror.com/vidore/colqwen2.5-v0.2
+
+# Modify the `base_model_name_or_path` field in `colqwen2.5-v0.2/adapter_config.json`
+base_model_name_or_path="/absolute/path/to/colqwen2.5-base"
+# Set it to local path of colqwen2.5-base
+
+# Set the following in your .env file
+COLBERT_MODEL_PATH="/absolute/path/to/colqwen2.5-v0.2"
+
+# Initialize MySQL database
 alembic init migrations
 cp env.py migrations
 alembic revision --autogenerate -m "Init Mysql"
 alembic upgrade head
 
-# Start the application using Gunicorn:
-gunicorn -c gunicorn_config.py app.main:app  # http://localhost:8000
+# Start backend with Gunicorn
+gunicorn -c gunicorn_config.py app.main:app
+# http://localhost:8000
 
-# Start colbert Service
+# Start ColBERT embedding model server
 python model_server.py
 
-# develop frontend
+# Frontend development
 cd web
 npm install
-npm run dev  # http://localhost:3000
+npm run dev  
+# http://localhost:3000
 
-# or build nextjs
-cd web
-npm install
-npm run build
-npm start  # http://localhost:3000
+# Or build frontend (recommended)
+# cd web
+# npm install
+# npm run build
+# npm start  # http://localhost:3000
 ```
 
 > 🧪 Note: Milvus, Redis, MongoDB, Kafka, and MinIO are expected to run locally or via Docker.

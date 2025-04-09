@@ -162,50 +162,73 @@ PDF 被解析为图像，并通过 ColQwen2.5 进行视觉嵌入，元数据和�
 git clone https://github.com/liweiphys/layra.git
 cd layra
 
-# 设置数据库连接参数与fastapi配置
+# 设置数据库连接参数与 FastAPI 配置
 vim .env
 vim web/.env.local 
 vim gunicorn_config.py
-# 或者直接使用默认的设置
+# 或者直接使用默认设置
 
-# 通过 Docker Compose 启动 Milvus Redis、MongoDB、Kafka 和 MinIO。
+# 使用 Docker Compose 启动 Milvus、Redis、MongoDB、Kafka 和 MinIO。
 cd docker
 sudo docker-compose -f milvus-standalone-docker-compose.yml -f docker-compose.yml up -d
 
-# 运行后端
+# 返回项目根目录
 cd ../
 
-# 安装 python == 3.10.6 设置虚拟环境
+# 安装 Python 3.10.6 并设置虚拟环境（可选）
 # python -m venv venv && source venv/bin/activate
-# 或者conda安装
+# 或使用 conda 安装
 conda create --name layra python=3.10
 conda activate layra
 
+# 安装依赖
 pip install -r requirements.txt
 
-# Mysql数据库初始化
+# 下载大模型权重
+# ⚠️ 若未安装 Git LFS，请先执行：
+git lfs install
+
+# 下载原始权重 
+# git clone https://huggingface.co/vidore/colqwen2.5-base
+# 中国用户可使用镜像：
+git clone https://hf-mirror.com/vidore/colqwen2.5-base
+
+# 下载微调权重
+# git clone https://huggingface.co/vidore/colqwen2.5-v0.2
+# 中国用户可使用镜像:
+git clone https://hf-mirror.com/vidore/colqwen2.5-v0.2
+
+# 修改 adapter_config.json 中的 base_model_name_or_path 路径
+base_model_name_or_path="colqwen2.5-base下载路径"
+# 设置为 colqwen2.5-base 下载路径
+
+# 修改 .env 文件，修改以下配置项
+COLBERT_MODEL_PATH="colqwen2.5-v0.2下载路径"
+
+# Mysql 数据库初始化
 alembic init migrations
 cp env.py migrations
 alembic revision --autogenerate -m "Init Mysql"
 alembic upgrade head
 
-# 使用 Gunicorn 启动应用
+# 使用 Gunicorn 启动后端服务
 gunicorn -c gunicorn_config.py app.main:app
-# http://localhost:8000
+# 访问地址：http://localhost:8000
 
-# 启动 colbert 服务
+# 启动 ColBERT 服务（向量化模型服务器）
 python model_server.py
 
 # 开发前端
 cd web
 npm install
-npm run dev  # http://localhost:3000
+npm run dev 
+# http://localhost:3000
 
-# 或者build前端(推荐)
-cd web
-npm install
-npm run build
-npm start  # http://localhost:3000
+# 或者构建前端（推荐）
+# cd web
+# npm install
+# npm run build
+# npm start  # http://localhost:3000
 ```
 
 > 🧪 注意：Milvus、Redis、MongoDB、Kafka 和 MinIO 需要本地运行或通过 Docker 启动。
