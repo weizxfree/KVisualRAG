@@ -36,16 +36,17 @@ LAYRA 适用于研究探索和企业部署，具备以下特点：
 - [为什么选择 LAYRA？](#-为什么选择-layra)
 - [首个可用测试版本](#-首个可用测试版本)
 - [系统架构](#-系统架构)
-  - [查询流程](#-查询流程)
-  - [上传与索引流程](#-上传与索引流程)
+- [查询流程](#-查询流程)
+- [上传与索引流程](#-上传与索引流程)
 - [主要特性](#-主要特性)
 - [技术栈](#-技术栈)
 - [部署](#-部署)
 - [应用场景](#-应用场景)
 - [路线图](#-路线图)
 - [贡献](#-贡献)
-- [许可证](#-许可证)
 - [联系方式](#-联系方式)
+- [Star History](#-star-history)
+- [许可证](#-许可证)
 
 ---
 
@@ -273,12 +274,6 @@ npm run dev
 
 ---
 
-## 📄 许可证
-
-本项目采用 **Apache 2.0** 许可证。更多详情请查看 [LICENSE](./LICENSE) 文件。
-
----
-
 ## 📫 联系方式
 
 **liweiphys**  
@@ -286,6 +281,18 @@ npm run dev
 🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)  
 📺 Bilibili：Biggestbiaoge（主页有LAYRA的视频介绍）  
 💼 *目前开放求职中，欢迎HR联系！*
+
+---
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=liweiphys/layra&type=Date)](https://www.star-history.com/#liweiphys/layra&Date)
+
+---
+
+## 📄 许可证
+
+本项目采用 **Apache 2.0** 许可证。更多详情请查看 [LICENSE](./LICENSE) 文件。
 
 ---
 
