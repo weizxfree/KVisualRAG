@@ -36,16 +36,17 @@ The first test version is now available for trial, with support for **PDF docume
 - [Why LAYRA?](#-why-layra)
 - [First Trial Version Available](#-first-trial-version-available)
 - [System Architecture](#-system-architecture)
-  - [Query Flow](#-query-flow)
-  - [Upload & Indexing Flow](#-upload--indexing-flow)
+- [Query Flow](#-query-flow)
+- [Upload & Indexing Flow](#-upload--indexing-flow)
 - [Key Features](#-key-features)
 - [Tech Stack](#-tech-stack)
 - [Deployment](#-deployment)
 - [Use Cases](#-use-cases)
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
-- [License](#-license)
 - [Contact](#-contact)
+- [Star History](#-star-history)
+- [License](#-license)
 
 ---
 
@@ -275,12 +276,6 @@ We are in the process of creating a CONTRIBUTING.md file, which will provide gui
 
 ---
 
-## 📄 License
-
-This project is licensed under the **Apache License 2.0**. See the [LICENSE](./LICENSE) file for more details.
-
----
-
 ## 📫 Contact
 
 **liweiphys**  
@@ -288,6 +283,18 @@ This project is licensed under the **Apache License 2.0**. See the [LICENSE](./L
 🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)  
 📺 Bilibili: Biggestbiaoge  
 💼 *Available for hire — open to new opportunities!*
+
+---
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=liweiphys/layra&type=Date)](https://www.star-history.com/#liweiphys/layra&Date)
+
+---
+
+## 📄 License
+
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](./LICENSE) file for more details.
 
 ---
 
