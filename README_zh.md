@@ -182,6 +182,12 @@ cd ../
 conda create --name layra python=3.10
 conda activate layra
 
+# 安装系统依赖
+# Ubuntu/Debian系统:
+sudo apt-get update && sudo apt-get install -y poppler-utils
+# Fedora/CentOS系统:
+# sudo dnf install -y poppler-utils
+
 # 安装依赖
 pip install -r requirements.txt
 
