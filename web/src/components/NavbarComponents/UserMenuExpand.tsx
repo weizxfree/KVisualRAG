@@ -12,7 +12,7 @@ const UserMenuExpand = () => {
   const { user } = useAuthStore();
 
   return (
-    <div className="fixed top-2 right-[2%] gap-3 h-8 flex items-center justify-between px-6 py-1 border-indigo-500">
+    <div className="fixed right-[2%] gap-3 h-8 flex items-center justify-between px-6 border-indigo-500">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
