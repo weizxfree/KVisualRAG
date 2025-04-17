@@ -285,7 +285,8 @@ npm run dev
 **liweiphys**  
 📧 liweixmu@foxmail.com  
 🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)  
-📺 Bilibili：Biggestbiaoge（主页有LAYRA的视频介绍）  
+📺 [bilibili: LAYRA视频介绍](https://www.bilibili.com/video/BV17BRUYCEGt?vd_source=8a1b7271cd2e9a7f6a1ae7a781b2e688) 
+🔍 微信公众号：LAYRA项目
 💼 *目前开放求职中，欢迎HR联系！*
 
 ---

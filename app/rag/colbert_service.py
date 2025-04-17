@@ -49,7 +49,7 @@ class ColBERTService:
         return qs
 
     def process_image(self, images: List) -> List[List[float]]:
-        batch_size = 2 if len(images) > 2 else len(images)
+        batch_size = 1 # if len(images) > 2 else len(images)
         dataloader = DataLoader(
             dataset=ListDataset[str](images),
             batch_size=batch_size,
