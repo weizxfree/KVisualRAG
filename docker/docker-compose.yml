@@ -52,7 +52,7 @@ services:
     command: ["redis-server", "--requirepass", "redis577715"]
 
   mysql:
-    image: mysql:9.0.1
+    image: mysql:8.0.35
     environment:
       - MYSQL_ROOT_PASSWORD=mysql?577715
       - MYSQL_DATABASE=imagedb

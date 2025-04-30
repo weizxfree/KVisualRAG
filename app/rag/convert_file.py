@@ -33,7 +33,7 @@ async def save_file_to_minio(username:str, uploadfile: UploadFile):
     await async_minio_manager.upload_file(file_name, uploadfile)
     minio_url = await async_minio_manager.create_presigned_url(file_name)
 
-    # minio_url = minio_url.replace("localhost:9110", "192.168.1.5:9110")
+    # minio_url = minio_url.replace("localhost:9110", "tw-03.access.glows.ai:24265")
     # minio_url = minio_url.replace("localhost:9110", "127.0.0.1:9110")
     return file_name, minio_url
 
@@ -42,7 +42,7 @@ async def save_image_to_minio(username, filename, image_stream):
     file_name = f"{username}_{os.path.splitext(filename)[0]}_{ObjectId()}.png"
     await async_minio_manager.upload_image(file_name, image_stream)
     minio_url = await async_minio_manager.create_presigned_url(file_name)
-
-    # minio_url = minio_url.replace("localhost:9110", "192.168.1.5:9110")
+#
+    # minio_url = minio_url.replace("localhost:9110", "tw-03.access.glows.ai:24265")
     # minio_url = minio_url.replace("localhost:9110", "127.0.0.1:9110")
     return file_name, minio_url

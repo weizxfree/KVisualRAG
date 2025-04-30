@@ -12,10 +12,10 @@ import numpy as np
 
 class ColBERTService:
     def __init__(self, model_path):
-        self.device = torch.device(get_torch_device("auto"))
+        self.device = "mps"
         self.model = ColQwen2_5.from_pretrained(
             model_path,
-            torch_dtype=torch.bfloat16,
+            torch_dtype=torch.float16,
             device_map=self.device,
             attn_implementation=(
                 "flash_attention_2" if is_flash_attn_2_available() else None
