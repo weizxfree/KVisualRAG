@@ -40,9 +40,9 @@ class OpenAIEmbedding:
 
     def __init__(
         self,
-        model_name="text-embedding-3-small",
+        model_name="openai/BAAI/bge-m3",
         threshold=0.70,
-        api_base="https://api.openai.com/v1",
+        api_base="https://api.siliconflow.cn/v1",
         cache_size=10000,
         batch_size=20,
     ):
