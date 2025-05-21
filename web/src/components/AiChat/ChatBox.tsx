@@ -12,6 +12,7 @@ import Cookies from "js-cookie";
 import { EventSourceParserStream } from "eventsource-parser/stream";
 import { deleteFile } from "@/lib/api/knowledgeBaseApi";
 import { updateModelConfig } from "@/lib/api/configApi";
+import './ChatBox.css'
 
 interface ChatBoxProps {
   messages: Message[];
@@ -226,14 +227,15 @@ const ChatBox: React.FC<ChatBoxProps> = ({
   }, [inputMessage]); // 这个 effect 只在组件挂载时运行一次
 
   return (
-    <div className="w-[85%] h-full rounded-3xl p-4 flex flex-col">
+    <div className="w-full chat-container h-full flex flex-col">
       <div className="flex-1 min-h-0 overflow-hidden">
         {messages.length === 0 ? (
           <div className="h-full w-[90%] flex flex-col items-center gap-4 bg-white/30 rounded-xl">
             <div className="h-[30vh]"></div>
             <p className="text-lg">
-              Please remember to choose which knowledge database you will use
-              for this chat.
+              在和我聊天之前，如果需要某个知识库，请记得先配置它
+              {/* Please remember to choose which knowledge database you will use
+              for this chat. */}
             </p>
             <button
               className="bg-indigo-500 hover:bg-indigo-600 rounded-full text-base px-4 py-2 text-white flex gap-1 cursor-pointer"
@@ -251,7 +253,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({
                   clipRule="evenodd"
                 />
               </svg>
-              <div>Configure Now</div>
+              <div>配 置</div>
             </button>
             <div className="flex items-center justify-center gap-2 text-indigo-500 font-semibold">
               <svg
@@ -321,14 +323,15 @@ const ChatBox: React.FC<ChatBoxProps> = ({
                   <path d="M10.75 16.82A7.462 7.462 0 0 1 15 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0 0 18 15.06v-11a.75.75 0 0 0-.546-.721A9.006 9.006 0 0 0 15 3a8.963 8.963 0 0 0-4.25 1.065V16.82ZM9.25 4.065A8.963 8.963 0 0 0 5 3c-.85 0-1.673.118-2.454.339A.75.75 0 0 0 2 4.06v11a.75.75 0 0 0 .954.721A7.506 7.506 0 0 1 5 15.5c1.579 0 3.042.487 4.25 1.32V4.065Z" />
                 </svg>
                 <div className="whitespace-nowrap">
-                  No Knowledge-Base was accessed‌
+                  尚未配置知识库
+                  {/* No Knowledge-Base was accessed‌ */}
                 </div>
               </div>
             )}
           </div>
         ) : (
           <div className="h-[100%] w-[70%] flex flex-col mx-auto">
-            <div className="shadow-xs rounded-xl pb-2 mb-2 flex flex-col item-center justify-center gap-1">
+            <div className="shadow-xs rounded-xl pt-1 pb-1 mb-2 flex flex-col item-center justify-center gap-1">
               <div className="w-full px-10 text-sm flex items-center justify-center gap-2 text-indigo-500 font-semibold">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -401,7 +404,8 @@ const ChatBox: React.FC<ChatBoxProps> = ({
                     <path d="M10.75 16.82A7.462 7.462 0 0 1 15 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0 0 18 15.06v-11a.75.75 0 0 0-.546-.721A9.006 9.006 0 0 0 15 3a8.963 8.963 0 0 0-4.25 1.065V16.82ZM9.25 4.065A8.963 8.963 0 0 0 5 3c-.85 0-1.673.118-2.454.339A.75.75 0 0 0 2 4.06v11a.75.75 0 0 0 .954.721A7.506 7.506 0 0 1 5 15.5c1.579 0 3.042.487 4.25 1.32V4.065Z" />
                   </svg>
                   <div className="whitespace-nowrap">
-                    No Knowledge-Base was accessed‌
+                    尚未配置知识库
+                    {/* No Knowledge-Base was accessed‌ */}
                   </div>
                 </div>
               )}

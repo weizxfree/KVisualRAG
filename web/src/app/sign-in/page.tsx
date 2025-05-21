@@ -3,6 +3,7 @@ import Alert from "@/components/Alert";
 import { loginUser, registerUser } from "@/lib/auth";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
+import './page.css';
 
 const SignInPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -79,30 +80,24 @@ const SignInPage = () => {
   }, [showAlert]);
 
   return (
-    <div className="absolute w-full h-full top-0 left-0 min-h-screen flex items-center justify-center opacity-100 scrollbar-hide">
+    <div className="login-page">
       {showAlert.show && <Alert showAlert={showAlert} />}
       <div
-        className={`w-full max-w-[30%] space-y-8 p-10 bg-white rounded-xl shadow-lg z-10  opacity-80`}
+        className={`login-container`}
       >
-        <h1
-          className={`text-center text-3xl font-extrabold text-transparent bg-clip-text
-            bg-gradient-to-r from-indigo-500 to-indigo-700`}
+        <div
+          className={`login-title`}
         >
-          LAYRA
-        </h1>
+          <div className="login-title-logo"></div>
+          <div className="login-title-text">KnowFlow</div>
+        </div>
 
-        <h2 className="text-2xl font-bold text-center text-gray-700">
-          {isLogin ? "Login" : "Register"}
-        </h2>
+        <div className="tip">
+          {isLogin ? "很高兴再次见到您" : "很高兴您加入"}
+        </div>
 
-        <form className="space-y-6" onSubmit={handleSubmit}>
+        <form className="w-full" onSubmit={handleSubmit}>
           <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Name
-            </label>
             <input
               id="name"
               name="name"
@@ -111,39 +106,41 @@ const SignInPage = () => {
               onChange={(e) => setName(e.target.value)}
               autoComplete="name"
               required
-              className={`mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-xs focus:outline-hidden focus:border-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
+              placeholder="请输入账号"
+              className={`mt-4 w-full px-3 py-2 border border-gray-300 rounded-md shadow-xs focus:outline-hidden focus:border-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
             />
           </div>
 
           {!isLogin && (
             <div>
-              <label
+              {/* <label
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700"
               >
                 Email address
-              </label>
+              </label> */}
               <input
                 id="email"
                 name="email"
                 type="email"
                 value={email}
+                placeholder="请输入邮箱地址"
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="email"
                 required
-                className={`mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-xs focus:outline-hidden focus:border-2 focus:ring-indigo-500 focus:border-indigo-500
+                className={`mt-4 w-full px-3 py-2 border border-gray-300 rounded-md shadow-xs focus:outline-hidden focus:border-2 focus:ring-indigo-500 focus:border-indigo-500
                      sm:text-sm`}
               />
             </div>
           )}
 
           <div>
-            <label
+            {/* <label
               htmlFor="password"
               className="block text-sm font-medium text-gray-700"
             >
               Password
-            </label>
+            </label> */}
             <input
               id="password"
               name="password"
@@ -152,7 +149,8 @@ const SignInPage = () => {
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="current-password"
               required
-              className={`mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-xs focus:outline-hidden focus:border-2 "focus:ring-indigo-500 focus:border-indigo-500"
+              placeholder="请输入密码"
+              className={`mt-4 w-full px-3 py-2 border border-gray-300 rounded-md shadow-xs focus:outline-hidden focus:border-2 "focus:ring-indigo-500 focus:border-indigo-500"
                   focus:ring-slate-600 focus:border-slate-600 sm:text-sm`}
             />
           </div>
@@ -160,37 +158,37 @@ const SignInPage = () => {
           <div>
             <button
               type="submit"
-              className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-xs text-sm font-medium text-white
-                bg-indigo-600 hover:bg-indigo-700 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer disabled:cursor-not-allowed`}
+              className={`submit-btn mt-[50px] w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-xs text-sm font-medium text-white
+                 cursor-pointer disabled:cursor-not-allowed`}
               disabled={pending}
             >
-              {pending ? "Sending" : isLogin ? "Sign In" : "Sign Up"}
+              {pending ? "进行中..." : isLogin ? "登 录" : "注 册"}
             </button>
           </div>
         </form>
 
-        <div className="text-sm text-center">
+        <div className="text-sm mt-4 text-center">
           {isLogin ? (
             <p>
-              Don’t have an account?{" "}
+              没有账号?{" "}
               <button
                 onClick={toggleAuthMode}
                 className={`font-medium text-indigo-600 hover:text-indigo-500
                      cursor-pointer disabled:cursor-not-allowed`}
                 disabled={pending}
               >
-                {pending ? "Sending" : "Sign Up"}
+                注册
               </button>
             </p>
           ) : (
             <p>
-              Already have an account?{" "}
+              已有账号?{" "}
               <button
                 onClick={toggleAuthMode}
                 className={`font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer disabled:cursor-not-allowed`}
                 disabled={pending}
               >
-                {pending ? "Sending" : "Sign In"}
+                登录
               </button>
             </p>
           )}

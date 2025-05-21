@@ -520,9 +520,9 @@ const AIChat: React.FC = () => {
   };
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden h-full flex w-full">
       <Navbar />
-      <div className="absolute w-[96%] h-[91%] top-[7%] bg-white/10 left-[2%] rounded-3xl flex items-center justify-between shadow-2xl">
+      <div className="flex-1 h-full bg-white/10 rounded-3xl flex items-center justify-between shadow-2xl">
         <LeftSidebar
           onNewChat={handleNewChat}
           chatHistory={chatHistory}

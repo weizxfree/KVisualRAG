@@ -1,12 +1,14 @@
 import { Base } from "@/types/types";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import ConfirmDialog from "../ConfirmDialog";
+import './LeftSideBar.css'
 
 interface LeftSideBarProps {
   bases: Base[];
-  searchTerm: string;
+  // searchTerm: string;
   setShowCreateModal: Dispatch<SetStateAction<boolean>>;
   selectedBase: string | null;
+  // setSearchTerm: Dispatch<SetStateAction<string>>;
   setSelectedBase: Dispatch<SetStateAction<string | null>>;
   ondeleteBase: (base: Base) => void;
   onRenameKnowledgeBase: (base: Base, knowledgeBaseName: string) => void;
@@ -14,7 +16,7 @@ interface LeftSideBarProps {
 
 const LeftSideBar: React.FC<LeftSideBarProps> = ({
   bases,
-  searchTerm,
+  // searchTerm,
   setShowCreateModal,
   selectedBase,
   setSelectedBase,
@@ -25,11 +27,13 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({
     setSettingsOpen(new Array(bases.length).fill(false));
     setIsEditOpen(new Array(bases.length).fill(false));
     setInputValues(bases.map((base) => base.name));
+    setSelectedBase(bases[0]?.baseId || null);
   }, [bases]);
 
   const [isSettingsOpen, setSettingsOpen] = useState<boolean[]>([]);
   const [inputValues, setInputValues] = useState<string[]>([]);
   const [isEditOpen, setIsEditOpen] = useState<boolean[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [showConfirmDeleteBase, setShowConfirmDeleteBase] = useState<{
     index: number;
     base: Base;
@@ -96,11 +100,18 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({
   };
 
   return (
-    <div className="w-[20%] flex-flex-col gap-4 h-full">
-      <div className="px-4 flex items-center justify-center h-[10%]">
+    <div className="k-left-container flex-flex-col gap-4 h-full">
+      <div className="k-left-c-title">
+        知识库列表
+      </div>
+      <div className="k-new-chat" onClick={() => setShowCreateModal(true)}>
+        <div className="k-new-chat-icon"></div>
+        <button className="k-new-chat-text">新建知识库</button>
+      </div>
+      {/* <div className="px-4 flex items-center justify-center h-[10%]">
         <button
           onClick={() => setShowCreateModal(true)}
-          className="w-full py-2 px-4 bg-indigo-500 text-white hover:bg-indigo-700 transition-colors rounded-full"
+          className="w-full  bg-indigo-500 text-white hover:bg-indigo-700 transition-colors rounded-full"
         >
           <div className="flex items-center gap-2 cursor-pointer">
             <svg
@@ -119,18 +130,40 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({
             <span>Add Knowledge-Base</span>
           </div>
         </button>
+      </div> */}
+
+      <div className="relative w-full">
+        <input
+          type="text"
+          placeholder="搜索"
+          className="k-search w-full px-[10px] py-[5px] rounded-[5px] border border-gray-300 focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="size-4 absolute right-[10px] top-1/2 transform -translate-y-1/2 text-gray-400"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+            clipRule="evenodd"
+          />
+        </svg>
       </div>
 
-      <div className="bg-white rounded-2xl overflow-scroll min-h-[90%] max-h-[90%] scrollbar-hide p-2">
+      <div className="overflow-scroll scrollbar-hide mt-2 h-full">
         {filteredBases.map((base, index) => (
           <div
             key={index}
-            className={`py-2 my-2 hover:bg-indigo-200  cursor-pointer rounded-2xl flex justify-between items-start ${
-              selectedBase === base.baseId ? "bg-indigo-500" : ""
+            className={`flex p-2 justify-between mb-[8px] cursor-pointer ${
+              selectedBase === base.baseId ? "k-chat-active" : "k-chat-inactive"
             }`}
           >
             <div
-              className={`flex-1 gap-2 hover:text-white w-full ${base.baseId === "1"? "cursor-not-allowed":""}`}
+              className={`flex-1 flex w-full justify-between items-center ${base.baseId === "1"? "cursor-not-allowed":""}`}
               onClick={() => {
                 if (base.baseId === "1") {
                   return;
@@ -138,33 +171,21 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({
                 return setSelectedBase(base.baseId);
               }}
             >
-              <div className="flex relative">
+              <img className="k-chat-img" src={`https://picsum.photos/400/400?random=${index}`} />
+
+              <div className="flex-1 flex relative">
                 <div
-                  className={`px-3 flex items-center gap-2 text-gray-900 w-[80%] ${
+                  className={`flex flex-col justify-between ml-[5px] text-gray-900 w-[80px] ${
                     selectedBase === base.baseId
                       ? "text-white text-lg"
                       : "text-base"
                   }`}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className={`${
-                      selectedBase === base.baseId ? "size-6" : "size-5"
-                    }  shrink-0`}
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 1c3.866 0 7 1.79 7 4s-3.134 4-7 4-7-1.79-7-4 3.134-4 7-4Zm5.694 8.13c.464-.264.91-.583 1.306-.952V10c0 2.21-3.134 4-7 4s-7-1.79-7-4V8.178c.396.37.842.688 1.306.953C5.838 10.006 7.854 10.5 10 10.5s4.162-.494 5.694-1.37ZM3 13.179V15c0 2.21 3.134 4 7 4s7-1.79 7-4v-1.822c-.396.37-.842.688-1.306.953-1.532.875-3.548 1.369-5.694 1.369s-4.162-.494-5.694-1.37A7.009 7.009 0 0 1 3 13.179Z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
 
                   <div
                     className={`${
-                      selectedBase === base.baseId ? "text-lg" : "text-base"
-                    } whitespace-nowrap overflow-hidden`}
+                      selectedBase === base.baseId ? "chat-text-active" : "chat-text-inactive"
+                    } whitespace-nowrap overflow-hidden`} title={base.name}
                   >
                     {isEditOpen[index] ? (
                       <input
@@ -179,19 +200,24 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({
                       base.name
                     )}
                   </div>
+                  <div
+                    className={`${
+                      selectedBase === base.baseId ? "chat-text-active" : "chat-text-inactive"
+                    }`}
+                  >
+                    {base.fileNumber} 个文件
+                  </div>
                 </div>
                 {/* 重命名和删除 */}
                 <div
-                  className="w-[20%] flex items-center justify-center font-semibold cursor-pointer text-white"
+                  className="k-chat-edit-icon flex items-center justify-center font-semibold cursor-pointer text-white"
                   onClick={() => toggleSettings(index)}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
-                    fill="currentColor"
-                    className={`${
-                      selectedBase === base.baseId ? "size-6" : "size-5"
-                    }`}
+                    fill="#000000"
+                    className={`size-3`}
                   >
                     <path d="M2 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM6.5 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM12.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" />
                   </svg>
@@ -242,13 +268,6 @@ const LeftSideBar: React.FC<LeftSideBarProps> = ({
                   </div>
                 )}
               </div>
-              <p
-                className={`px-4 text-sm text-gray-500 ${
-                  selectedBase === base.baseId ? "text-white" : ""
-                }`}
-              >
-                {base.fileNumber} files
-              </p>
             </div>
           </div>
         ))}

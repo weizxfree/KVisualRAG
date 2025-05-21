@@ -1,0 +1,63 @@
+.logo {
+  color: red;
+}
+.login-page {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url('@/assets/login-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  justify-content: right;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.login-container {
+  width: 344px;
+  height: 435px;
+  background: #ffffff;
+  box-shadow: 0px 0 15px 0px rgba(0, 32, 65, 0.04);
+  border-radius: 15px 15px 15px 15px;
+  margin-right: 170px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 28px;
+}
+.login-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-title-logo {
+  width: 31px;
+  height: 36px;
+  margin-right: 10px;
+  background-image: url('@/assets/logo/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.login-title-text {
+  font-family: Alibaba PuHuiTi 2, Alibaba PuHuiTi 20;
+  font-weight: 500;
+  font-size: 38px;
+  color: #26293b;
+  line-height: 53px;
+  text-align: center;
+}
+.tip {
+  font-family: Alibaba PuHuiTi 2, Alibaba PuHuiTi 20;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 25px;
+  color: #404447;
+  line-height: 19px;
+  width: 100%;
+}
+.submit-btn {
+  background: linear-gradient( 135deg, #53B1FD 0%, #1570EF 100%);
+}

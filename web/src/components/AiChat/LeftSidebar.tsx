@@ -5,6 +5,7 @@ import useChatStore from "@/stores/chatStore";
 import { getTimeLabel } from "@/utils/date";
 import ConfirmDialog from "../ConfirmDialog";
 import { useClickAway } from "react-use";
+import './LeftSidebar.css';
 
 interface SidebarProps {
   onNewChat: () => void;
@@ -120,9 +121,16 @@ const LeftSidebar: React.FC<SidebarProps> = ({
   };
 
   return (
-    <div className="bg-white/90 w-[20%] h-full rounded-3xl flex flex-col items-center p-2">
+    <div className="left-container w-[180px] h-full flex flex-col items-center">
       {/* 新会话按钮 */}
-      <div
+      <div className="left-c-title">
+        助理列表
+      </div>
+      <div className="new-chat" onClick={onNewChat}>
+        <div className="new-chat-icon"></div>
+        <button className="new-chat-text">新建助理</button>
+      </div>
+      {/* <div
         className="my-2 rounded-xl flex items-center justify-center w-full h-[8%] cursor-pointer"
         onClick={onNewChat}
       >
@@ -138,10 +146,10 @@ const LeftSidebar: React.FC<SidebarProps> = ({
           </svg>
           <div className=" text-sm">New Chat</div>
         </div>
-      </div>
+      </div> */}
 
       {/* 历史生成标题和清空按钮 */}
-      <h2 className="text-sm mb-2 text-center font-bold">History Chat</h2>
+      {/* <h2 className="text-sm mb-2 text-center font-bold">History Chat</h2>
       <div className="flex gap-2">
         <div
           className="text-indigo-500 cursor-pointer flex gap-1 items-center"
@@ -182,10 +190,10 @@ const LeftSidebar: React.FC<SidebarProps> = ({
 
           <div>Refresh</div>
         </div>
-      </div>
+      </div> */}
       {/* 聊天列表 */}
-      <div className="border-b-2 border-gray-200 h-[1%] w-[80%]"></div>
-      <div className="px-2 w-full flex-1 overflow-auto scrollbar-hide mt-2">
+      {/* <div className="border-b-2 border-gray-200 h-[1%] w-[80%]"></div> */}
+      <div className="w-full flex-1 overflow-auto scrollbar-hide mt-2">
         {chatHistory.map((chat, index) => {
           const timeLabel = getTimeLabel(chat.lastModityTime);
           const lastTimeLabel = getTimeLabel(
@@ -196,43 +204,28 @@ const LeftSidebar: React.FC<SidebarProps> = ({
           const isFirstInGroup = index === 0 || timeLabel !== lastTimeLabel;
           return (
             <div key={index} className="flex flex-col">
-              {isFirstInGroup && (
+              {/* {isFirstInGroup && (
                 <div className="pl-2 py-2 font-bold text-sm">{timeLabel} </div>
-              )}
+              )} */}
               <div
                 key={index}
-                className={`relative flex ${
+                className={`relative flex mb-[8px] ${
                   chatId === chat.conversationId
-                    ? "bg-indigo-500 text-white"
-                    : ""
-                } hover:bg-indigo-300 hover:text-white rounded-xl`}
+                    ? "chat-active"
+                    : "chat-inactive"
+                }`}
               >
                 <div
                   key={index}
                   className="py-2 pl-2 pr-0 flex items-center gap-1 w-[80%] cursor-pointer text-md"
                   onClick={() => handleSelectChat(chat)}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className={`${
-                      chatId === chat.conversationId ? "size-6" : "size-4"
-                    } shrink-0`}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
-                    />
-                  </svg>
+                  <img className="chat-img" src={`https://picsum.photos/400/400?random=${index}`} />
 
                   <div
                     className={`${
-                      chatId === chat.conversationId ? "text-base" : "text-sm"
-                    } whitespace-nowrap overflow-hidden `}
+                      chatId === chat.conversationId ? "chat-text-active" : "chat-text-inactive"
+                    } whitespace-nowrap overflow-hidden `} title={chat.name}
                   >
                     {isEditOpen[index] ? (
                       <input
@@ -249,14 +242,14 @@ const LeftSidebar: React.FC<SidebarProps> = ({
                   </div>
                 </div>
                 <div
-                  className="w-[20%] flex items-center justify-center font-semibold cursor-pointer text-white"
+                  className="chat-edit-icon flex items-center justify-center font-semibold cursor-pointer"
                   onClick={() => toggleSettings(index)}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
-                    fill="currentColor"
-                    className="size-4"
+                    fill="#000000"
+                    className="size-3"
                   >
                     <path d="M2 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM6.5 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM12.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" />
                   </svg>

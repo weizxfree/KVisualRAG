@@ -54,7 +54,7 @@ const KnowledgeBaseDetails: React.FC<KnowledgeBaseDetailsProps> = ({
     if (!user?.name) return;
     try {
       let response;
-      if (selectedBase) {
+      if (selectedBase && selectedBase != "1") {
         response = await getKBFiles(
           selectedBase,
           currentPage,
@@ -142,11 +142,11 @@ const KnowledgeBaseDetails: React.FC<KnowledgeBaseDetailsProps> = ({
   return (
     <div className="flex-1 h-full">
       {selectedBase ? (
-        <div className="bg-white p-6 rounded-xl shadow-sm h-full  flex flex-col">
+        <div className="bg-[#F4F8FB] p-6 shadow-sm h-full  flex flex-col">
           <div className="h-[15%]">
             <div className="flex items-center gap-2 mb-2 justify-between">
-              <div className="flex items-center gap-2 max-w-[70%] overflow-scroll scrollbar-hide">
-                <svg
+              <div className="flex text-[#1570EF] items-center gap-2 max-w-[70%] overflow-scroll scrollbar-hide">
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -160,7 +160,7 @@ const KnowledgeBaseDetails: React.FC<KnowledgeBaseDetailsProps> = ({
                     strokeLinejoin="round"
                     d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
                   />
-                </svg>
+                </svg> */}
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +173,7 @@ const KnowledgeBaseDetails: React.FC<KnowledgeBaseDetailsProps> = ({
                   <path d="M12 16.5c2.685 0 5.19-.586 7.078-1.609a8.282 8.282 0 0 0 1.897-1.384c.016.121.025.244.025.368 0 2.692-4.03 4.875-9 4.875s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.284 8.284 0 0 0 1.897 1.384C6.809 15.914 9.315 16.5 12 16.5Z" />
                   <path d="M12 20.25c2.685 0 5.19-.586 7.078-1.609a8.282 8.282 0 0 0 1.897-1.384c.016.121.025.244.025.368 0 2.692-4.03 4.875-9 4.875s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.284 8.284 0 0 0 1.897 1.384C6.809 19.664 9.315 20.25 12 20.25Z" />
                 </svg>
-                <h2 className="text-2xl font-bold">
+                <h2 className="text-1xl font-bold">
                   {bases.find((r) => r.baseId === selectedBase)?.name}
                 </h2>
               </div>
@@ -291,7 +291,7 @@ const KnowledgeBaseDetails: React.FC<KnowledgeBaseDetailsProps> = ({
           </div>
         </div>
       ) : (
-        <div className="h-full flex items-center justify-center bg-white rounded-xl shadow-sm flex-col pb-6">
+        <div className="bg-[#F4F8FB] p-6 h-full flex items-center justify-center shadow-sm flex-col pb-6">
           <div className="flex items-center justify-center h-[10%] w-full">
             <p className="text-gray-500 text-xl">
               Please choose a Knowledge-Base to upload

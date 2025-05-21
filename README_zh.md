@@ -220,6 +220,7 @@ alembic upgrade head
 
 # 使用 Gunicorn 启动后端服务
 gunicorn -c gunicorn_config.py app.main:app
+nohup gunicorn -c gunicorn_config.py app.main:app > gunicorn.log 2>&1 &
 # 访问地址：http://localhost:8000
 
 # 启动 ColBERT 服务（向量化模型服务器）

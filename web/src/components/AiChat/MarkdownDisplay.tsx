@@ -12,6 +12,7 @@ interface MarkdownDisplayProps {
   message: Message;
   showTokenNumber: boolean;
   isThinking: boolean;
+  isUser: boolean;
 }
 
 // Add new CodeBlock component
@@ -165,10 +166,12 @@ const MarkdownDisplay: React.FC<MarkdownDisplayProps> = ({
   message,
   showTokenNumber,
   isThinking,
+  isUser
+
 }) => {
   return (
     <div className="flex flex-col w-full gap-2">
-      <div className="prose dark:prose-invert max-w-full">
+      <div className={`prose dark:prose-invert max-w-full ${isUser ? 'text-white':''}`}>
         <ReactMarkdown
           remarkPlugins={[remarkMath, remarkGfm]} // 必须 math 在前
           rehypePlugins={[
@@ -214,7 +217,7 @@ const MarkdownDisplay: React.FC<MarkdownDisplayProps> = ({
       {message.token_number !== undefined &&
         message.token_number.total_token > 0 &&
         showTokenNumber && (
-          <div className="text-gray-600 text-sm flex gap-4">
+          <div className="text-gray-600 text-sm flex gap-3">
             <span>Total token usage: {message.token_number?.total_token}</span>
             <span>
               Completion token usage: {message.token_number?.completion_tokens}

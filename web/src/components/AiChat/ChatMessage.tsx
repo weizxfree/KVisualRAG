@@ -48,13 +48,13 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
       className={`rounded-lg max-w-[95%] w-fit break-words flex flex-col 
         ${isUser ? "ml-auto" : "mr-auto"} ${
         isUser && message.type === "text"
-          ? "bg-indigo-300 shadow-lg"
+          ? "bg-blue-500 shadow-lg"
           : message.type === "image"
           ? "bg-white mb-3 shadow-lg"
           : "bg-white mb-0.5"
       } ${
         message.type === "text"
-          ? "px-4 py-3 mb-2 text-gray-800"
+          ? "px-4 py-3 mb-2"
           : "overflow-hidden"
       }`}
     >
@@ -63,6 +63,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
           {message.type === "text" && message.thinking && (
             <MarkdownDisplay
               md_text={message.thinking}
+              isUser={isUser}
               message={message}
               showTokenNumber={false}
               isThinking={true}
@@ -72,6 +73,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
         {message.type === "text" && message.content && (
           <MarkdownDisplay
             md_text={message.content}
+            isUser={isUser}
             message={message}
             showTokenNumber={true}
             isThinking={false}

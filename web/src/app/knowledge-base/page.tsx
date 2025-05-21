@@ -255,10 +255,9 @@ const KnowledgeBase = () => {
   };
 
   return (
-    <div className="overflow-hidden flex flex-col">
+    <div className="h-full overflow-hidden flex">
       <Navbar />
-      <div className="absolute w-[96%] h-[91%] top-[7%] bg-white/10 left-[2%] rounded-3xl flex items-center justify-between shadow-2xl">
-        <div className="w-full top-0 absolute px-6 pb-6 pt-2 h-full">
+      <div className="flex-1 w-full h-full bg-white/10 flex items-center justify-between shadow-2xl">
           {/* 新建知识库弹窗 */}
           {showCreateModal && (
             <AddKnowledgeBase
@@ -279,16 +278,17 @@ const KnowledgeBase = () => {
           )}
 
           {/* 顶部导航 */}
-          <TopBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          {/* <TopBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> */}
 
-          <div className="mx-auto px-4 pt-4 flex gap-6 h-[88%]">
+          <div className="flex h-full w-full">
             {/* 左侧边栏 */}
             <LeftSideBar
               bases={bases}
-              searchTerm={searchTerm}
+              // searchTerm={searchTerm}
               setShowCreateModal={setShowCreateModal}
               selectedBase={selectedBase}
-              setSelectedBase={setSelectedBase}
+              setSelectedBase={setSelectedBase} 
+              // setSearchTerm={setSearchTerm}
               ondeleteBase={handledeleteBase}
               onRenameKnowledgeBase={handleRenameKnowledgeBase}
             />
@@ -306,7 +306,6 @@ const KnowledgeBase = () => {
               setLoad={setLoad}
             />
           </div>
-        </div>
       </div>
     </div>
   );

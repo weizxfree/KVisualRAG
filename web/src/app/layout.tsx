@@ -5,8 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LAYRA",
-  description: "LAYRA: Towards Visual-Driven Intelligent RAG",
+  title: "KnowFlow",
+  description: "KnowFlow: Towards Visual-Driven Intelligent RAG",
+  icons: "/pictures/logo1.svg",
 };
 
 export default function RootLayout({
