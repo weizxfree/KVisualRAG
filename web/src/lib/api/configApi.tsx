@@ -48,6 +48,7 @@ export const updateModelConfig = async (
     max_length: modelConfig.useMaxLengthDefault ? -1 : modelConfig.maxLength,
     top_P: modelConfig.useTopPDefault ? -1 : modelConfig.topP,
     top_K: modelConfig.useTopKDefault ? -1 : modelConfig.topK,
+    provider_type: modelConfig.providerType, // 新增 provider_type
   });
 };
 
@@ -67,6 +68,7 @@ export const addModelConfig = async (
     max_length: modelConfig.useMaxLengthDefault ? -1 : modelConfig.maxLength,
     top_P: modelConfig.useTopPDefault ? -1 : modelConfig.topP,
     top_K: modelConfig.useTopKDefault ? -1 : modelConfig.topK,
+    provider_type: modelConfig.providerType, // 新增 provider_type
   });
 };
 

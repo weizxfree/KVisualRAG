@@ -70,6 +70,7 @@ export interface ModelConfig {
   useMaxLengthDefault: boolean;
   useTopPDefault: boolean;
   useTopKDefault: boolean;
+  providerType?: "qwen" | "ollama"; // 新增模型提供者类型
 }
 
 export interface UploadFile {

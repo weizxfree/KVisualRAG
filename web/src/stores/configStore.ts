@@ -24,6 +24,7 @@ const useModelConfigStore = create<ModelConfigStore>((set) => ({
     useMaxLengthDefault: true,
     useTopPDefault: true,
     useTopKDefault: true,
+    providerType: "qwen", // 默认设置为 qwen
   },
   setModelConfig: (updater) => 
     set((state) => ({

@@ -88,6 +88,7 @@ class MongoDB:
         max_length: int,
         top_P: float,
         top_K: int,
+        provider_type: Optional[str] = "qwen",  # 新增 provider_type
     ):
         model_config = {
             "username": username,
@@ -104,6 +105,7 @@ class MongoDB:
                     max_length=max_length,
                     top_P=top_P,
                     top_K=top_K,
+                    provider_type=provider_type,  # 传递 provider_type
                 )
             ],
         }
@@ -130,6 +132,7 @@ class MongoDB:
         max_length: int,
         top_P: float,
         top_K: int,
+        provider_type: Optional[str] = "qwen",  # 新增 provider_type
     ) -> dict:
         return {
             "model_id": model_id,
@@ -142,6 +145,7 @@ class MongoDB:
             "max_length": max_length,
             "top_P": top_P,
             "top_K": top_K,
+            "provider_type": provider_type,  # 添加 provider_type
         }
 
     async def update_selected_model(self, username: str, model_id: str):
@@ -183,6 +187,7 @@ class MongoDB:
         max_length: int,
         top_P: float,
         top_K: int,
+        provider_type: Optional[str] = "qwen",  # 新增 provider_type
     ):
         # 检查用户是否存在
         user_exists = await self.db.model_config.find_one({"username": username})
@@ -208,6 +213,7 @@ class MongoDB:
             max_length=max_length,
             top_P=top_P,
             top_K=top_K,
+            provider_type=provider_type,  # 传递 provider_type
         )
 
         # 插入到数组
@@ -247,6 +253,7 @@ class MongoDB:
         max_length: Optional[int] = None,
         top_P: Optional[float] = None,
         top_K: Optional[int] = None,
+        provider_type: Optional[str] = None,  # 新增 provider_type
     ):
         # 构建更新字段
         update_fields = {}
@@ -268,6 +275,8 @@ class MongoDB:
             update_fields["models.$[elem].top_P"] = top_P
         if top_K is not None:
             update_fields["models.$[elem].top_K"] = top_K
+        if provider_type is not None:
+            update_fields["models.$[elem].provider_type"] = provider_type
 
         # 执行更新
         try:

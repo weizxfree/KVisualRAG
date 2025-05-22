@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     minio_secret_key: str = "your_secret_key"  # MinIO 的密钥
     minio_bucket_name: str = "ai-chat"  # 需要上传的桶的名称
     milvus_uri:str ="http://127.0.0.1:19530"
-    colbert_model_path:str = "/home/liwei/ai/colqwen2.5-v0.2"
+    colbert_model_path:str = "/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2"
 
     class Config:
         env_file = ".env"

@@ -27,9 +27,18 @@ class ChatService:
         )
 
         model_name = model_config["model_name"]
-        model_url = model_config["model_url"]
-        api_key = model_config["api_key"]
+        model_url = model_config["model_url"] 
+        api_key = model_config["api_key"]     
         base_used = model_config["base_used"]
+        provider_type = model_config.get("provider_type", "ollama") 
+
+        # Adjust API client parameters based on provider type
+        effective_api_key = api_key
+        effective_base_url = model_url
+
+        if provider_type == "ollama":
+            effective_base_url = "http://localhost:11434/v1"  # Default Ollama API URL
+            effective_api_key = "ollama"  # Ollama doesn't typically use API keys, use a placeholder
 
         system_prompt = model_config["system_prompt"]
         if len(system_prompt) > 1048576:
@@ -170,9 +179,8 @@ class ChatService:
         send_messages = await replace_image_content(messages)
 
         client = AsyncOpenAI(
-            # 若没有配置环境变量，请用百炼API Key将下行替换为：api_key="sk-xxx",
-            api_key=api_key,
-            base_url=model_url,
+            api_key=effective_api_key,
+            base_url=effective_base_url,
         )
 
         # 调用OpenAI API
