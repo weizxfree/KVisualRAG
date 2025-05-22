@@ -218,12 +218,12 @@ const MarkdownDisplay: React.FC<MarkdownDisplayProps> = ({
         message.token_number.total_token > 0 &&
         showTokenNumber && (
           <div className="text-gray-600 text-sm flex gap-3">
-            <span>Total token usage: {message.token_number?.total_token}</span>
+            <span>总计 token: {message.token_number?.total_token}</span>
             <span>
-              Completion token usage: {message.token_number?.completion_tokens}
+              会话 token: {message.token_number?.completion_tokens}
             </span>
             <span>
-              Prompt token usage: {message.token_number?.prompt_tokens}
+              提示词 token: {message.token_number?.prompt_tokens}
             </span>
           </div>
         )}

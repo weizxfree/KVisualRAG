@@ -127,8 +127,9 @@ const LeftSidebar: React.FC<SidebarProps> = ({
         助理列表
       </div>
       <div className="new-chat" onClick={onNewChat}>
-        <div className="new-chat-icon"></div>
-        <button className="new-chat-text">新建助理</button>
+        {/* <div className="new-chat-icon"></div> */}
+        {/* <button className="new-chat-text">新建助理</button> */}
+        <button className="w-full  bg-indigo-500 text-white hover:bg-indigo-700 transition-colors rounded-full">新建助理</button>
       </div>
       {/* <div
         className="my-2 rounded-xl flex items-center justify-center w-full h-[8%] cursor-pointer"
@@ -320,10 +321,10 @@ const LeftSidebar: React.FC<SidebarProps> = ({
       {/* 确认删除单个聊天 */}
       {showConfirmDeleteChat && (
         <ConfirmDialog
-          message={`Confirm the deletion of chat record "${showConfirmDeleteChat.chat.name.slice(
-            0,
-            30
-          )}"？`}
+            message={`确认删除聊天记录 "${showConfirmDeleteChat.chat.name.slice(
+              0,
+              30
+           )}"吗？`}
           onConfirm={confirmDeleteChat}
           onCancel={cancelDeleteChat}
         />

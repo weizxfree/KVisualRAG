@@ -149,8 +149,8 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
 
               <p>
                 {showRefFile.includes(message.messageId)
-                  ? "Close References"
-                  : "View References"}
+                  ? "折叠引用"
+                  : "查看引用"}
               </p>
               {showRefFile.includes(message.messageId) ? (
                 <svg

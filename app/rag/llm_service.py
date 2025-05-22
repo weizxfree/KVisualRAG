@@ -171,12 +171,16 @@ class ChatService:
             },
         )
 
+        print(content)
+
         user_message = {
             "role": "user",
             "content": content,
         }
         messages.append(user_message)
         send_messages = await replace_image_content(messages)
+        
+
 
         client = AsyncOpenAI(
             api_key=effective_api_key,

@@ -53,14 +53,14 @@ const ChatBox: React.FC<ChatBoxProps> = ({
 
   let buttonText;
   if (!uploadFile) {
-    buttonText = "Send";
+    buttonText = "发送";
   } else if (!isUploadComplete) {
-    buttonText = `Upload:${uploadProgress}%`;
+    buttonText = `上传:${uploadProgress}%`;
   } else if (!isTaskComplete) {
     buttonText =
-      taskStatus === "failed" ? "Upload Failed" : `Processing:${taskProgress}%`;
+      taskStatus === "failed" ? "上传失败" : `Processing:${taskProgress}%`;
   } else {
-    buttonText = "Send";
+    buttonText = "发送";
   }
 
   // 在ChatBox组件内新增状态
@@ -233,7 +233,6 @@ const ChatBox: React.FC<ChatBoxProps> = ({
           <div className="h-full w-[90%] flex flex-col items-center gap-4 bg-white/30 rounded-xl">
             <div className="h-[30vh]"></div>
             <p className="text-lg">
-              在和我聊天之前，如果需要某个知识库，请记得先配置它
               {/* Please remember to choose which knowledge database you will use
               for this chat. */}
             </p>
@@ -286,7 +285,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({
                 </svg>
                 <div className="whitespace-nowrap">
                   {" "}
-                  Knowledge-Base accessed:
+                  知识库:
                 </div>
                 <div className="whitespace-nowrap overflow-x-scroll scrollbar-hide flex gap-2">
                   {modelConfig.baseUsed.map((base, index) => (
@@ -367,7 +366,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({
                   </svg>
                   <div className="whitespace-nowrap">
                     {" "}
-                    Knowledge-Base accessed:
+                    知识库:
                   </div>
                   <div className="whitespace-nowrap overflow-x-scroll scrollbar-hide flex gap-2">
                     {modelConfig.baseUsed.map((base, index) => (
@@ -435,7 +434,7 @@ const ChatBox: React.FC<ChatBoxProps> = ({
             <textarea
               ref={textareaRef}
               className="pl-11 pr-8 w-full py-3 min-h-[40%] max-h-[100%] border-indigo-500 border-2 rounded-xl text-base focus:outline-hidden focus:border-indigo-600 focus:border-[2.5px] resize-none overflow-y-auto"
-              placeholder="Press Shift+Enter to send..."
+              placeholder="按 Shift+Enter 发送..."
               value={inputMessage}
               rows={1}
               onChange={(e) => {

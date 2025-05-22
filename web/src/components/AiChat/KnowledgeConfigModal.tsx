@@ -263,7 +263,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                 transform="translate(0, -0.5)"
               />
             </svg>
-            <span className="text-lg font-semibold">Config Knowledge Base</span>
+            <span className="text-lg font-semibold">知识库配置</span>
           </div>
           <a
             href="/knowledge-base" // 配置页面的路由路径
@@ -291,7 +291,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                 d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
               />
             </svg>
-            Add Knowledge-Base
+            新建知识库
           </a>
         </div>
 
@@ -302,7 +302,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
           <div className="pt-2">
             <details className="group" open>
               <summary className="flex items-center cursor-pointer text-sm font-medium">
-                LLM Settings
+                语言模型设置
                 <svg
                   className="ml-1 w-4 h-4 transition-transform group-open:rotate-180"
                   fill="none"
@@ -326,7 +326,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                     onClick={() => setShowAddLLM(true)}
                   >
                     <label className="block text-sm font-medium mb-2">
-                      LLM Engine
+                      LLM 模型
                     </label>
                     <div className="px-3 py-2 text-indigo-500 hover:text-indigo-700 text-sm flex items-center cursor-pointer">
                       <svg
@@ -349,7 +349,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                           d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                         />
                       </svg>
-                      Add New Configuration
+                      添加配置
                     </div>
                   </div>
                   <div className="flex gap-2">
@@ -437,7 +437,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
 
                 {/* 新增模型地址和API Key */}
                 <div>
-                  <label className="block text-sm font-medium">LLM Url</label>
+                  <label className="block text-sm font-medium">LLM URL</label>
                   <input
                     type="url"
                     value={modelConfig.modelURL}
@@ -473,7 +473,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
           <div className="pt-2">
             <details className="group" open>
               <summary className="flex items-center cursor-pointer text-sm font-medium">
-                Choose DB
+                引用知识库
                 <svg
                   className="ml-1 w-4 h-4 transition-transform group-open:rotate-180"
                   fill="none"
@@ -538,7 +538,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
           <div className="pt-2">
             <details className="group">
               <summary className="flex items-center cursor-pointer text-sm font-medium">
-                System Prompt
+                系统提示词
                 <svg
                   className="ml-1 w-4 h-4 transition-transform group-open:rotate-180"
                   fill="none"
@@ -581,7 +581,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
           <div className="pt-2">
             <details className="group">
               <summary className="flex items-center cursor-pointer text-sm font-medium">
-                Advanced Settings
+                高级设置
                 <svg
                   className="ml-1 w-4 h-4 transition-transform group-open:rotate-180"
                   fill="none"
@@ -825,13 +825,13 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
             onClick={onClose}
             className="px-4 py-2  text-gray-700 border border-gray-300 rounded-full hover:bg-gray-100 cursor-pointer"
           >
-            Cancel
+            取消
           </button>
           <button
             onClick={handleSubmit}
             className="px-4 py-2 bg-indigo-500 text-white rounded-full hover:bg-indigo-700 cursor-pointer"
           >
-            Save
+            保存
           </button>
         </div>
       </div>

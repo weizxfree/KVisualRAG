@@ -44,14 +44,14 @@ const KnowledgeBase = () => {
 
   let buttonText;
   if (!uploadFile) {
-    buttonText = "Upload Files";
+    buttonText = "上传文件";
   } else if (!isUploadComplete) {
-    buttonText = `Upload:${uploadProgress}%`;
+    buttonText = `上传:${uploadProgress}%`;
   } else if (!isTaskComplete) {
     buttonText =
-      taskStatus === "failed" ? "Upload Failed" : `Processing:${taskProgress}%`;
+      taskStatus === "failed" ? "上传失败" : `Processing:${taskProgress}%`;
   } else {
-    buttonText = "Upload Files";
+    buttonText = "上传文件";
   }
 
   // 成功消息自动消失

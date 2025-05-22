@@ -213,11 +213,11 @@ const KnowledgeBaseDetails: React.FC<KnowledgeBaseDetailsProps> = ({
 
             <div className="flex gap-4 text-sm text-gray-500">
               <span>
-                File Number:{" "}
+                文件数:{" "}
                 {bases.find((r) => r.baseId === selectedBase)?.fileNumber}
               </span>
               <span>
-                Creat Time:{" "}
+                创建时间:{" "}
                 {bases.find((r) => r.baseId === selectedBase)?.createTime}
               </span>
             </div>
@@ -271,9 +271,9 @@ const KnowledgeBaseDetails: React.FC<KnowledgeBaseDetailsProps> = ({
               </div>
             </label>
             <p className="mt-4 text-gray-600">
-              Drag files here or click to select
+              拖动文件或点击选择
             </p>
-            <p className="mt-2 text-sm text-gray-500">Support PDF...</p>
+            <p className="mt-2 text-sm text-gray-500">支持 PDF</p>
           </div>
 
           <div className="w-full h-[calc(60%-24px)]">
