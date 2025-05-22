@@ -69,6 +69,7 @@ const AIChat: React.FC = () => {
           useMaxLengthDefault: item.max_length === -1 ? true : false,
           useTopPDefault: item.top_P === -1 ? true : false,
           useTopKDefault: item.top_K === -1 ? true : false,
+          providerType: item.provider_type || "qwen",
         })
       );
 
@@ -147,6 +148,7 @@ const AIChat: React.FC = () => {
             useMaxLengthDefault: item.max_length === -1 ? true : false,
             useTopPDefault: item.top_P === -1 ? true : false,
             useTopKDefault: item.top_K === -1 ? true : false,
+            providerType: item.provider_type || "qwen",
           });
           const messages: Message[] = response.data.turns
             .map((item: any) => {

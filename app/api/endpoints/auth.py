@@ -102,7 +102,7 @@ async def register(
         model_name="qwen2.5-vl-72b-instruct",
         model_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         api_key="sk-default-xxx",
-        provider_type='ollama',
+        provider_type='qwen',
         base_used=[],
         system_prompt="You are a helpful assistant.",
         temperature=-1,

@@ -11,7 +11,7 @@ class ModelConfigBase(BaseModel):
     max_length: int
     top_P: float
     top_K: int
-    provider_type: Optional[str] = "ollama"  # 新增 provider_type 字段，默认为 qwen
+    provider_type: Optional[str] = "qwen"  # 修改默认值为 qwen
 
 class ModelCreate(ModelConfigBase):
     provider_type: str = "qwen"  # 明确要求 provider_type，或在此处设置默认值

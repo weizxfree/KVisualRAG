@@ -24,15 +24,18 @@ app = framework.get_app()
 
 # CORS settings
 origins = [
-    "*"
-]  # ["https://your-frontend-domain.com"],  # 建议生产环境中替换为具体的域名白名单
+    "http://36.155.18.243:3000",  # 前端开发服务器
+    "http://localhost:3000",       # 本地开发
+]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    allow_headers=["*", "Authorization", "Content-Type", "Accept"],
+    expose_headers=["*"],
+    max_age=3600,
 )
 
 

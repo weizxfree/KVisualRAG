@@ -30,7 +30,9 @@ class ChatService:
         model_url = model_config["model_url"] 
         api_key = model_config["api_key"]     
         base_used = model_config["base_used"]
-        provider_type = model_config.get("provider_type", "ollama") 
+        provider_type = model_config.get("provider_type", "qwen")
+
+        print(provider_type)
 
         # Adjust API client parameters based on provider type
         effective_api_key = api_key
@@ -81,8 +83,19 @@ class ChatService:
         if not system_prompt:
             system_prompt = "All outputs in Markdown format, especially mathematical formulas in Latex format($formula$)."
 
+        # 组合内置提示词和自定义提示词
+        built_in_prompt = """你是一个多模态AI助手，可以同时处理文本和图片信息。当用户提问时：
+1. 仔细分析问题中提到的所有内容，包括文本和图片
+2. 对于图片内容，详细描述你看到的视觉信息
+3. 结合文本和图片信息，给出准确、完整的回答
+4. 如果问题涉及图片中的具体细节，请明确指出
+5. 如果无法从图片中获取足够信息，请说明原因
+6. 回答时保持客观，只基于提供的信息进行回答
+7. 当不确定时，明确表示无法确定"""
+        combined_system_prompt = f"{built_in_prompt}\n\n{system_prompt}"
+
         logger.info(
-            f"chat '{user_message_content.conversation_id} uses system prompt {system_prompt}'"
+            f"chat '{user_message_content.conversation_id} uses system prompt {combined_system_prompt}'"
         )
 
         messages = [
@@ -91,8 +104,7 @@ class ChatService:
                 "content": [
                     {
                         "type": "text",
-                        # "text": "You are LAYRA, developed by Li Wei(李威), a multimodal RAG tool built on ColQwen and Qwen2.5-VL-72B. The retrieval process relies entirely on vision, enabling accurate recognition of tables, images, and documents in various formats. All outputs in Markdown format.",
-                        "text": system_prompt,
+                        "text": combined_system_prompt,
                     }
                 ],
             }
@@ -114,7 +126,6 @@ class ChatService:
             bases.append({"baseId": user_message_content.temp_db})
 
         # 搜索知识库匹配内容
-
         bases.extend(base_used)
         file_used = []
         if bases:
@@ -135,15 +146,14 @@ class ChatService:
             else:
                 cut_score = sorted_score
 
+            # 添加图片分析指导
+            content.append({
+                "type": "text",
+                "text": "请仔细分析以下图片，注意图片中的文字、图表、表格等关键信息。"
+            })
+
             # 获取minio name并转成base64
             for score in cut_score:
-                """
-                根据 file_id 和 image_id 获取：
-                - knowledge_db_id
-                - filename
-                - 文件的 minio_filename 和 minio_url
-                - 图片的 minio_filename 和 minio_url
-                """
                 file_and_image_info = await db.get_file_and_image_info(
                     score["file_id"], score["image_id"]
                 )
@@ -160,6 +170,7 @@ class ChatService:
                     {
                         "type": "image_url",
                         "image_url": file_and_image_info["image_minio_filename"],
+                        "context": f"这是从文档中检索到的相关图片，文件名：{file_and_image_info['file_name']}，相关度分数：{score['score']}"
                     }
                 )
 
@@ -175,7 +186,13 @@ class ChatService:
 
         user_message = {
             "role": "user",
-            "content": content,
+            "content": [
+                {
+                    "type": "text",
+                    "text": "请分析以下图片和文本信息，回答我的问题："
+                },
+                *content
+            ],
         }
         messages.append(user_message)
         send_messages = await replace_image_content(messages)

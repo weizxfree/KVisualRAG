@@ -129,7 +129,6 @@ async def insert_to_milvus(collection_name, embeddings, image_ids, file_id):
 
 
 async def replace_image_content(messages):
-
     # 创建深拷贝以保证原始数据不变
     new_messages = copy.deepcopy(messages)
     # 遍历每条消息
@@ -147,6 +146,11 @@ async def replace_image_content(messages):
                             item["image_url"]
                         )
                     )
-                    item["image_url"] = {"url": f"data:image/png;base64,{image_base64}"}
+                    # 保留上下文信息
+                    context = item.get("context", "")
+                    item["image_url"] = {
+                        "url": f"data:image/png;base64,{image_base64}",
+                        "context": context
+                    }
 
     return new_messages

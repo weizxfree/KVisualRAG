@@ -109,6 +109,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
                   height={200}
                   onClick={() => handleImageClick(message.minioUrl || "")}
                   className="cursor-pointer"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
             )}
@@ -210,6 +211,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
                   height={100}
                   onClick={() => handleImageClick(message.imageMinioUrl || "")}
                   className="cursor-pointer"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               <div
@@ -256,8 +258,8 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
             <Image
               src={selectedImage}
               alt="Selected large"
-              fill // 使用 fill 布局
-              style={{ objectFit: "contain" }} // 使用 style 来设置 objectFitobjectFit="contain" // 保持图像比例
+              fill
+              style={{ objectFit: "contain" }}
               className="max-h-[90%] m-auto"
             />
           </div>

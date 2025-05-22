@@ -76,6 +76,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
             useMaxLengthDefault: item.max_length === -1 ? true : false,
             useTopPDefault: item.top_P === -1 ? true : false,
             useTopKDefault: item.top_K === -1 ? true : false,
+            providerType: item.provider_type || "qwen",
           })
         );
 
@@ -217,6 +218,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
         const Newmodel: ModelConfig = {
           ...modelConfig,
           modelName: newModelName,
+          providerType: modelConfig.providerType || "qwen",
         };
         const response = await addModelConfig(user.name, Newmodel);
         setModelConfig({
@@ -320,6 +322,47 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
 
               <div className="mt-2 space-y-4 pb-2">
                 {/* 新增模型选择器 */}
+                <div>
+                  <div
+                    className="flex items-center justify-between"
+                    onClick={() => setShowAddLLM(true)}
+                  >
+                    <label className="block text-sm font-medium mb-2">
+                      LLM 服务商
+                    </label>
+                  </div>
+                  <div className="relative w-full">
+                    <select
+                      value={modelConfig.providerType || "qwen"}
+                      onChange={(e) =>
+                        setModelConfig((prev) => ({
+                          ...prev,
+                          providerType: e.target.value as "qwen" | "ollama",
+                        }))
+                      }
+                      className="mt-1 w-full px-3 py-2 border border-gray-200 rounded-xl cursor-pointer bg-white appearance-none focus:outline-hidden focus:ring-2 focus:ring-indigo-500 hover:border-indigo-500 transition-colors"
+                    >
+                      <option value="qwen">Qwen</option>
+                      <option value="ollama">Ollama</option>
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
                 <div>
                   <div
                     className="flex items-center justify-between"
@@ -452,6 +495,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                   />
                 </div>
 
+        
                 <div>
                   <label className="block text-sm font-medium">API Key</label>
                   <input
@@ -554,9 +598,18 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                 </svg>
               </summary>
               <div className="mt-2 space-y-4">
+                <div className="text-sm text-gray-500 mb-2">
+                  内置提示词：
+                  <div className="mt-1 p-2 bg-gray-50 rounded-lg">
+                    根据问题，你需要从文档中提取文本、图片、表格等信息，回答时一定要从文档中获取信息进行回答，不要联想和胡说八道，当不确定时回复我不知道。
+                  </div>
+                </div>
+                <div className="text-sm text-gray-500 mb-2">
+                  自定义提示词：
+                </div>
                 <textarea
                   className="mt-1 w-full px-3 py-2 border border-gray-200 rounded-xl min-h-[10vh] max-h-[20vh] resize-none overflow-y-auto focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
-                  placeholder={modelConfig.systemPrompt}
+                  placeholder="在此输入自定义提示词..."
                   rows={1}
                   value={modelConfig.systemPrompt}
                   onChange={(e) => {
@@ -641,11 +694,11 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                     min="0"
                     max="1"
                     step="0.1"
-                    value={modelConfig.temperature}
+                    value={modelConfig.temperature || 0}
                     onChange={(e) =>
                       setModelConfig((prev) => ({
                         ...prev,
-                        temperature: parseFloat(e.target.value),
+                        temperature: e.target.value === '' ? 0 : parseFloat(e.target.value),
                       }))
                     }
                     disabled={modelConfig.useTemperatureDefault}
@@ -696,11 +749,11 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                     type="number"
                     min="1024"
                     max="1048576"
-                    value={modelConfig.maxLength}
+                    value={modelConfig.maxLength || 1024}
                     onChange={(e) =>
                       setModelConfig((prev) => ({
                         ...prev,
-                        maxLength: parseInt(e.target.value),
+                        maxLength: e.target.value === '' ? 1024 : parseInt(e.target.value),
                       }))
                     }
                     disabled={modelConfig.useMaxLengthDefault}
@@ -750,11 +803,11 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                     min="0"
                     max="1"
                     step="0.1"
-                    value={modelConfig.topP}
+                    value={modelConfig.topP || 0}
                     onChange={(e) =>
                       setModelConfig((prev) => ({
                         ...prev,
-                        topP: parseFloat(e.target.value),
+                        topP: e.target.value === '' ? 0 : parseFloat(e.target.value),
                       }))
                     }
                     disabled={modelConfig.useTopPDefault}
@@ -803,11 +856,11 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                     min="1"
                     max="30"
                     step="1"
-                    value={modelConfig.topK}
+                    value={modelConfig.topK || 1}
                     onChange={(e) =>
                       setModelConfig((prev) => ({
                         ...prev,
-                        topK: parseInt(e.target.value),
+                        topK: e.target.value === '' ? 1 : parseInt(e.target.value),
                       }))
                     }
                     disabled={modelConfig.useTopKDefault}
