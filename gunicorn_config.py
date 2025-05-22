@@ -1,9 +1,9 @@
 from logging.config import dictConfig
 from app.core.config import settings
 
-loglevel = settings.log_level
-accesslog = settings.log_file
-errorlog = settings.log_file
+# loglevel = settings.log_level
+# accesslog = settings.log_file
+# errorlog = settings.log_file
 workers = 10  # Number of worker processes
 bind = "0.0.0.0:8000"
 worker_class = "uvicorn.workers.UvicornWorker"
@@ -22,7 +22,7 @@ dictConfig(
             "file": {
                 "level": "INFO",
                 "class": "logging.FileHandler",
-                "filename": settings.log_file,
+                "filename": "test",
                 "formatter": "default",
             },
         },

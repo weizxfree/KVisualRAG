@@ -8,11 +8,14 @@ from transformers.utils.import_utils import is_flash_attn_2_available
 from tqdm import tqdm
 from app.core.config import settings
 import numpy as np
+import os
 
 
 class ColBERTService:
     def __init__(self, model_path):
-        self.device = "mps"
+        self.device = "cuda:0"
+        # 使用绝对路径
+        print(f"Using model path: {model_path}")
         self.model = ColQwen2_5.from_pretrained(
             model_path,
             torch_dtype=torch.float16,
@@ -24,7 +27,8 @@ class ColBERTService:
         self.processor = cast(
             ColQwen2_5_Processor,
             ColQwen2_5_Processor.from_pretrained(
-                model_path, size={"shortest_edge": 56 * 56, "longest_edge": 28 * 28 * 768}
+                model_path, 
+                size={"shortest_edge": 56 * 56, "longest_edge": 28 * 28 * 768}
             ),
         )
 

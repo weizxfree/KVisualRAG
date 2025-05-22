@@ -99,7 +99,7 @@ async def register(
         username=user.username,
         selected_model=model_id,
         model_id=model_id,
-        model_name="qwen2.5-vl-32b-instruct",
+        model_name="qwen2.5-vl-72b-instruct",
         model_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         api_key="sk-default-xxx",
         base_used=[],

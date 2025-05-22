@@ -1,6 +1,6 @@
 import asyncio
 import json
-import aioredis
+import redis.asyncio as aioredis
 from fastapi import APIRouter, Depends, Request
 from fastapi.responses import StreamingResponse
 from sse_starlette.sse import EventSourceResponse

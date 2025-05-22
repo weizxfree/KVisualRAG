@@ -1,0 +1,1315 @@
+2025-05-21 09:41:13,953 - gunicorn.error - INFO - Starting gunicorn 23.0.0
+2025-05-21 09:41:13,954 - gunicorn.error - INFO - Listening at: http://0.0.0.0:8000 (854530)
+2025-05-21 09:41:13,954 - gunicorn.error - INFO - Using worker: uvicorn.workers.UvicornWorker
+2025-05-21 09:41:13,957 - gunicorn.error - INFO - Booting worker with pid: 854531
+2025-05-21 09:41:13,982 - gunicorn.error - INFO - Booting worker with pid: 854532
+2025-05-21 09:41:14,082 - gunicorn.error - INFO - Booting worker with pid: 854533
+2025-05-21 09:41:14,184 - gunicorn.error - INFO - Booting worker with pid: 854534
+2025-05-21 09:41:14,216 - gunicorn.error - INFO - Booting worker with pid: 854535
+2025-05-21 09:41:14,307 - gunicorn.error - INFO - Booting worker with pid: 854536
+2025-05-21 09:41:14,404 - gunicorn.error - INFO - Booting worker with pid: 854537
+2025-05-21 09:41:14,422 - gunicorn.error - INFO - Booting worker with pid: 854540
+2025-05-21 09:41:14,505 - gunicorn.error - INFO - Booting worker with pid: 854548
+2025-05-21 09:41:14,511 - gunicorn.error - INFO - Booting worker with pid: 854549
+2025-05-21 09:41:15,886 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:15,918 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:15,918 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:15,933 - uvicorn.error - INFO - Started server process [854532]
+2025-05-21 09:41:15,933 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:15,956 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:15,987 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,020 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,020 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,039 - uvicorn.error - INFO - Started server process [854531]
+2025-05-21 09:41:16,039 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,078 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,097 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,098 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,098 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,105 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,107 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,107 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,107 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,140 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,141 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,160 - uvicorn.error - INFO - Started server process [854533]
+2025-05-21 09:41:16,160 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,174 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,180 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,199 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,206 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,206 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,213 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,213 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,219 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,222 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,222 - uvicorn.error - INFO - Started server process [854534]
+2025-05-21 09:41:16,223 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,223 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,229 - uvicorn.error - INFO - Started server process [854535]
+2025-05-21 09:41:16,229 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,231 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,231 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,231 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,258 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,266 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,272 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,304 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,304 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,320 - uvicorn.error - INFO - Started server process [854536]
+2025-05-21 09:41:16,321 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,337 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,341 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,342 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,350 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,350 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,351 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,355 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,388 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,399 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,401 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,401 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,406 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,407 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,407 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,409 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,409 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,409 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,414 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,414 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,414 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,421 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,421 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,440 - uvicorn.error - INFO - Started server process [854540]
+2025-05-21 09:41:16,440 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,474 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,474 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,490 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,506 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,507 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,507 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,508 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,509 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,517 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,518 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,518 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,521 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 09:41:16,522 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,522 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,524 - uvicorn.error - INFO - Started server process [854549]
+2025-05-21 09:41:16,525 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,537 - uvicorn.error - INFO - Started server process [854548]
+2025-05-21 09:41:16,537 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,553 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 09:41:16,553 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 09:41:16,561 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,561 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,571 - uvicorn.error - INFO - Started server process [854537]
+2025-05-21 09:41:16,571 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 09:41:16,606 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 09:41:16,620 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,621 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,621 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,634 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,634 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,634 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,693 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,694 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,694 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,701 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,701 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,701 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,705 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,706 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,706 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,713 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,713 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,713 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:16,727 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 09:41:16,729 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 09:41:16,729 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 09:41:16,735 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 09:41:16,735 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:16,735 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 09:41:21,090 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-12cf2dde-bf1d-42c0-a419-bdec52bbe8ad
+2025-05-21 09:41:21,090 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-31836268-7de6-4beb-89b0-99d4e021bfde
+2025-05-21 09:41:21,091 - aiokafka.consumer.group_coordinator - INFO - Elected group leader -- performing partition assignments using roundrobin
+2025-05-21 09:41:21,090 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-72315686-0618-4c76-9469-4580ee8dcb5e
+2025-05-21 09:41:21,090 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-097770ca-ea49-4597-8276-a344cdce0560
+2025-05-21 09:41:21,090 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-258fdd0e-23ba-4a47-88be-f2a6fe65f3f5
+2025-05-21 09:41:21,091 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-469e95fb-5c22-4a11-9468-2022c74f453d
+2025-05-21 09:41:21,091 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-6c718cd5-de58-4b80-93e9-3695cb9c9788
+2025-05-21 09:41:21,091 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-bce0e60d-3c92-4bbe-95f4-7133472c0726
+2025-05-21 09:41:21,091 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-cea38e32-ca69-47fa-8bfd-f9337c974490
+2025-05-21 09:41:21,091 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 6) with member_id aiokafka-0.12.0-f36d12fb-ff7a-4374-b2b1-a5ad3f993cba
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 6
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions {TopicPartition(topic='task_generation', partition=0)} for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:21,096 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 09:41:26,064 - uvicorn.access - INFO - 127.0.0.1:44620 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 09:41:26,187 - uvicorn.access - INFO - 127.0.0.1:44620 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:41:26,287 - uvicorn.access - INFO - 127.0.0.1:44624 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 09:41:26,297 - uvicorn.access - INFO - 127.0.0.1:44620 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:41:26,302 - uvicorn.access - INFO - 127.0.0.1:44626 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:26,405 - uvicorn.access - INFO - 127.0.0.1:44620 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:26,424 - uvicorn.access - INFO - 127.0.0.1:44638 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:41:26,504 - uvicorn.access - INFO - 127.0.0.1:44626 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:26,510 - uvicorn.access - INFO - 127.0.0.1:44620 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:41:31,512 - uvicorn.access - INFO - 127.0.0.1:34448 - "GET /api/v1/chat/conversations/tom_652fa454-6080-415e-b8c3-f6f8b769b6cc HTTP/1.1" 200
+2025-05-21 09:41:31,713 - uvicorn.access - INFO - 127.0.0.1:34448 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:37,470 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/conversations/tom_652fa454-6080-415e-b8c3-f6f8b769b6cc HTTP/1.1" 200
+2025-05-21 09:41:37,682 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:41:37,791 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:38,307 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:41:38,928 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/conversations/tom_652fa454-6080-415e-b8c3-f6f8b769b6cc HTTP/1.1" 200
+2025-05-21 09:41:39,075 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:39,849 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:41:39,954 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:40,578 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/conversations/tom_652fa454-6080-415e-b8c3-f6f8b769b6cc HTTP/1.1" 200
+2025-05-21 09:41:40,745 - uvicorn.access - INFO - 127.0.0.1:34458 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:41,666 - uvicorn.access - INFO - 127.0.0.1:38958 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:41:41,772 - uvicorn.access - INFO - 127.0.0.1:38958 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:42,016 - uvicorn.access - INFO - 127.0.0.1:38958 - "GET /api/v1/chat/conversations/tom_652fa454-6080-415e-b8c3-f6f8b769b6cc HTTP/1.1" 200
+2025-05-21 09:41:42,155 - uvicorn.access - INFO - 127.0.0.1:38958 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:46,819 - uvicorn.access - INFO - 127.0.0.1:38962 - "DELETE /api/v1/chat/conversations/tom_652fa454-6080-415e-b8c3-f6f8b769b6cc HTTP/1.1" 200
+2025-05-21 09:41:46,956 - uvicorn.access - INFO - 127.0.0.1:38962 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:41:47,056 - uvicorn.access - INFO - 127.0.0.1:38962 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:41:47,069 - uvicorn.access - INFO - 127.0.0.1:38964 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:47,166 - uvicorn.access - INFO - 127.0.0.1:38962 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:41:48,261 - uvicorn.access - INFO - 127.0.0.1:38962 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:41:48,364 - uvicorn.access - INFO - 127.0.0.1:38962 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:42:07,775 - uvicorn.access - INFO - 127.0.0.1:49238 - "OPTIONS /api/v1/config/tom HTTP/1.1" 200
+2025-05-21 09:42:07,880 - uvicorn.access - INFO - 127.0.0.1:49238 - "POST /api/v1/config/tom HTTP/1.1" 201
+2025-05-21 09:42:10,730 - uvicorn.access - INFO - 127.0.0.1:49244 - "OPTIONS /api/v1/config/tom/tom_5ffae19e-75c9-40bc-a36a-f8484d705c54 HTTP/1.1" 200
+2025-05-21 09:42:10,846 - uvicorn.access - INFO - 127.0.0.1:49244 - "PATCH /api/v1/config/tom/tom_5ffae19e-75c9-40bc-a36a-f8484d705c54 HTTP/1.1" 200
+2025-05-21 09:42:15,151 - uvicorn.access - INFO - 127.0.0.1:32902 - "OPTIONS /api/v1/chat/conversations HTTP/1.1" 200
+2025-05-21 09:42:15,242 - uvicorn.access - INFO - 127.0.0.1:32902 - "POST /api/v1/chat/conversations HTTP/1.1" 200
+2025-05-21 09:42:15,334 - uvicorn.access - INFO - 127.0.0.1:32902 - "OPTIONS /api/v1/chat/conversations/config HTTP/1.1" 200
+2025-05-21 09:42:15,431 - uvicorn.access - INFO - 127.0.0.1:32902 - "POST /api/v1/chat/conversations/config HTTP/1.1" 200
+2025-05-21 09:42:15,464 - uvicorn.access - INFO - 127.0.0.1:32908 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:42:15,538 - uvicorn.access - INFO - 127.0.0.1:32902 - "POST /api/v1/sse/chat HTTP/1.1" 200
+2025-05-21 09:42:15,540 - app.core.logging - INFO - chat 'tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 uses system prompt 你是一名专业的文档审查员，需要根据知识库的内容进行回答。注意表格可能会跨页，要重点关注表格的完整性。以 markdown 输出，尽可能简洁明了。不清楚时候不要瞎编乱造。'
+2025-05-21 09:42:15,694 - httpx - INFO - HTTP Request: POST http://localhost:8005/embed_text "HTTP/1.1 200 OK"
+2025-05-21 09:42:29,489 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-21 09:43:04,964 - uvicorn.access - INFO - 127.0.0.1:51186 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:43:05,083 - uvicorn.access - INFO - 127.0.0.1:51186 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:43:06,511 - uvicorn.access - INFO - 127.0.0.1:51194 - "OPTIONS /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-21 09:43:06,612 - uvicorn.access - INFO - 127.0.0.1:51194 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-21 09:43:06,750 - uvicorn.access - INFO - 127.0.0.1:51194 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:43:07,009 - uvicorn.access - INFO - 127.0.0.1:51194 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-21 09:43:08,033 - uvicorn.access - INFO - 127.0.0.1:51194 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:43:08,140 - uvicorn.access - INFO - 127.0.0.1:51194 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:43:09,558 - uvicorn.access - INFO - 127.0.0.1:51194 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:43:09,646 - uvicorn.access - INFO - 127.0.0.1:51194 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:43:22,336 - uvicorn.access - INFO - 127.0.0.1:58774 - "PATCH /api/v1/config/tom/tom_5ffae19e-75c9-40bc-a36a-f8484d705c54 HTTP/1.1" 200
+2025-05-21 09:43:28,053 - app.core.logging - WARNING - 对话ID冲突: tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7
+2025-05-21 09:43:28,053 - uvicorn.access - INFO - 127.0.0.1:58784 - "POST /api/v1/chat/conversations HTTP/1.1" 200
+2025-05-21 09:43:28,201 - uvicorn.access - INFO - 127.0.0.1:58784 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:43:28,302 - uvicorn.access - INFO - 127.0.0.1:58792 - "POST /api/v1/chat/conversations/config HTTP/1.1" 200
+2025-05-21 09:43:28,403 - uvicorn.access - INFO - 127.0.0.1:58792 - "POST /api/v1/sse/chat HTTP/1.1" 200
+2025-05-21 09:43:28,405 - app.core.logging - INFO - chat 'tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 uses system prompt 你是一名专业的文档审查员，需要根据知识库的内容进行回答。注意表格可能会跨页，要重点关注表格的完整性。以 markdown 输出，尽可能简洁明了。不清楚时候不要瞎编乱造。'
+2025-05-21 09:43:28,555 - httpx - INFO - HTTP Request: POST http://localhost:8005/embed_text "HTTP/1.1 200 OK"
+2025-05-21 09:43:51,912 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-21 09:47:34,717 - uvicorn.access - INFO - 127.0.0.1:57736 - "OPTIONS /api/v1/chat/conversations/tom_0e67492d-f5d9-4451-9afd-744bb7bf2b8d HTTP/1.1" 200
+2025-05-21 09:47:34,822 - uvicorn.access - INFO - 127.0.0.1:57736 - "GET /api/v1/chat/conversations/tom_0e67492d-f5d9-4451-9afd-744bb7bf2b8d HTTP/1.1" 200
+2025-05-21 09:47:35,029 - uvicorn.access - INFO - 127.0.0.1:57736 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:47:35,211 - uvicorn.access - INFO - 127.0.0.1:57744 - "GET /api/v1/chat/conversations/tom_0e67492d-f5d9-4451-9afd-744bb7bf2b8d HTTP/1.1" 200
+2025-05-21 09:47:35,284 - uvicorn.access - INFO - 127.0.0.1:57736 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:47:36,613 - uvicorn.access - INFO - 127.0.0.1:57756 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-21 09:47:36,767 - uvicorn.access - INFO - 127.0.0.1:57756 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:47:37,651 - uvicorn.access - INFO - 127.0.0.1:57756 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:47:37,934 - uvicorn.access - INFO - 127.0.0.1:57756 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:48:24,265 - uvicorn.access - INFO - 127.0.0.1:36352 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 09:48:24,393 - uvicorn.access - INFO - 127.0.0.1:36352 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 09:48:24,496 - uvicorn.access - INFO - 127.0.0.1:36352 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 09:48:24,505 - uvicorn.access - INFO - 127.0.0.1:36364 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 09:48:24,508 - uvicorn.access - INFO - 127.0.0.1:36380 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 09:48:24,508 - uvicorn.access - INFO - 127.0.0.1:36396 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:48:24,518 - uvicorn.access - INFO - 127.0.0.1:36410 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:48:24,596 - uvicorn.access - INFO - 127.0.0.1:36364 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 09:48:24,609 - uvicorn.access - INFO - 127.0.0.1:36396 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:48:24,711 - uvicorn.access - INFO - 127.0.0.1:36364 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:48:24,721 - uvicorn.access - INFO - 127.0.0.1:36396 - "OPTIONS /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 09:48:24,837 - uvicorn.access - INFO - 127.0.0.1:36396 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 09:48:28,804 - uvicorn.access - INFO - 127.0.0.1:36424 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 09:48:28,926 - uvicorn.access - INFO - 127.0.0.1:36424 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:48:29,014 - uvicorn.access - INFO - 127.0.0.1:36440 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 09:48:29,014 - uvicorn.access - INFO - 127.0.0.1:36424 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:48:29,035 - uvicorn.access - INFO - 127.0.0.1:36450 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:48:29,102 - uvicorn.access - INFO - 127.0.0.1:36460 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:48:29,112 - uvicorn.access - INFO - 127.0.0.1:36424 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:48:29,122 - uvicorn.access - INFO - 127.0.0.1:36440 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:48:29,216 - uvicorn.access - INFO - 127.0.0.1:36460 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:49:46,104 - uvicorn.access - INFO - 127.0.0.1:48956 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:49:46,199 - uvicorn.access - INFO - 127.0.0.1:48956 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:49:51,292 - uvicorn.access - INFO - 127.0.0.1:34110 - "OPTIONS /api/v1/config/tom/tom_4ef8a1ee-8a2a-48da-843b-d41faf072b5f HTTP/1.1" 200
+2025-05-21 09:49:51,393 - uvicorn.access - INFO - 127.0.0.1:34110 - "PATCH /api/v1/config/tom/tom_4ef8a1ee-8a2a-48da-843b-d41faf072b5f HTTP/1.1" 200
+2025-05-21 09:49:52,765 - uvicorn.access - INFO - 127.0.0.1:34110 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:49:52,867 - uvicorn.access - INFO - 127.0.0.1:34110 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:50:04,505 - uvicorn.access - INFO - 127.0.0.1:47498 - "PATCH /api/v1/config/tom/tom_4ef8a1ee-8a2a-48da-843b-d41faf072b5f HTTP/1.1" 200
+2025-05-21 09:50:13,832 - uvicorn.access - INFO - 127.0.0.1:41798 - "OPTIONS /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:50:13,938 - uvicorn.access - INFO - 127.0.0.1:41798 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:50:14,178 - uvicorn.access - INFO - 127.0.0.1:41804 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-21 09:50:14,294 - uvicorn.access - INFO - 127.0.0.1:41804 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:50:18,206 - uvicorn.access - INFO - 127.0.0.1:41816 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:50:18,431 - uvicorn.access - INFO - 127.0.0.1:41816 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:50:21,772 - uvicorn.access - INFO - 127.0.0.1:50660 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-21 09:50:22,010 - uvicorn.access - INFO - 127.0.0.1:50660 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:50:22,211 - uvicorn.access - INFO - 127.0.0.1:50660 - "GET /api/v1/chat/conversations/tom_0e67492d-f5d9-4451-9afd-744bb7bf2b8d HTTP/1.1" 200
+2025-05-21 09:50:22,386 - uvicorn.access - INFO - 127.0.0.1:50660 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:50:24,243 - uvicorn.access - INFO - 127.0.0.1:50660 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:50:24,342 - uvicorn.access - INFO - 127.0.0.1:50660 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:50:24,350 - uvicorn.access - INFO - 127.0.0.1:50674 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:50:24,446 - uvicorn.access - INFO - 127.0.0.1:50674 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:50:25,879 - uvicorn.access - INFO - 127.0.0.1:50674 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:50:25,980 - uvicorn.access - INFO - 127.0.0.1:50674 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:50:34,165 - uvicorn.access - INFO - 127.0.0.1:37154 - "PATCH /api/v1/config/tom/tom_4ef8a1ee-8a2a-48da-843b-d41faf072b5f HTTP/1.1" 200
+2025-05-21 09:50:38,092 - uvicorn.access - INFO - 127.0.0.1:37164 - "POST /api/v1/chat/conversations HTTP/1.1" 200
+2025-05-21 09:50:38,200 - uvicorn.access - INFO - 127.0.0.1:37164 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:50:38,352 - uvicorn.access - INFO - 127.0.0.1:37174 - "POST /api/v1/chat/conversations/config HTTP/1.1" 200
+2025-05-21 09:50:38,443 - uvicorn.access - INFO - 127.0.0.1:37174 - "OPTIONS /api/v1/sse/chat HTTP/1.1" 200
+2025-05-21 09:50:38,537 - uvicorn.access - INFO - 127.0.0.1:37174 - "POST /api/v1/sse/chat HTTP/1.1" 200
+2025-05-21 09:50:38,539 - app.core.logging - INFO - chat 'tom_e468a58d-6ece-4bb6-aece-fd7581f9e738 uses system prompt 你是一名专业的文档审查员，需要根据知识库的内容进行回答。注意表格可能会跨页，要重点关注表格的完整性。以 markdown 输出，尽可能简洁明了。不清楚时候不要瞎编乱造。'
+2025-05-21 09:50:38,689 - httpx - INFO - HTTP Request: POST http://localhost:8005/embed_text "HTTP/1.1 200 OK"
+2025-05-21 09:51:21,526 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-21 09:51:42,566 - uvicorn.access - INFO - 127.0.0.1:55086 - "OPTIONS /api/v1/chat/conversations/tom_e468a58d-6ece-4bb6-aece-fd7581f9e738 HTTP/1.1" 200
+2025-05-21 09:51:42,666 - uvicorn.access - INFO - 127.0.0.1:55086 - "GET /api/v1/chat/conversations/tom_e468a58d-6ece-4bb6-aece-fd7581f9e738 HTTP/1.1" 200
+2025-05-21 09:51:46,605 - uvicorn.access - INFO - 127.0.0.1:55100 - "DELETE /api/v1/chat/conversations/tom_e468a58d-6ece-4bb6-aece-fd7581f9e738 HTTP/1.1" 200
+2025-05-21 09:51:46,722 - uvicorn.access - INFO - 127.0.0.1:55100 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:51:46,827 - uvicorn.access - INFO - 127.0.0.1:55100 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:51:46,835 - uvicorn.access - INFO - 127.0.0.1:55110 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:51:46,937 - uvicorn.access - INFO - 127.0.0.1:55100 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:51:48,133 - uvicorn.access - INFO - 127.0.0.1:55100 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:51:48,241 - uvicorn.access - INFO - 127.0.0.1:55100 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:52:13,713 - uvicorn.access - INFO - 127.0.0.1:38340 - "PATCH /api/v1/config/tom/tom_4ef8a1ee-8a2a-48da-843b-d41faf072b5f HTTP/1.1" 200
+2025-05-21 09:52:19,062 - uvicorn.access - INFO - 127.0.0.1:38356 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:52:19,210 - uvicorn.access - INFO - 127.0.0.1:38356 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:52:20,458 - uvicorn.access - INFO - 127.0.0.1:38356 - "PATCH /api/v1/config/tom/tom_4ef8a1ee-8a2a-48da-843b-d41faf072b5f HTTP/1.1" 200
+2025-05-21 09:52:22,579 - uvicorn.access - INFO - 127.0.0.1:38480 - "OPTIONS /api/v1/chat/conversations HTTP/1.1" 200
+2025-05-21 09:52:22,674 - uvicorn.access - INFO - 127.0.0.1:38480 - "POST /api/v1/chat/conversations HTTP/1.1" 200
+2025-05-21 09:52:22,763 - uvicorn.access - INFO - 127.0.0.1:38480 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:52:22,898 - uvicorn.access - INFO - 127.0.0.1:38482 - "OPTIONS /api/v1/chat/conversations/config HTTP/1.1" 200
+2025-05-21 09:52:23,006 - uvicorn.access - INFO - 127.0.0.1:38482 - "POST /api/v1/chat/conversations/config HTTP/1.1" 200
+2025-05-21 09:52:23,118 - uvicorn.access - INFO - 127.0.0.1:38482 - "POST /api/v1/sse/chat HTTP/1.1" 200
+2025-05-21 09:52:23,120 - app.core.logging - INFO - chat 'tom_f5573144-e584-4be0-97bb-99fe3ed205db uses system prompt 你是一名专业的文档审查员，需要根据知识库的内容进行回答。注意表格可能会跨页，要重点关注表格的完整性。以 markdown 输出，尽可能简洁明了。不清楚时候不要瞎编乱造。'
+2025-05-21 09:52:23,294 - httpx - INFO - HTTP Request: POST http://localhost:8005/embed_text "HTTP/1.1 200 OK"
+2025-05-21 09:52:49,382 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-21 09:57:02,534 - uvicorn.access - INFO - 127.0.0.1:50732 - "GET / HTTP/1.1" 404
+2025-05-21 09:57:38,301 - uvicorn.access - INFO - 127.0.0.1:56996 - "OPTIONS /api/v1/chat/conversations/tom_652fa454-6080-415e-b8c3-f6f8b769b6cc HTTP/1.1" 200
+2025-05-21 09:57:38,404 - app.core.logging - ERROR - HTTP Exception: Conversation not found
+2025-05-21 09:57:38,404 - uvicorn.access - INFO - 127.0.0.1:56996 - "GET /api/v1/chat/conversations/tom_652fa454-6080-415e-b8c3-f6f8b769b6cc HTTP/1.1" 404
+2025-05-21 09:57:42,580 - uvicorn.access - INFO - 127.0.0.1:45050 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:57:42,821 - uvicorn.access - INFO - 127.0.0.1:45050 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:57:42,927 - uvicorn.access - INFO - 127.0.0.1:45050 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:57:57,423 - uvicorn.access - INFO - 127.0.0.1:55030 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:58:02,427 - uvicorn.access - INFO - 127.0.0.1:48264 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:58:02,656 - uvicorn.access - INFO - 127.0.0.1:48264 - "OPTIONS /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-21 09:58:02,668 - uvicorn.access - INFO - 127.0.0.1:48268 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:58:02,758 - uvicorn.access - INFO - 127.0.0.1:48264 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-21 09:58:02,899 - uvicorn.access - INFO - 127.0.0.1:48264 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:58:03,504 - uvicorn.access - INFO - 127.0.0.1:48264 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-21 09:58:03,723 - uvicorn.access - INFO - 127.0.0.1:48264 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:58:05,360 - uvicorn.access - INFO - 127.0.0.1:48264 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:58:05,456 - uvicorn.access - INFO - 127.0.0.1:48264 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 09:58:05,507 - uvicorn.access - INFO - 127.0.0.1:48276 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:58:05,603 - uvicorn.access - INFO - 127.0.0.1:48264 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 09:58:07,289 - uvicorn.access - INFO - 127.0.0.1:48288 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 09:58:07,389 - uvicorn.access - INFO - 127.0.0.1:48288 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:00:50,758 - uvicorn.access - INFO - 127.0.0.1:55530 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:00:50,956 - uvicorn.access - INFO - 127.0.0.1:57078 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:00:51,040 - uvicorn.access - INFO - 127.0.0.1:57078 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:00:51,124 - uvicorn.access - INFO - 127.0.0.1:57078 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:00:52,594 - uvicorn.access - INFO - 127.0.0.1:57078 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:00:52,681 - uvicorn.access - INFO - 127.0.0.1:57078 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:00:52,696 - uvicorn.access - INFO - 127.0.0.1:57080 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:00:52,791 - uvicorn.access - INFO - 127.0.0.1:57078 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:00:52,800 - uvicorn.access - INFO - 127.0.0.1:57080 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:00:52,875 - uvicorn.access - INFO - 127.0.0.1:57078 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:00:52,888 - uvicorn.access - INFO - 127.0.0.1:57082 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:00:52,899 - uvicorn.access - INFO - 127.0.0.1:57090 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:00:52,988 - uvicorn.access - INFO - 127.0.0.1:57082 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:00:52,995 - uvicorn.access - INFO - 127.0.0.1:57078 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:00:53,015 - uvicorn.access - INFO - 127.0.0.1:57090 - "OPTIONS /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 10:00:53,113 - uvicorn.access - INFO - 127.0.0.1:57090 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 10:01:40,468 - uvicorn.access - INFO - 127.0.0.1:45810 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:01:40,547 - uvicorn.access - INFO - 127.0.0.1:45810 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:01:40,661 - uvicorn.access - INFO - 127.0.0.1:45824 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:01:40,663 - uvicorn.access - INFO - 127.0.0.1:45838 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:01:40,749 - uvicorn.access - INFO - 127.0.0.1:45810 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:01:40,756 - uvicorn.access - INFO - 127.0.0.1:45824 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:01:40,758 - uvicorn.access - INFO - 127.0.0.1:45838 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:01:40,855 - uvicorn.access - INFO - 127.0.0.1:45824 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:01:42,318 - uvicorn.access - INFO - 127.0.0.1:45824 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:01:42,407 - uvicorn.access - INFO - 127.0.0.1:45838 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:01:42,420 - uvicorn.access - INFO - 127.0.0.1:45810 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:01:42,425 - uvicorn.access - INFO - 127.0.0.1:45824 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:01:42,508 - uvicorn.access - INFO - 127.0.0.1:45838 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:01:42,525 - uvicorn.access - INFO - 127.0.0.1:52918 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:01:42,528 - uvicorn.access - INFO - 127.0.0.1:45824 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 10:06:53,139 - uvicorn.access - INFO - 127.0.0.1:39360 - "OPTIONS /api/v1/base/upload/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0 HTTP/1.1" 200
+2025-05-21 10:07:11,619 - app.core.logging - INFO - Generated presigned URL: http://127.0.0.1:9110/ai-chat/tom_%E6%9C%B1%E5%BC%80%E6%B2%9F_682da5ce75bc668c1eddf45b.pdf?AWSAccessKeyId=miniouser&Signature=lShU3UJzd7Z%2FY4txDSEpvp18GKM%3D&Expires=4901422031
+2025-05-21 10:07:11,623 - app.core.logging - INFO - send {task_id} to kafka, file name {file.filename}, knowledge id {knowledge_db_id}.
+2025-05-21 10:07:11,623 - app.core.logging - INFO - Task tom_7eaa2e5f-5fbb-43eb-aeb9-c64812bb11fd message sent to Kafka: {'task_id': 'tom_7eaa2e5f-5fbb-43eb-aeb9-c64812bb11fd', 'username': 'tom', 'knowledge_db_id': 'tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0', 'file_meta': {'file_id': 'tom_d26b7225-086d-4ec7-9b25-b40136006374', 'minio_filename': 'tom_朱开沟_682da5ce75bc668c1eddf45b.pdf', 'original_filename': '朱开沟.pdf'}} with priority: 1
+2025-05-21 10:07:11,631 - app.core.logging - INFO - kafka start consume
+2025-05-21 10:07:11,645 - uvicorn.access - INFO - 127.0.0.1:39360 - "POST /api/v1/base/upload/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0 HTTP/1.1" 200
+2025-05-21 10:07:11,735 - uvicorn.access - INFO - 127.0.0.1:39360 - "OPTIONS /api/v1/sse/task/tom/tom_7eaa2e5f-5fbb-43eb-aeb9-c64812bb11fd HTTP/1.1" 200
+2025-05-21 10:07:11,796 - app.core.logging - INFO - Get minio object: tom_朱开沟_682da5ce75bc668c1eddf45b.pdf
+2025-05-21 10:07:11,823 - uvicorn.access - INFO - 127.0.0.1:39360 - "GET /api/v1/sse/task/tom/tom_7eaa2e5f-5fbb-43eb-aeb9-c64812bb11fd HTTP/1.1" 200
+2025-05-21 10:07:22,787 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:22,787 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:22,788 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:23,493 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:23,494 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:23,494 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:24,001 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:24,001 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:24,001 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:24,005 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:24,006 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:24,006 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:24,006 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:24,006 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:24,006 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:24,006 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:24,006 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:24,006 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:24,009 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:24,010 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:24,010 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:24,014 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:24,015 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:24,015 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:24,017 - aiokafka.consumer.group_coordinator - WARNING - Heartbeat failed for group task_consumer_group because it is rebalancing
+2025-05-21 10:07:24,017 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions frozenset() for group task_consumer_group
+2025-05-21 10:07:24,017 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 10:07:24,020 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-31836268-7de6-4beb-89b0-99d4e021bfde
+2025-05-21 10:07:24,020 - aiokafka.consumer.group_coordinator - INFO - Elected group leader -- performing partition assignments using roundrobin
+2025-05-21 10:07:24,020 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-72315686-0618-4c76-9469-4580ee8dcb5e
+2025-05-21 10:07:24,020 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-469e95fb-5c22-4a11-9468-2022c74f453d
+2025-05-21 10:07:24,022 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-12cf2dde-bf1d-42c0-a419-bdec52bbe8ad
+2025-05-21 10:07:24,022 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-6c718cd5-de58-4b80-93e9-3695cb9c9788
+2025-05-21 10:07:24,022 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-cea38e32-ca69-47fa-8bfd-f9337c974490
+2025-05-21 10:07:24,022 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-bce0e60d-3c92-4bbe-95f4-7133472c0726
+2025-05-21 10:07:24,022 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-f36d12fb-ff7a-4374-b2b1-a5ad3f993cba
+2025-05-21 10:07:24,022 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 7) with member_id aiokafka-0.12.0-258fdd0e-23ba-4a47-88be-f2a6fe65f3f5
+2025-05-21 10:07:24,024 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,024 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,024 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,025 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 10:07:24,025 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 10:07:24,025 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 10:07:24,025 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,025 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,026 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,026 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,026 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 10:07:24,026 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 10:07:24,026 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,026 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 7
+2025-05-21 10:07:24,026 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 10:07:24,026 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions {TopicPartition(topic='task_generation', partition=0)} for group task_consumer_group
+2025-05-21 10:07:24,027 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 10:07:24,027 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 10:17:18,313 - uvicorn.access - INFO - 127.0.0.1:41600 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:17:18,320 - uvicorn.access - INFO - 127.0.0.1:41608 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:17:18,401 - uvicorn.access - INFO - 127.0.0.1:41600 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:17:18,495 - uvicorn.access - INFO - 127.0.0.1:41608 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:17:18,512 - uvicorn.access - INFO - 127.0.0.1:41600 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:17:18,625 - uvicorn.access - INFO - 127.0.0.1:41614 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:17:18,627 - uvicorn.access - INFO - 127.0.0.1:41622 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:17:18,627 - uvicorn.access - INFO - 127.0.0.1:41628 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:17:18,641 - uvicorn.access - INFO - 127.0.0.1:41600 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:17:18,719 - uvicorn.access - INFO - 127.0.0.1:41614 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:17:18,736 - uvicorn.access - INFO - 127.0.0.1:41628 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:17:18,805 - uvicorn.access - INFO - 127.0.0.1:41600 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:17:18,826 - uvicorn.access - INFO - 127.0.0.1:41614 - "OPTIONS /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 10:17:18,923 - uvicorn.access - INFO - 127.0.0.1:41614 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 10:18:29,046 - uvicorn.access - INFO - 127.0.0.1:46620 - "OPTIONS /api/v1/base/file/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/tom_d26b7225-086d-4ec7-9b25-b40136006374 HTTP/1.1" 200
+2025-05-21 10:18:31,926 - uvicorn.access - INFO - 127.0.0.1:36032 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:32,018 - uvicorn.access - INFO - 127.0.0.1:36032 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:32,144 - uvicorn.access - INFO - 127.0.0.1:36046 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:32,151 - uvicorn.access - INFO - 127.0.0.1:36074 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:32,154 - uvicorn.access - INFO - 127.0.0.1:36076 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:32,161 - uvicorn.access - INFO - 127.0.0.1:36062 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:32,240 - uvicorn.access - INFO - 127.0.0.1:36046 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:32,253 - uvicorn.access - INFO - 127.0.0.1:36062 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:18:32,254 - uvicorn.access - INFO - 127.0.0.1:36076 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:32,337 - uvicorn.access - INFO - 127.0.0.1:36074 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:32,340 - uvicorn.access - INFO - 127.0.0.1:36076 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:18:32,351 - uvicorn.access - INFO - 127.0.0.1:36062 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:18:32,432 - uvicorn.access - INFO - 127.0.0.1:36046 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:32,444 - uvicorn.access - INFO - 127.0.0.1:36076 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:18:34,280 - uvicorn.access - INFO - 127.0.0.1:36078 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:34,385 - uvicorn.access - INFO - 127.0.0.1:36078 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:18:34,478 - uvicorn.access - INFO - 127.0.0.1:36086 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:18:34,486 - uvicorn.access - INFO - 127.0.0.1:36094 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:34,495 - uvicorn.access - INFO - 127.0.0.1:36106 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:34,578 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:34,598 - uvicorn.access - INFO - 127.0.0.1:36094 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 10:18:35,147 - uvicorn.access - INFO - 127.0.0.1:36094 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:35,244 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:35,259 - uvicorn.access - INFO - 127.0.0.1:36094 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:35,262 - uvicorn.access - INFO - 127.0.0.1:36106 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:35,357 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:35,359 - uvicorn.access - INFO - 127.0.0.1:36094 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:18:35,369 - uvicorn.access - INFO - 127.0.0.1:36078 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:35,450 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:18:36,277 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:36,366 - uvicorn.access - INFO - 127.0.0.1:36078 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:36,384 - uvicorn.access - INFO - 127.0.0.1:36086 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:18:36,384 - uvicorn.access - INFO - 127.0.0.1:36094 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:18:36,385 - uvicorn.access - INFO - 127.0.0.1:36106 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:36,487 - uvicorn.access - INFO - 127.0.0.1:36094 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:36,504 - uvicorn.access - INFO - 127.0.0.1:36106 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 10:18:37,381 - uvicorn.access - INFO - 127.0.0.1:36106 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:37,467 - uvicorn.access - INFO - 127.0.0.1:36094 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:37,487 - uvicorn.access - INFO - 127.0.0.1:36106 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:37,487 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:37,580 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:37,581 - uvicorn.access - INFO - 127.0.0.1:36094 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 10:18:37,587 - uvicorn.access - INFO - 127.0.0.1:36106 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:18:37,692 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 10:18:38,350 - uvicorn.access - INFO - 127.0.0.1:36106 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:38,454 - uvicorn.access - INFO - 127.0.0.1:36086 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 10:18:38,471 - uvicorn.access - INFO - 127.0.0.1:36106 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:18:38,471 - uvicorn.access - INFO - 127.0.0.1:36094 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 10:18:38,595 - uvicorn.access - INFO - 127.0.0.1:36112 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:38,685 - uvicorn.access - INFO - 127.0.0.1:36112 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 10:18:38,799 - uvicorn.access - INFO - 127.0.0.1:36114 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-21 10:18:44,535 - gunicorn.error - INFO - Handling signal: int
+2025-05-21 10:18:44,557 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,558 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,586 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,586 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,587 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,587 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,596 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,596 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,597 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,598 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,605 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,606 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,608 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,609 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,625 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,625 - uvicorn.error - INFO - Shutting down
+2025-05-21 10:18:44,625 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,625 - gunicorn.error - INFO - Error while closing socket [Errno 9] Bad file descriptor
+2025-05-21 10:18:44,658 - uvicorn.error - INFO - Waiting for connections to close. (CTRL+C to force quit)
+2025-05-21 10:18:44,687 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-05-21 10:18:44,688 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-05-21 10:18:44,692 - app.core.logging - INFO - FastAPI Closed
+2025-05-21 10:18:44,692 - uvicorn.error - INFO - Application shutdown complete.
+2025-05-21 10:18:44,692 - uvicorn.error - INFO - Finished server process [854535]
+2025-05-21 10:18:44,692 - app.core.logging - INFO - FastAPI Closed
+2025-05-21 10:18:44,693 - uvicorn.error - INFO - Application shutdown complete.
+2025-05-21 10:18:44,693 - uvicorn.error - INFO - Finished server process [854532]
+2025-05-21 10:18:44,697 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-05-21 10:18:44,699 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-05-21 10:18:44,701 - app.core.logging - INFO - FastAPI Closed
+2025-05-21 10:18:44,701 - uvicorn.error - INFO - Application shutdown complete.
+2025-05-21 10:18:44,702 - uvicorn.error - INFO - Finished server process [854533]
+2025-05-21 10:18:44,706 - app.core.logging - INFO - FastAPI Closed
+2025-05-21 10:18:44,706 - uvicorn.error - INFO - Application shutdown complete.
+2025-05-21 10:18:44,706 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-05-21 10:18:44,706 - uvicorn.error - INFO - Finished server process [854531]
+2025-05-21 10:18:44,709 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-05-21 10:18:44,711 - app.core.logging - INFO - FastAPI Closed
+2025-05-21 10:18:44,711 - uvicorn.error - INFO - Application shutdown complete.
+2025-05-21 10:18:44,711 - uvicorn.error - INFO - Finished server process [854549]
+2025-05-21 10:18:44,715 - app.core.logging - INFO - FastAPI Closed
+2025-05-21 10:18:44,715 - uvicorn.error - INFO - Application shutdown complete.
+2025-05-21 10:18:44,715 - uvicorn.error - INFO - Finished server process [854548]
+2025-05-21 10:18:44,723 - gunicorn.error - ERROR - Worker (pid:854535) was sent SIGINT!
+2025-05-21 10:18:44,725 - gunicorn.error - ERROR - Worker (pid:854532) was sent SIGINT!
+2025-05-21 10:18:44,726 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-05-21 10:18:44,726 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-05-21 10:18:44,731 - app.core.logging - INFO - FastAPI Closed
+2025-05-21 10:18:44,731 - uvicorn.error - INFO - Application shutdown complete.
+2025-05-21 10:18:44,731 - uvicorn.error - INFO - Finished server process [854536]
+2025-05-21 10:18:44,731 - app.core.logging - INFO - FastAPI Closed
+2025-05-21 10:18:44,732 - uvicorn.error - INFO - Application shutdown complete.
+2025-05-21 10:18:44,732 - uvicorn.error - INFO - Finished server process [854540]
+2025-05-21 10:18:44,733 - gunicorn.error - ERROR - Worker (pid:854531) was sent SIGINT!
+2025-05-21 10:18:44,733 - gunicorn.error - ERROR - Worker (pid:854533) was sent SIGINT!
+2025-05-21 10:18:44,742 - gunicorn.error - ERROR - Worker (pid:854549) was sent SIGINT!
+2025-05-21 10:18:44,758 - gunicorn.error - ERROR - Worker (pid:854536) was sent SIGINT!
+2025-05-21 10:18:44,769 - gunicorn.error - ERROR - Worker (pid:854548) was sent SIGINT!
+2025-05-21 10:18:44,780 - gunicorn.error - ERROR - Worker (pid:854540) was sent SIGINT!
+2025-05-21 10:18:48,560 - uvicorn.error - INFO - Finished server process [854537]
+2025-05-21 10:18:48,624 - gunicorn.error - ERROR - Worker (pid:854537) was sent SIGINT!
+2025-05-21 10:19:18,035 - gunicorn.error - ERROR - Worker (pid:854534) was sent SIGKILL! Perhaps out of memory?
+2025-05-21 10:19:18,058 - gunicorn.error - INFO - Shutting down: Master
+2025-05-21 11:08:49,099 - gunicorn.error - INFO - Starting gunicorn 23.0.0
+2025-05-21 11:08:49,099 - gunicorn.error - INFO - Listening at: http://0.0.0.0:8000 (957273)
+2025-05-21 11:08:49,099 - gunicorn.error - INFO - Using worker: uvicorn.workers.UvicornWorker
+2025-05-21 11:08:49,102 - gunicorn.error - INFO - Booting worker with pid: 957283
+2025-05-21 11:08:49,167 - gunicorn.error - INFO - Booting worker with pid: 957284
+2025-05-21 11:08:49,181 - gunicorn.error - INFO - Booting worker with pid: 957285
+2025-05-21 11:08:49,280 - gunicorn.error - INFO - Booting worker with pid: 957286
+2025-05-21 11:08:49,350 - gunicorn.error - INFO - Booting worker with pid: 957287
+2025-05-21 11:08:49,392 - gunicorn.error - INFO - Booting worker with pid: 957288
+2025-05-21 11:08:49,492 - gunicorn.error - INFO - Booting worker with pid: 957292
+2025-05-21 11:08:49,566 - gunicorn.error - INFO - Booting worker with pid: 957293
+2025-05-21 11:08:49,633 - gunicorn.error - INFO - Booting worker with pid: 957297
+2025-05-21 11:08:49,717 - gunicorn.error - INFO - Booting worker with pid: 957298
+2025-05-21 11:08:51,107 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,140 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,140 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,156 - uvicorn.error - INFO - Started server process [957284]
+2025-05-21 11:08:51,156 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,173 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,184 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,200 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,208 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,209 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,216 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,216 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,227 - uvicorn.error - INFO - Started server process [957285]
+2025-05-21 11:08:51,227 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,233 - uvicorn.error - INFO - Started server process [957283]
+2025-05-21 11:08:51,233 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,264 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,265 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,271 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,275 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,297 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,297 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,306 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,306 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,314 - uvicorn.error - INFO - Started server process [957286]
+2025-05-21 11:08:51,315 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,322 - uvicorn.error - INFO - Started server process [957287]
+2025-05-21 11:08:51,323 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,329 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,351 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,358 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,361 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,361 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,377 - uvicorn.error - INFO - Started server process [957288]
+2025-05-21 11:08:51,377 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,397 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,401 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,403 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,412 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,413 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,417 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,418 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,429 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,429 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,429 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,431 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,433 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,433 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,434 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,434 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,434 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,452 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,453 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,453 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,464 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,496 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,496 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,499 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,503 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,503 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,512 - uvicorn.error - INFO - Started server process [957292]
+2025-05-21 11:08:51,512 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,520 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,520 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,520 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,526 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,528 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,528 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,544 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,546 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,546 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,547 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,547 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,547 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,554 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,560 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,560 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,560 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,611 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,612 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,643 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,643 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,646 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,646 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,658 - uvicorn.error - INFO - Started server process [957293]
+2025-05-21 11:08:51,659 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,667 - uvicorn.error - INFO - Started server process [957297]
+2025-05-21 11:08:51,667 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,671 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:08:51,695 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,703 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:08:51,703 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:08:51,704 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,705 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,706 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,706 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,719 - uvicorn.error - INFO - Started server process [957298]
+2025-05-21 11:08:51,720 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:08:51,725 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,726 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,726 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,756 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:08:51,819 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,820 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,821 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,836 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,836 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,836 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,840 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,841 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,842 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,856 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,856 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,857 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:51,898 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:08:51,899 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:08:51,900 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:08:51,914 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:08:51,914 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:51,914 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:08:54,472 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-daa506da-393b-4070-8f44-d0066cc86ce5
+2025-05-21 11:08:54,472 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-e8e6afac-0e16-47f5-92c3-f58441efad25
+2025-05-21 11:08:54,473 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-a4cb3cbb-2475-4dae-ba62-740be533416f
+2025-05-21 11:08:54,473 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-493851bd-365e-4284-86ff-3f1a7bbccddb
+2025-05-21 11:08:54,474 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-c87ed118-6cd6-46fa-bac7-ab4b8445c79b
+2025-05-21 11:08:54,474 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-f3d58a86-ce5f-4f52-b3bf-e28bff72139c
+2025-05-21 11:08:54,476 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-869fa4c0-de69-43b0-9d94-e3ea7cd8ec32
+2025-05-21 11:08:54,476 - aiokafka.consumer.group_coordinator - INFO - Elected group leader -- performing partition assignments using roundrobin
+2025-05-21 11:08:54,477 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-45a3a81d-bc12-44ef-b616-21168675041e
+2025-05-21 11:08:54,477 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-effb35e1-b7e0-47a5-8330-40edf4e8bf64
+2025-05-21 11:08:54,477 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 9) with member_id aiokafka-0.12.0-263d5859-2159-423b-8b0e-73fdf84d6af0
+2025-05-21 11:08:54,518 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,518 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,518 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,518 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,518 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,518 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,518 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 9
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:08:54,519 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions {TopicPartition(topic='task_generation', partition=0)} for group task_consumer_group
+2025-05-21 11:10:05,661 - uvicorn.access - INFO - 127.0.0.1:51876 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:10:05,666 - uvicorn.access - INFO - 127.0.0.1:51888 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:10:05,755 - uvicorn.access - INFO - 127.0.0.1:51876 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:10:05,852 - uvicorn.access - INFO - 127.0.0.1:51888 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:10:05,872 - uvicorn.access - INFO - 127.0.0.1:51876 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 11:10:05,964 - uvicorn.access - INFO - 127.0.0.1:51900 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 11:10:05,966 - uvicorn.access - INFO - 127.0.0.1:51902 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 11:10:05,974 - uvicorn.access - INFO - 127.0.0.1:51914 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 11:10:05,978 - uvicorn.access - INFO - 127.0.0.1:51928 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 11:10:05,979 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:10:05,980 - uvicorn.access - INFO - 127.0.0.1:51876 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:10:06,050 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:10:06,050 - uvicorn.access - INFO - 127.0.0.1:51900 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:10:06,146 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:10:06,146 - uvicorn.access - INFO - 127.0.0.1:51914 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:10:06,243 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:10:06,243 - uvicorn.access - INFO - 127.0.0.1:51900 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:10:06,338 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:10:06,338 - uvicorn.access - INFO - 127.0.0.1:51914 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:10:25,971 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:10:25,972 - uvicorn.access - INFO - 127.0.0.1:44356 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:10:27,889 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:10:27,890 - uvicorn.access - INFO - 127.0.0.1:44356 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:14:07,685 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:14:07,686 - uvicorn.access - INFO - 127.0.0.1:48164 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:14:15,387 - uvicorn.access - INFO - 127.0.0.1:33918 - "OPTIONS /api/v1/config/tom HTTP/1.1" 200
+2025-05-21 11:14:15,481 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:14:15,481 - uvicorn.access - INFO - 127.0.0.1:33918 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:14:16,457 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:14:16,457 - uvicorn.access - INFO - 127.0.0.1:33918 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:14:18,404 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:14:18,405 - uvicorn.access - INFO - 127.0.0.1:33930 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:14:19,138 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:14:19,139 - uvicorn.access - INFO - 127.0.0.1:33930 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:14:19,352 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:14:19,352 - uvicorn.access - INFO - 127.0.0.1:33930 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:14:19,854 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:14:19,854 - uvicorn.access - INFO - 127.0.0.1:33930 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:14:20,111 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:14:20,111 - uvicorn.access - INFO - 127.0.0.1:33930 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:15:01,416 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:15:01,416 - uvicorn.access - INFO - 127.0.0.1:39058 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:15:51,263 - uvicorn.access - INFO - 127.0.0.1:43090 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:15:51,373 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:15:51,373 - uvicorn.access - INFO - 127.0.0.1:43090 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:15:51,456 - uvicorn.access - INFO - 127.0.0.1:43102 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:15:51,477 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:15:51,478 - uvicorn.access - INFO - 127.0.0.1:43106 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:15:51,581 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:15:51,582 - uvicorn.access - INFO - 127.0.0.1:43102 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:15:51,584 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:15:51,584 - uvicorn.access - INFO - 127.0.0.1:43118 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:15:51,683 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:15:51,683 - uvicorn.access - INFO - 127.0.0.1:43118 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:16:35,817 - uvicorn.access - INFO - 127.0.0.1:34374 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:16:35,916 - uvicorn.access - INFO - 127.0.0.1:34374 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:16:36,044 - uvicorn.access - INFO - 127.0.0.1:34390 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 11:16:36,053 - uvicorn.access - INFO - 127.0.0.1:34398 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-21 11:16:36,060 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:36,060 - uvicorn.access - INFO - 127.0.0.1:34400 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:16:36,127 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:36,127 - uvicorn.access - INFO - 127.0.0.1:34390 - "POST /api/v1/base/users/tom/files HTTP/1.1" 404
+2025-05-21 11:16:36,166 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:36,166 - uvicorn.access - INFO - 127.0.0.1:34400 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:16:36,421 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:36,421 - uvicorn.access - INFO - 127.0.0.1:34398 - "POST /api/v1/base/users/tom/files HTTP/1.1" 404
+2025-05-21 11:16:39,590 - uvicorn.access - INFO - 127.0.0.1:34410 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:16:39,675 - uvicorn.access - INFO - 127.0.0.1:34410 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:16:39,814 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:39,815 - uvicorn.access - INFO - 127.0.0.1:34418 - "POST /api/v1/base/users/tom/files HTTP/1.1" 404
+2025-05-21 11:16:39,817 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:39,817 - uvicorn.access - INFO - 127.0.0.1:34420 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:16:39,826 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:39,827 - uvicorn.access - INFO - 127.0.0.1:34430 - "POST /api/v1/base/users/tom/files HTTP/1.1" 404
+2025-05-21 11:16:39,905 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:39,905 - uvicorn.access - INFO - 127.0.0.1:34418 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:16:51,663 - uvicorn.access - INFO - 127.0.0.1:49638 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:16:51,770 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:51,771 - uvicorn.access - INFO - 127.0.0.1:49638 - "POST /api/v1/base/users/tom/files HTTP/1.1" 404
+2025-05-21 11:16:51,866 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:51,867 - uvicorn.access - INFO - 127.0.0.1:49650 - "POST /api/v1/base/users/tom/files HTTP/1.1" 404
+2025-05-21 11:16:51,873 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:51,873 - uvicorn.access - INFO - 127.0.0.1:49658 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:16:51,873 - uvicorn.access - INFO - 127.0.0.1:49674 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:16:51,955 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:16:51,955 - uvicorn.access - INFO - 127.0.0.1:49650 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:17:00,576 - uvicorn.access - INFO - 127.0.0.1:49686 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:17:00,699 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:00,699 - uvicorn.access - INFO - 127.0.0.1:49686 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:17:00,779 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:00,779 - uvicorn.access - INFO - 127.0.0.1:49694 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:17:00,781 - uvicorn.access - INFO - 127.0.0.1:49700 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:17:00,905 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:00,906 - uvicorn.access - INFO - 127.0.0.1:50422 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:17:01,135 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:01,135 - uvicorn.access - INFO - 127.0.0.1:50422 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:17:01,226 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:01,226 - uvicorn.access - INFO - 127.0.0.1:49694 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:17:02,818 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:02,818 - uvicorn.access - INFO - 127.0.0.1:50426 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:17:12,769 - uvicorn.access - INFO - 127.0.0.1:40378 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:17:12,909 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:12,909 - uvicorn.access - INFO - 127.0.0.1:40378 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:17:12,973 - uvicorn.access - INFO - 127.0.0.1:40394 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:17:13,001 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:13,001 - uvicorn.access - INFO - 127.0.0.1:40398 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:17:13,088 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:13,088 - uvicorn.access - INFO - 127.0.0.1:40394 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:17:13,145 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:13,145 - uvicorn.access - INFO - 127.0.0.1:40412 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:17:13,187 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:13,188 - uvicorn.access - INFO - 127.0.0.1:40398 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 404
+2025-05-21 11:17:23,221 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:23,221 - uvicorn.access - INFO - 127.0.0.1:37682 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:17:28,106 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:28,107 - uvicorn.access - INFO - 127.0.0.1:37686 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:17:28,737 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:28,737 - uvicorn.access - INFO - 127.0.0.1:37686 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:17:29,388 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:29,389 - uvicorn.access - INFO - 127.0.0.1:37686 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:17:29,591 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:29,591 - uvicorn.access - INFO - 127.0.0.1:37686 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:17:29,779 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:29,780 - uvicorn.access - INFO - 127.0.0.1:37686 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:17:29,961 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:29,961 - uvicorn.access - INFO - 127.0.0.1:37686 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:17:33,986 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:33,986 - uvicorn.access - INFO - 127.0.0.1:32946 - "POST /api/v1/config/tom HTTP/1.1" 404
+2025-05-21 11:17:44,472 - app.core.logging - ERROR - HTTP Exception: Invalid or expired token
+2025-05-21 11:17:44,472 - uvicorn.access - INFO - 127.0.0.1:54426 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 404
+2025-05-21 11:18:00,477 - sqlalchemy.engine.Engine - INFO - SELECT DATABASE()
+2025-05-21 11:18:00,477 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-05-21 11:18:00,479 - sqlalchemy.engine.Engine - INFO - SELECT @@sql_mode
+2025-05-21 11:18:00,479 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-05-21 11:18:00,480 - sqlalchemy.engine.Engine - INFO - SELECT @@lower_case_table_names
+2025-05-21 11:18:00,481 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-05-21 11:18:00,483 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-05-21 11:18:00,489 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = %s
+2025-05-21 11:18:00,489 - sqlalchemy.engine.Engine - INFO - [generated in 0.00044s] ('tom',)
+2025-05-21 11:18:00,508 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/administrator/KnowFlowVisualRAG/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-05-21 11:18:00,911 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-05-21 11:18:00,912 - uvicorn.access - INFO - 127.0.0.1:44348 - "POST /api/v1/auth/login HTTP/1.1" 200
+2025-05-21 11:18:01,313 - uvicorn.access - INFO - 127.0.0.1:44348 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:18:01,419 - uvicorn.access - INFO - 127.0.0.1:44348 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 11:18:01,510 - uvicorn.access - INFO - 127.0.0.1:44348 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 11:18:01,520 - uvicorn.access - INFO - 127.0.0.1:54510 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 11:18:01,534 - uvicorn.access - INFO - 127.0.0.1:54524 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-21 11:18:01,592 - uvicorn.access - INFO - 127.0.0.1:44348 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 11:18:01,598 - uvicorn.access - INFO - 127.0.0.1:54526 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 11:18:01,681 - uvicorn.access - INFO - 127.0.0.1:44348 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 11:18:01,721 - uvicorn.access - INFO - 127.0.0.1:54530 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-21 11:18:01,771 - uvicorn.access - INFO - 127.0.0.1:54526 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 11:18:04,545 - uvicorn.access - INFO - 127.0.0.1:54540 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-21 11:18:04,659 - uvicorn.access - INFO - 127.0.0.1:54540 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-21 11:18:20,409 - gunicorn.error - INFO - Handling signal: winch
+2025-05-21 11:18:21,343 - gunicorn.error - INFO - Handling signal: winch
+2025-05-21 11:18:36,183 - gunicorn.error - INFO - Handling signal: winch
+2025-05-21 11:21:09,954 - gunicorn.error - INFO - Handling signal: hup
+2025-05-21 11:21:09,955 - gunicorn.error - INFO - Hang up: Master
+2025-05-21 11:21:09,966 - gunicorn.error - INFO - Booting worker with pid: 971926
+2025-05-21 11:21:09,967 - gunicorn.error - INFO - Booting worker with pid: 971927
+2025-05-21 11:21:09,970 - gunicorn.error - INFO - Booting worker with pid: 971928
+2025-05-21 11:21:09,971 - gunicorn.error - INFO - Booting worker with pid: 971933
+2025-05-21 11:21:09,973 - gunicorn.error - INFO - Booting worker with pid: 971934
+2025-05-21 11:21:09,974 - gunicorn.error - INFO - Booting worker with pid: 971935
+2025-05-21 11:21:09,975 - gunicorn.error - INFO - Booting worker with pid: 971936
+2025-05-21 11:21:09,977 - gunicorn.error - INFO - Booting worker with pid: 971937
+2025-05-21 11:21:09,978 - gunicorn.error - INFO - Booting worker with pid: 971938
+2025-05-21 11:21:09,980 - gunicorn.error - INFO - Booting worker with pid: 971939
+2025-05-21 11:21:09,984 - gunicorn.error - ERROR - Worker (pid:957298) was sent SIGHUP!
+2025-05-21 11:21:09,984 - gunicorn.error - ERROR - Worker (pid:957286) was sent SIGHUP!
+2025-05-21 11:21:09,989 - gunicorn.error - ERROR - Worker (pid:957284) was sent SIGHUP!
+2025-05-21 11:21:09,989 - gunicorn.error - ERROR - Worker (pid:957293) was sent SIGHUP!
+2025-05-21 11:21:09,989 - gunicorn.error - ERROR - Worker (pid:957283) was sent SIGHUP!
+2025-05-21 11:21:09,990 - gunicorn.error - ERROR - Worker (pid:957288) was sent SIGHUP!
+2025-05-21 11:21:09,989 - gunicorn.error - ERROR - Worker (pid:957285) was sent SIGHUP!
+2025-05-21 11:21:09,991 - gunicorn.error - ERROR - Worker (pid:957287) was sent SIGHUP!
+2025-05-21 11:21:09,991 - gunicorn.error - ERROR - Worker (pid:957292) was sent SIGHUP!
+2025-05-21 11:21:09,993 - gunicorn.error - ERROR - Worker (pid:957297) was sent SIGHUP!
+2025-05-21 11:21:11,921 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,921 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,925 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,929 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,939 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,953 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:11,953 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:11,953 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:11,953 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:11,956 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:11,957 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:11,960 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,961 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:11,961 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:11,964 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,967 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,968 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,968 - uvicorn.error - INFO - Started server process [971935]
+2025-05-21 11:21:11,969 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:11,968 - uvicorn.error - INFO - Started server process [971937]
+2025-05-21 11:21:11,969 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:11,970 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:11,970 - app.core.logging - INFO - FastAPI Framework initialized
+2025-05-21 11:21:11,970 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:11,972 - uvicorn.error - INFO - Started server process [971938]
+2025-05-21 11:21:11,972 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:11,976 - uvicorn.error - INFO - Started server process [971939]
+2025-05-21 11:21:11,977 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:11,986 - uvicorn.error - INFO - Started server process [971936]
+2025-05-21 11:21:11,986 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:11,991 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:11,992 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:11,996 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:11,996 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:11,999 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:11,999 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:12,000 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:12,000 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:12,002 - app.core.logging - INFO - Router with prefix /api/v1 included
+2025-05-21 11:21:12,002 - app.core.logging - INFO - FastAPI app started with settings: api_version_url='/api/v1' max_workers=10 log_level='INFO' log_file='layra.log' db_url='mysql+asyncmy://mysqluser:mysql577715@localhost/imagedb' db_pool_size=10 db_max_overflow=20 redis_url='localhost:6379' redis_password='redis577715' redis_token_db=0 redis_task_db=1 redis_lock_db=2 secret_key='TestCodeForLLMProject' algorithm='HS256' access_token_expire_minutes=36000 mongodb_url='localhost:27017' mongodb_db='mongodb' mongodb_root_username='mongouser' mongodb_root_password='mongo577715' mongodb_pool_size=100 mongodb_min_pool_size=10 debug_mode=True kafka_broker_url='localhost:9094' kafka_topic='task_generation' kafka_group_id='task_consumer_group' minio_url='http://127.0.0.1:9110' minio_access_key='miniouser' minio_secret_key='minio577715' minio_bucket_name='ai-chat' milvus_uri='http://127.0.0.1:19530' colbert_model_path='/home/administrator/KnowFlowVisualRAG/colqwen2.5-v0.2'
+2025-05-21 11:21:12,004 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,005 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,007 - uvicorn.error - INFO - Started server process [971926]
+2025-05-21 11:21:12,007 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:12,010 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,011 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,012 - uvicorn.error - INFO - Started server process [971933]
+2025-05-21 11:21:12,012 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:12,014 - uvicorn.error - INFO - Started server process [971928]
+2025-05-21 11:21:12,015 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:12,015 - uvicorn.error - INFO - Started server process [971927]
+2025-05-21 11:21:12,016 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:12,017 - uvicorn.error - INFO - Started server process [971934]
+2025-05-21 11:21:12,018 - uvicorn.error - INFO - Waiting for application startup.
+2025-05-21 11:21:12,020 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,042 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,045 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,047 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,051 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,052 - app.core.logging - INFO - MongoDB 索引创建完成
+2025-05-21 11:21:12,134 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,136 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,136 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,137 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,138 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,139 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,150 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,150 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,150 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,150 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,150 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,150 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,150 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,153 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,159 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,161 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,161 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,163 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,173 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,173 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,173 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,173 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,174 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,174 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,174 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,179 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,180 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,183 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,186 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,187 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,188 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,190 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,191 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,191 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,191 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,191 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,194 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,198 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,199 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,200 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,200 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,200 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,202 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,202 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,202 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,211 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,211 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,211 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,241 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,243 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,243 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,255 - app.core.logging - INFO - Bucket 'ai-chat' already exists.
+2025-05-21 11:21:12,257 - aiokafka.consumer.subscription_state - INFO - Updating subscribed topics to: frozenset({'task_generation'})
+2025-05-21 11:21:12,257 - uvicorn.error - INFO - Application startup complete.
+2025-05-21 11:21:12,258 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,258 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,258 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:12,269 - aiokafka.consumer.group_coordinator - INFO - Discovered coordinator 0 for group task_consumer_group
+2025-05-21 11:21:12,269 - aiokafka.consumer.group_coordinator - INFO - Revoking previously assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:12,269 - aiokafka.consumer.group_coordinator - INFO - (Re-)joining group task_consumer_group
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-0f63b07d-c5c0-491d-a154-c446c8589adb
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-d86eb465-b7a2-4a30-a635-6eb0fa8bf56a
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-1f6c538b-165f-469d-a48b-161d6404a463
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Elected group leader -- performing partition assignments using roundrobin
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-78c3d55d-2a96-4cc8-885f-c1c512aecc79
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-a9f64156-a844-4855-8614-4698ab65d71e
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-870ecb33-bd7d-4b2b-8aed-1c451ca3d128
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-00ec4fbe-0f90-4563-b32b-0143bdf084ad
+2025-05-21 11:21:19,917 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-c58e86d8-8af6-4db7-831f-e2c18b15a00a
+2025-05-21 11:21:19,918 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-d589ed14-1811-48f8-b1b5-960abc5bd4e6
+2025-05-21 11:21:19,918 - aiokafka.consumer.group_coordinator - INFO - Joined group 'task_consumer_group' (generation 10) with member_id aiokafka-0.12.0-288a88c8-6dcc-4e5f-8d12-ee3c71db2306
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,924 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:19,923 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,924 - aiokafka.consumer.group_coordinator - INFO - Successfully synced group task_consumer_group with generation 10
+2025-05-21 11:21:19,924 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:19,924 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:19,924 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:19,924 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions {TopicPartition(topic='task_generation', partition=0)} for group task_consumer_group
+2025-05-21 11:21:19,924 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:21:19,924 - aiokafka.consumer.group_coordinator - INFO - Setting newly assigned partitions set() for group task_consumer_group
+2025-05-21 11:52:06,534 - uvicorn.access - INFO - 127.0.0.1:35052 - "GET / HTTP/1.1" 404
+2025-05-21 12:22:14,233 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 12:22:24,482 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 12:22:32,963 - uvicorn.access - INFO - 127.0.0.1:36986 - "GET / HTTP/1.1" 404
+2025-05-21 13:33:19,921 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 13:33:20,098 - uvicorn.access - INFO - 127.0.0.1:40246 - "GET / HTTP/1.1" 404
+2025-05-21 13:33:20,320 - uvicorn.access - INFO - 127.0.0.1:40252 - "GET /favicon.ico HTTP/1.1" 404
+2025-05-21 13:33:22,229 - uvicorn.access - INFO - 127.0.0.1:42538 - "GET / HTTP/1.1" 404
+2025-05-21 13:39:33,368 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 13:40:52,260 - uvicorn.access - INFO - 127.0.0.1:47950 - "GET / HTTP/1.1" 404
+2025-05-21 14:27:30,232 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 14:47:36,957 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 15:29:37,814 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 17:51:44,453 - uvicorn.access - INFO - 127.0.0.1:42520 - "GET / HTTP/1.1" 404
+2025-05-21 17:54:08,654 - uvicorn.access - INFO - 127.0.0.1:36582 - "GET / HTTP/1.1" 404
+2025-05-21 17:55:16,189 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 17:57:38,187 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 19:36:17,215 - uvicorn.access - INFO - 127.0.0.1:49142 - "GET / HTTP/1.1" 404
+2025-05-21 19:36:51,221 - uvicorn.access - INFO - 127.0.0.1:33510 - "GET /?format=json HTTP/1.1" 404
+2025-05-21 19:36:53,835 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 20:19:32,389 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 21:12:45,057 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 21:35:30,192 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 21:48:31,652 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 21:57:03,107 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-21 22:13:19,227 - uvicorn.access - INFO - 127.0.0.1:54712 - "GET / HTTP/1.1" 404
+2025-05-22 01:58:33,233 - uvicorn.access - INFO - 127.0.0.1:44090 - "GET / HTTP/1.1" 404
+2025-05-22 01:58:36,054 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-22 01:58:46,704 - uvicorn.access - INFO - 127.0.0.1:56776 - "GET /favicon.ico HTTP/1.1" 404
+2025-05-22 01:58:48,790 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-05-22 02:05:15,072 - uvicorn.access - INFO - 127.0.0.1:49772 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:05:15,203 - uvicorn.access - INFO - 127.0.0.1:49772 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:05:15,309 - uvicorn.access - INFO - 127.0.0.1:49772 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:05:15,403 - uvicorn.access - INFO - 127.0.0.1:49772 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:08:23,362 - uvicorn.access - INFO - 127.0.0.1:55500 - "GET / HTTP/1.1" 404
+2025-05-22 02:09:47,876 - gunicorn.error - INFO - Starting gunicorn 23.0.0
+2025-05-22 02:09:47,877 - gunicorn.error - ERROR - Connection in use: ('0.0.0.0', 8000)
+2025-05-22 02:09:47,877 - gunicorn.error - ERROR - connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+2025-05-22 02:09:48,877 - gunicorn.error - ERROR - Connection in use: ('0.0.0.0', 8000)
+2025-05-22 02:09:48,878 - gunicorn.error - ERROR - connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+2025-05-22 02:09:49,878 - gunicorn.error - ERROR - Connection in use: ('0.0.0.0', 8000)
+2025-05-22 02:09:49,878 - gunicorn.error - ERROR - connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+2025-05-22 02:09:50,879 - gunicorn.error - ERROR - Connection in use: ('0.0.0.0', 8000)
+2025-05-22 02:09:50,879 - gunicorn.error - ERROR - connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+2025-05-22 02:09:51,880 - gunicorn.error - ERROR - Connection in use: ('0.0.0.0', 8000)
+2025-05-22 02:09:51,880 - gunicorn.error - ERROR - connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+2025-05-22 02:09:52,880 - gunicorn.error - ERROR - Can't connect to ('0.0.0.0', 8000)
+2025-05-22 02:13:03,926 - uvicorn.access - INFO - 127.0.0.1:40258 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:13:03,931 - uvicorn.access - INFO - 127.0.0.1:40274 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:13:04,037 - uvicorn.access - INFO - 127.0.0.1:40274 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:13:04,127 - uvicorn.access - INFO - 127.0.0.1:40258 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:13:04,176 - uvicorn.access - INFO - 127.0.0.1:40274 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:13:04,263 - uvicorn.access - INFO - 127.0.0.1:40276 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:04,268 - uvicorn.access - INFO - 127.0.0.1:40290 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:04,273 - uvicorn.access - INFO - 127.0.0.1:40258 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:13:04,279 - uvicorn.access - INFO - 127.0.0.1:40274 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:13:04,287 - uvicorn.access - INFO - 127.0.0.1:40304 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:04,360 - uvicorn.access - INFO - 127.0.0.1:40290 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:04,372 - uvicorn.access - INFO - 127.0.0.1:40258 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:13:04,481 - uvicorn.access - INFO - 127.0.0.1:40304 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:04,579 - uvicorn.access - INFO - 127.0.0.1:40258 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:07,256 - uvicorn.access - INFO - 127.0.0.1:40320 - "OPTIONS /api/v1/chat/conversations/tom_f5573144-e584-4be0-97bb-99fe3ed205db HTTP/1.1" 200
+2025-05-22 02:13:07,358 - uvicorn.access - INFO - 127.0.0.1:40320 - "GET /api/v1/chat/conversations/tom_f5573144-e584-4be0-97bb-99fe3ed205db HTTP/1.1" 200
+2025-05-22 02:13:07,636 - uvicorn.access - INFO - 127.0.0.1:40320 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:07,974 - uvicorn.access - INFO - 127.0.0.1:40320 - "OPTIONS /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-22 02:13:08,083 - uvicorn.access - INFO - 127.0.0.1:40320 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-22 02:13:08,305 - uvicorn.access - INFO - 127.0.0.1:40320 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:09,164 - uvicorn.access - INFO - 127.0.0.1:40320 - "GET /api/v1/chat/conversations/tom_f5573144-e584-4be0-97bb-99fe3ed205db HTTP/1.1" 200
+2025-05-22 02:13:09,398 - uvicorn.access - INFO - 127.0.0.1:40320 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:13,750 - uvicorn.access - INFO - 127.0.0.1:42222 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:13:13,844 - uvicorn.access - INFO - 127.0.0.1:42222 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:13:13,934 - uvicorn.access - INFO - 127.0.0.1:42242 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:13:13,935 - uvicorn.access - INFO - 127.0.0.1:42226 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:13:13,935 - uvicorn.access - INFO - 127.0.0.1:42248 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:13:13,937 - uvicorn.access - INFO - 127.0.0.1:42222 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:13:14,027 - uvicorn.access - INFO - 127.0.0.1:42248 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:13:14,053 - uvicorn.access - INFO - 127.0.0.1:42222 - "OPTIONS /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:13:14,141 - uvicorn.access - INFO - 127.0.0.1:42254 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:13:14,145 - uvicorn.access - INFO - 127.0.0.1:42222 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:13:24,757 - uvicorn.access - INFO - 127.0.0.1:54388 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:13:24,850 - uvicorn.access - INFO - 127.0.0.1:54388 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:13:24,982 - uvicorn.access - INFO - 127.0.0.1:54392 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:13:24,988 - uvicorn.access - INFO - 127.0.0.1:54398 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:25,074 - uvicorn.access - INFO - 127.0.0.1:54388 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:13:25,076 - uvicorn.access - INFO - 127.0.0.1:54392 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:13:25,087 - uvicorn.access - INFO - 127.0.0.1:54398 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:25,186 - uvicorn.access - INFO - 127.0.0.1:54398 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:13:26,869 - uvicorn.access - INFO - 127.0.0.1:54398 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-22 02:13:27,087 - uvicorn.access - INFO - 127.0.0.1:54398 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:28,484 - uvicorn.access - INFO - 127.0.0.1:54406 - "OPTIONS /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-22 02:13:28,569 - uvicorn.access - INFO - 127.0.0.1:54406 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-22 02:13:28,692 - uvicorn.access - INFO - 127.0.0.1:54406 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:29,667 - uvicorn.access - INFO - 127.0.0.1:54406 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-22 02:13:29,886 - uvicorn.access - INFO - 127.0.0.1:54406 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:13:30,200 - uvicorn.access - INFO - 127.0.0.1:54406 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-22 02:15:05,157 - uvicorn.access - INFO - 127.0.0.1:41988 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-22 02:15:05,321 - uvicorn.access - INFO - 127.0.0.1:41988 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:15:06,351 - uvicorn.access - INFO - 127.0.0.1:41988 - "GET /api/v1/chat/conversations/tom_f5573144-e584-4be0-97bb-99fe3ed205db HTTP/1.1" 200
+2025-05-22 02:15:06,575 - uvicorn.access - INFO - 127.0.0.1:41988 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:15:09,085 - uvicorn.access - INFO - 127.0.0.1:42002 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:09,211 - uvicorn.access - INFO - 127.0.0.1:42002 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:15:09,292 - uvicorn.access - INFO - 127.0.0.1:42018 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:09,309 - uvicorn.access - INFO - 127.0.0.1:42038 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:09,312 - uvicorn.access - INFO - 127.0.0.1:42022 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:15:09,372 - uvicorn.access - INFO - 127.0.0.1:42002 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:09,399 - uvicorn.access - INFO - 127.0.0.1:42018 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:15:31,767 - uvicorn.access - INFO - 127.0.0.1:34010 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:31,866 - uvicorn.access - INFO - 127.0.0.1:34010 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:32,018 - uvicorn.access - INFO - 127.0.0.1:34042 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:32,018 - uvicorn.access - INFO - 127.0.0.1:34026 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:32,053 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:15:32,116 - uvicorn.access - INFO - 127.0.0.1:34042 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:32,153 - uvicorn.access - INFO - 127.0.0.1:34026 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:15:32,197 - uvicorn.access - INFO - 127.0.0.1:34042 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:15:32,200 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:32,287 - uvicorn.access - INFO - 127.0.0.1:34042 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:15:32,384 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:15:33,085 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:33,195 - uvicorn.access - INFO - 127.0.0.1:34036 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:15:33,304 - uvicorn.access - INFO - 127.0.0.1:34044 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:33,324 - uvicorn.access - INFO - 127.0.0.1:34056 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:33,327 - uvicorn.access - INFO - 127.0.0.1:34048 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:15:33,397 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:33,415 - uvicorn.access - INFO - 127.0.0.1:34044 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:15:34,439 - uvicorn.access - INFO - 127.0.0.1:34044 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:34,519 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:34,533 - uvicorn.access - INFO - 127.0.0.1:34044 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:34,535 - uvicorn.access - INFO - 127.0.0.1:34056 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:15:34,619 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:34,620 - uvicorn.access - INFO - 127.0.0.1:34044 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:15:34,631 - uvicorn.access - INFO - 127.0.0.1:34048 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:15:34,723 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:15:35,737 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:35,825 - uvicorn.access - INFO - 127.0.0.1:34048 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:35,839 - uvicorn.access - INFO - 127.0.0.1:34036 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:15:35,840 - uvicorn.access - INFO - 127.0.0.1:34044 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:15:35,851 - uvicorn.access - INFO - 127.0.0.1:34056 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:35,941 - uvicorn.access - INFO - 127.0.0.1:34036 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:35,958 - uvicorn.access - INFO - 127.0.0.1:34056 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:15:55,231 - uvicorn.access - INFO - 127.0.0.1:39646 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:55,312 - uvicorn.access - INFO - 127.0.0.1:39646 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:15:55,443 - uvicorn.access - INFO - 127.0.0.1:39648 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:15:55,453 - uvicorn.access - INFO - 127.0.0.1:39660 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:55,531 - uvicorn.access - INFO - 127.0.0.1:39646 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:15:55,543 - uvicorn.access - INFO - 127.0.0.1:39648 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:55,544 - uvicorn.access - INFO - 127.0.0.1:39660 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:15:55,639 - uvicorn.access - INFO - 127.0.0.1:39648 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:15:58,036 - uvicorn.access - INFO - 127.0.0.1:39674 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:15:58,127 - uvicorn.access - INFO - 127.0.0.1:39674 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:16:30,749 - uvicorn.access - INFO - 127.0.0.1:52424 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:16:30,865 - uvicorn.access - INFO - 127.0.0.1:52424 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:16:32,172 - uvicorn.access - INFO - 127.0.0.1:52424 - "OPTIONS /api/v1/chat/conversations/tom_25732500-a6cc-4f2a-8b24-5fbeb322a237 HTTP/1.1" 200
+2025-05-22 02:16:32,274 - uvicorn.access - INFO - 127.0.0.1:52424 - "GET /api/v1/chat/conversations/tom_25732500-a6cc-4f2a-8b24-5fbeb322a237 HTTP/1.1" 200
+2025-05-22 02:16:32,590 - uvicorn.access - INFO - 127.0.0.1:52424 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:17:20,859 - uvicorn.access - INFO - 127.0.0.1:51584 - "GET /api/v1/chat/conversations/tom_f5573144-e584-4be0-97bb-99fe3ed205db HTTP/1.1" 200
+2025-05-22 02:17:21,091 - uvicorn.access - INFO - 127.0.0.1:51584 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:17:24,686 - uvicorn.access - INFO - 127.0.0.1:48842 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-22 02:17:24,919 - uvicorn.access - INFO - 127.0.0.1:48842 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:17:27,547 - uvicorn.access - INFO - 127.0.0.1:48854 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:17:27,658 - uvicorn.access - INFO - 127.0.0.1:48854 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:17:27,768 - uvicorn.access - INFO - 127.0.0.1:48882 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:17:27,782 - uvicorn.access - INFO - 127.0.0.1:48868 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:17:27,859 - uvicorn.access - INFO - 127.0.0.1:48854 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:17:27,892 - uvicorn.access - INFO - 127.0.0.1:48868 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:17:28,746 - uvicorn.access - INFO - 127.0.0.1:48892 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:19:03,113 - uvicorn.access - INFO - 127.0.0.1:33248 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:19:03,203 - uvicorn.access - INFO - 127.0.0.1:33248 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:19:03,332 - uvicorn.access - INFO - 127.0.0.1:33264 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:19:03,354 - uvicorn.access - INFO - 127.0.0.1:33268 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:19:03,419 - uvicorn.access - INFO - 127.0.0.1:33248 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:19:03,422 - uvicorn.access - INFO - 127.0.0.1:33264 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:19:03,522 - uvicorn.access - INFO - 127.0.0.1:33248 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:19:03,573 - uvicorn.access - INFO - 127.0.0.1:33274 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:19:04,968 - uvicorn.access - INFO - 127.0.0.1:33274 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:19:05,061 - uvicorn.access - INFO - 127.0.0.1:33248 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:19:05,081 - uvicorn.access - INFO - 127.0.0.1:33274 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:19:05,083 - uvicorn.access - INFO - 127.0.0.1:33264 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:19:05,086 - uvicorn.access - INFO - 127.0.0.1:33268 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:19:05,173 - uvicorn.access - INFO - 127.0.0.1:33248 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:19:05,195 - uvicorn.access - INFO - 127.0.0.1:33274 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:19:06,060 - uvicorn.access - INFO - 127.0.0.1:33274 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:19:06,149 - uvicorn.access - INFO - 127.0.0.1:33248 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:19:06,164 - uvicorn.access - INFO - 127.0.0.1:33264 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:19:06,165 - uvicorn.access - INFO - 127.0.0.1:33274 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:19:06,256 - uvicorn.access - INFO - 127.0.0.1:33248 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:19:06,258 - uvicorn.access - INFO - 127.0.0.1:33264 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:19:06,263 - uvicorn.access - INFO - 127.0.0.1:33274 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:19:06,366 - uvicorn.access - INFO - 127.0.0.1:33264 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:19:13,748 - uvicorn.access - INFO - 127.0.0.1:32900 - "GET /api/v1/chat/conversations/tom_f5573144-e584-4be0-97bb-99fe3ed205db HTTP/1.1" 200
+2025-05-22 02:19:13,971 - uvicorn.access - INFO - 127.0.0.1:32900 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:19:14,764 - uvicorn.access - INFO - 127.0.0.1:32900 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-22 02:19:15,059 - uvicorn.access - INFO - 127.0.0.1:32900 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:19:24,493 - uvicorn.access - INFO - 127.0.0.1:44232 - "GET /api/v1/chat/conversations/tom_53a0dd33-8b92-4023-9162-ce2c0ec1ccb7 HTTP/1.1" 200
+2025-05-22 02:19:24,948 - uvicorn.access - INFO - 127.0.0.1:44232 - "GET /api/v1/chat/conversations/tom_2ab5f92f-f5fb-4608-9726-d0203fa692a1 HTTP/1.1" 200
+2025-05-22 02:19:25,073 - uvicorn.access - INFO - 127.0.0.1:44232 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:19:26,523 - uvicorn.access - INFO - 127.0.0.1:44232 - "OPTIONS /api/v1/chat/conversations/tom_0e67492d-f5d9-4451-9afd-744bb7bf2b8d HTTP/1.1" 200
+2025-05-22 02:19:26,625 - uvicorn.access - INFO - 127.0.0.1:44232 - "GET /api/v1/chat/conversations/tom_0e67492d-f5d9-4451-9afd-744bb7bf2b8d HTTP/1.1" 200
+2025-05-22 02:19:26,811 - uvicorn.access - INFO - 127.0.0.1:44232 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:24:46,066 - uvicorn.access - INFO - 127.0.0.1:45106 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:24:46,066 - uvicorn.access - INFO - 127.0.0.1:45116 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:24:46,164 - uvicorn.access - INFO - 127.0.0.1:45106 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:24:46,263 - uvicorn.access - INFO - 127.0.0.1:45116 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:24:46,281 - uvicorn.access - INFO - 127.0.0.1:45106 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:24:46,370 - uvicorn.access - INFO - 127.0.0.1:45106 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:24:46,405 - uvicorn.access - INFO - 127.0.0.1:45134 - "OPTIONS /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:24:46,424 - uvicorn.access - INFO - 127.0.0.1:45128 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:24:46,506 - uvicorn.access - INFO - 127.0.0.1:45134 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:24:46,523 - uvicorn.access - INFO - 127.0.0.1:45106 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:24:46,541 - uvicorn.access - INFO - 127.0.0.1:45128 - "OPTIONS /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:24:46,653 - uvicorn.access - INFO - 127.0.0.1:45128 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:24:56,789 - uvicorn.access - INFO - 127.0.0.1:33338 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:24:56,883 - uvicorn.access - INFO - 127.0.0.1:33338 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:24:57,006 - uvicorn.access - INFO - 127.0.0.1:33354 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:24:57,028 - uvicorn.access - INFO - 127.0.0.1:33360 - "OPTIONS /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:24:57,034 - uvicorn.access - INFO - 127.0.0.1:33366 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:24:57,118 - uvicorn.access - INFO - 127.0.0.1:33354 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:24:57,141 - uvicorn.access - INFO - 127.0.0.1:33360 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:24:57,146 - uvicorn.access - INFO - 127.0.0.1:33366 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:24:57,220 - uvicorn.access - INFO - 127.0.0.1:33338 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:24:57,253 - uvicorn.access - INFO - 127.0.0.1:33360 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:24:59,050 - uvicorn.access - INFO - 127.0.0.1:33380 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:24:59,163 - uvicorn.access - INFO - 127.0.0.1:33380 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:24:59,276 - uvicorn.access - INFO - 127.0.0.1:33386 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:24:59,281 - uvicorn.access - INFO - 127.0.0.1:33400 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:24:59,284 - uvicorn.access - INFO - 127.0.0.1:33398 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:24:59,388 - uvicorn.access - INFO - 127.0.0.1:33386 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:24:59,415 - uvicorn.access - INFO - 127.0.0.1:33400 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:34:45,031 - uvicorn.access - INFO - 127.0.0.1:46022 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:34:45,157 - uvicorn.access - INFO - 127.0.0.1:46022 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:34:45,272 - uvicorn.access - INFO - 127.0.0.1:46022 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:34:45,279 - uvicorn.access - INFO - 127.0.0.1:46038 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:34:45,290 - uvicorn.access - INFO - 127.0.0.1:46056 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:34:45,290 - uvicorn.access - INFO - 127.0.0.1:46040 - "OPTIONS /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:34:45,385 - uvicorn.access - INFO - 127.0.0.1:46022 - "OPTIONS /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:34:45,402 - uvicorn.access - INFO - 127.0.0.1:46040 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:34:45,507 - uvicorn.access - INFO - 127.0.0.1:46022 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:34:45,614 - uvicorn.access - INFO - 127.0.0.1:46040 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:34:46,150 - uvicorn.access - INFO - 127.0.0.1:46040 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:34:46,244 - uvicorn.access - INFO - 127.0.0.1:46022 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:34:46,281 - uvicorn.access - INFO - 127.0.0.1:46056 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:34:46,282 - uvicorn.access - INFO - 127.0.0.1:46040 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:34:46,383 - uvicorn.access - INFO - 127.0.0.1:46040 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:34:46,388 - uvicorn.access - INFO - 127.0.0.1:46072 - "POST /api/v1/base/users/tom/files HTTP/1.1" 200
+2025-05-22 02:34:46,407 - uvicorn.access - INFO - 127.0.0.1:46022 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:34:46,408 - uvicorn.access - INFO - 127.0.0.1:46056 - "POST /api/v1/base/knowledge_bases/tom_da93d1e3-ae8b-4c0f-b7e0-4ebdb49bc3b0/files HTTP/1.1" 200
+2025-05-22 02:34:47,542 - uvicorn.access - INFO - 127.0.0.1:46022 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:34:47,545 - uvicorn.access - INFO - 127.0.0.1:46056 - "OPTIONS /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:34:47,646 - uvicorn.access - INFO - 127.0.0.1:46056 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:34:47,733 - uvicorn.access - INFO - 127.0.0.1:46022 - "GET /api/v1/auth/verify-token HTTP/1.1" 200
+2025-05-22 02:34:47,748 - uvicorn.access - INFO - 127.0.0.1:46072 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:34:47,750 - uvicorn.access - INFO - 127.0.0.1:46056 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:34:47,840 - uvicorn.access - INFO - 127.0.0.1:46022 - "GET /api/v1/base/users/tom/knowledge_bases HTTP/1.1" 200
+2025-05-22 02:34:47,844 - uvicorn.access - INFO - 127.0.0.1:46056 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:34:47,857 - uvicorn.access - INFO - 127.0.0.1:46040 - "GET /api/v1/chat/users/tom/conversations HTTP/1.1" 200
+2025-05-22 02:34:47,950 - uvicorn.access - INFO - 127.0.0.1:46056 - "GET /api/v1/config/tom/all HTTP/1.1" 200
+2025-05-22 02:43:09,694 - uvicorn.access - INFO - 127.0.0.1:42752 - "GET / HTTP/1.1" 404
