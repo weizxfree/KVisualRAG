@@ -329,6 +329,7 @@ const AIChat: React.FC = () => {
       let completion_tokens: number = 0;
       let prompt_tokens: number = 0;
       let file_used: FileUsed[];
+      
       while (true) {
         const { done, value } = (await eventReader?.read()) || {};
         if (done) break;
@@ -354,7 +355,7 @@ const AIChat: React.FC = () => {
           completion_tokens = payload.completion_tokens;
           prompt_tokens = payload.prompt_tokens;
         }
-
+        
         // 使用函数式更新确保基于最新状态
         setMessages((prevMessages: string | any[]) => {
           // 查找最后一个AI消息（即加载占位符）
@@ -392,6 +393,8 @@ const AIChat: React.FC = () => {
           ];
         });
       }
+      
+      // 添加搜索到的知识库相关文件
       setMessages((prevMessages: string | any[]) => {
         return [
           ...prevMessages,

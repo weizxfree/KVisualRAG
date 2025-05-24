@@ -1,12 +1,15 @@
 import asyncio
 import copy
 import uuid
+import base64
+import requests
 from app.db.milvus import milvus_client
 from app.db.mongo import get_mongo
 from app.rag.convert_file import convert_file_to_images, save_image_to_minio
 from app.rag.get_embedding import get_embeddings_from_httpx
 from app.db.miniodb import async_minio_manager
 from app.core.logging import logger
+import httpx
 
 
 def sort_and_filter(data, min_score=None, max_score=None):
@@ -129,28 +132,32 @@ async def insert_to_milvus(collection_name, embeddings, image_ids, file_id):
 
 
 async def replace_image_content(messages):
-    # 创建深拷贝以保证原始数据不变
-    new_messages = copy.deepcopy(messages)
-    # 遍历每条消息
-    for message in new_messages:
-        if "content" not in message:
-            continue
-
-        # 遍历content中的每个内容项
-        for item in message["content"]:
-            if isinstance(item, dict):
-                # 检查类型是否为image_url
-                if item.get("type") == "image_url":
-                    image_base64 = (
-                        await async_minio_manager.download_image_and_convert_to_base64(
-                            item["image_url"]
-                        )
-                    )
-                    # 保留上下文信息
-                    context = item.get("context", "")
-                    item["image_url"] = {
-                        "url": f"data:image/png;base64,{image_base64}",
-                        "context": context
-                    }
-
-    return new_messages
+    """
+    替换消息中的图片内容
+    
+    将 image_minio_url 类型转换为 image_url 类型，保持URL格式
+    """
+    logger.info("🔄 Processing image content in messages...")
+    
+    try:
+        processed_messages = copy.deepcopy(messages)
+        
+        for message in processed_messages:
+            if isinstance(message.get("content"), list):
+                for item in message["content"]:
+                    if item.get("type") == "image_url":
+                        # 获取MinIO URL
+                        image_url = item.get("image_url")
+                        if image_url:
+                            logger.info(f"📥 Processing image URL: {image_url[:80]}...")
+                            image_base64 = (
+                                 await async_minio_manager.download_image_and_convert_to_base64(item["image_url"])
+                            )
+                            item["image_url"] = {"url": f"data:image/png;base64,{image_base64}"}
+                            logger.info(f"✅ URL converted to image_url format")
+        logger.info("✅ Image content processing completed")
+        return processed_messages
+        
+    except Exception as e:
+        logger.error(f"❌ 图片内容替换失败: {e}")
+        return messages

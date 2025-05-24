@@ -11,6 +11,14 @@ from app.db.milvus import milvus_client
 from app.rag.get_embedding import get_embeddings_from_httpx
 from app.rag.utils import replace_image_content, sort_and_filter
 
+# LiteLLM 相关导入
+try:
+    from litellm import acompletion
+    LITELLM_AVAILABLE = True
+except ImportError:
+    LITELLM_AVAILABLE = False
+    acompletion = None
+
 
 class ChatService:
 
@@ -32,15 +40,13 @@ class ChatService:
         base_used = model_config["base_used"]
         provider_type = model_config.get("provider_type", "qwen")
 
-        print(provider_type)
+        print(f"Provider: {provider_type}, Model: {model_name}")
 
-        # Adjust API client parameters based on provider type
-        effective_api_key = api_key
-        effective_base_url = model_url
-
-        if provider_type == "ollama":
-            effective_base_url = "http://localhost:11434/v1"  # Default Ollama API URL
-            effective_api_key = "ollama"  # Ollama doesn't typically use API keys, use a placeholder
+        # 统一使用 LiteLLM 处理所有模型
+        if not LITELLM_AVAILABLE:
+            raise Exception("LiteLLM is required but not available. Please install with: pip install litellm")
+        
+        print(f"🚀 Using unified LiteLLM architecture for all models")
 
         system_prompt = model_config["system_prompt"]
         if len(system_prompt) > 1048576:
@@ -84,14 +90,10 @@ class ChatService:
             system_prompt = "All outputs in Markdown format, especially mathematical formulas in Latex format($formula$)."
 
         # 组合内置提示词和自定义提示词
-        built_in_prompt = """你是一个多模态AI助手，可以同时处理文本和图片信息。当用户提问时：
-1. 仔细分析问题中提到的所有内容，包括文本和图片
-2. 对于图片内容，详细描述你看到的视觉信息
-3. 结合文本和图片信息，给出准确、完整的回答
-4. 如果问题涉及图片中的具体细节，请明确指出
-5. 如果无法从图片中获取足够信息，请说明原因
-6. 回答时保持客观，只基于提供的信息进行回答
-7. 当不确定时，明确表示无法确定"""
+        built_in_prompt = """你是一个多模态AI助手，可以同时处理文本和图片信息。当用户提问时：重点关注图片中的关键信息：文字、图表、表格、数据等
+**分析要求**：
+1. 仔细分析问题中提到的所有内容，结合图片内容信息进行回答，不要联想
+2. 当不确定时，明确表示无法确定，并说明需要哪些额外信息"""
         combined_system_prompt = f"{built_in_prompt}\n\n{system_prompt}"
 
         logger.info(
@@ -146,17 +148,13 @@ class ChatService:
             else:
                 cut_score = sorted_score
 
-            # 添加图片分析指导
-            content.append({
-                "type": "text",
-                "text": "请仔细分析以下图片，注意图片中的文字、图表、表格等关键信息。"
-            })
-
-            # 获取minio name并转成base64
-            for score in cut_score:
+            # 获取minio name并转成URL，按分数排序
+            for idx, score in enumerate(cut_score):
                 file_and_image_info = await db.get_file_and_image_info(
                     score["file_id"], score["image_id"]
                 )
+                
+                # 根据排名添加优先级标识
                 file_used.append(
                     {
                         "score": score["score"],
@@ -166,13 +164,15 @@ class ChatService:
                         "file_url": file_and_image_info["file_minio_url"],
                     }
                 )
+                
                 content.append(
                     {
                         "type": "image_url",
                         "image_url": file_and_image_info["image_minio_filename"],
-                        "context": f"这是从文档中检索到的相关图片，文件名：{file_and_image_info['file_name']}，相关度分数：{score['score']}"
                     }
                 )
+
+                print(file_and_image_info["image_minio_url"]) 
 
         # 用户输入
         content.append(
@@ -182,47 +182,14 @@ class ChatService:
             },
         )
 
-        print(content)
-
         user_message = {
             "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "请分析以下图片和文本信息，回答我的问题："
-                },
-                *content
-            ],
+            "content": content
         }
         messages.append(user_message)
         send_messages = await replace_image_content(messages)
         
-
-
-        client = AsyncOpenAI(
-            api_key=effective_api_key,
-            base_url=effective_base_url,
-        )
-
-        # 调用OpenAI API
-        # 动态构建参数字典
-        optional_args = {}
-        if temperature != -1:
-            optional_args["temperature"] = temperature
-        if max_length != -1:
-            optional_args["max_tokens"] = max_length  # 注意官方API参数名为max_tokens
-        if top_P != -1:
-            optional_args["top_p"] = top_P  # 注意官方API参数名为top_p（小写p）
-
-        # 带条件参数的API调用
-        response = await client.chat.completions.create(
-            model=model_name,
-            messages=send_messages,
-            stream=True,
-            stream_options={"include_usage": True},
-            **optional_args,  # 展开条件参数
-        )
-
+        # 发送 file_used 信息
         file_used_payload = json.dumps(
             {
                 "type": "file_used",
@@ -233,56 +200,96 @@ class ChatService:
         )
         yield f"data: {file_used_payload}\n\n"
 
-        # 处理流响应
+        # 根据模型支持情况选择调用方式
         full_response = []
         total_token = 0
         completion_tokens = 0
         prompt_tokens = 0
-        async for chunk in response:  # 直接迭代异步生成器
-            if chunk.choices:
-                delta = chunk.choices[0].delta
-                # 思考
-                if (
-                    hasattr(delta, "reasoning_content")
-                    and delta.reasoning_content != None
-                ):
-                    # 用JSON封装内容，自动处理换行符等特殊字符
-                    payload = json.dumps(
-                        {
-                            "type": "thinking",
-                            "data": delta.reasoning_content,
-                            "message_id": message_id,
-                        }
-                    )
-                    yield f"data: {payload}\n\n"  # 保持SSE事件标准分隔符
-                # 回答
-                content = delta.content if delta else None
-                if content:
-                    # 用JSON封装内容，自动处理换行符等特殊字符
-                    payload = json.dumps(
-                        {"type": "text", "data": content, "message_id": message_id}
-                    )
-                    full_response.append(content)
-                    yield f"data: {payload}\n\n"  # 保持SSE事件标准分隔符
-            else:
-                # token消耗
-                if hasattr(chunk, "usage") and chunk.usage != None:
-                    total_token = chunk.usage.total_tokens
-                    completion_tokens = chunk.usage.completion_tokens
-                    prompt_tokens = chunk.usage.prompt_tokens
-                    # 用JSON封装内容，自动处理换行符等特殊字符
-                    payload = json.dumps(
-                        {
-                            "type": "token",
-                            "total_token": total_token,
-                            "completion_tokens": completion_tokens,
-                            "prompt_tokens": prompt_tokens,
-                            "message_id": message_id,
-                        }
-                    )
-                    yield f"data: {payload}\n\n"  # 保持SSE事件标准分隔符
+        
+        try:
+            if LITELLM_AVAILABLE:
+                print("🚀 Using LiteLLM for unified API call...")
+                
+                # 根据 provider_type 设置模型名称格式
+                litellm_model = model_name
+                if provider_type == "ollama":
+                    litellm_model = f"ollama/{model_name}"
+                else:
+                    litellm_model = f"openai/{model_name}"
+            
+                # 构建 LiteLLM 参数
+                litellm_params = {
+                    "model": litellm_model,
+                    "messages": send_messages,
+                    "stream": True,
+                }
+                
+                # 添加可选参数
+                if temperature != -1:
+                    litellm_params["temperature"] = temperature
+                if max_length != -1:
+                    litellm_params["max_tokens"] = max_length
+                if top_P != -1:
+                    litellm_params["top_p"] = top_P
+                    
+                litellm_params["stream_options"] = {"include_usage": True}
+                # 设置 API 配置
+                litellm_params["api_base"] = model_url
+                litellm_params["api_key"] = api_key
+                litellm_params["timeout"] = 60
+                print(f"LiteLLM params: model={litellm_model}, messages={len(send_messages)}")
+                print(f"Message content types: {[type(msg.get('content')) for msg in send_messages]}")
 
-        await client.close()
+                response = await acompletion(**litellm_params)
+                
+                # 处理 LiteLLM 流响应
+                async for chunk in response:
+                    if hasattr(chunk, 'choices') and chunk.choices:
+                        delta = chunk.choices[0].delta
+
+                        if (hasattr(delta, "reasoning_content") and delta.reasoning_content != None):
+                            # 用JSON封装内容，自动处理换行符等特殊字符
+                            payload = json.dumps(
+                                {
+                                    "type": "thinking",
+                                    "data": delta.reasoning_content,
+                                    "message_id": message_id,
+                                }
+                            )
+                            yield f"data: {payload}\n\n"
+
+                        if hasattr(delta, 'content') and delta.content:
+                            content_chunk = delta.content
+                            payload = json.dumps(
+                                {"type": "text", "data": content_chunk, "message_id": message_id}
+                            )
+                            full_response.append(content_chunk)
+                            yield f"data: {payload}\n\n"
+                            
+                    # 处理 token 统计
+                    if hasattr(chunk, 'usage') and chunk.usage:
+                        usage = chunk.usage
+                        total_token = getattr(usage, 'total_tokens', 0)
+                        completion_tokens = getattr(usage, 'completion_tokens', 0)
+                        prompt_tokens = getattr(usage, 'prompt_tokens', 0)
+                        
+                        payload = json.dumps(
+                            {
+                                "type": "token",
+                                "total_token": total_token,
+                                "completion_tokens": completion_tokens,
+                                "prompt_tokens": prompt_tokens,
+                                "message_id": message_id,
+                            }
+                        )
+                        yield f"data: {payload}\n\n"
+                        
+        except Exception as e:
+            error_msg = f"API call error (LiteLLM): {str(e)}"
+            print(f"Error: {error_msg}")
+            print(f"Exception details: {type(e).__name__}: {str(e)}")
+            
+            yield f"data: {json.dumps({'type': 'error', 'data': error_msg})}\n\n"
 
         ai_message = {"role": "assistant", "content": "".join(full_response)}
         # 保存AI响应到mongodb

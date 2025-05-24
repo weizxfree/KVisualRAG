@@ -334,12 +334,17 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
                   <div className="relative w-full">
                     <select
                       value={modelConfig.providerType || "qwen"}
-                      onChange={(e) =>
+                      onChange={(e) => {
+                        const newProviderType = e.target.value as "qwen" | "ollama";
                         setModelConfig((prev) => ({
                           ...prev,
-                          providerType: e.target.value as "qwen" | "ollama",
-                        }))
-                      }
+                          providerType: newProviderType,
+                          // 根据provider_type自动设置默认的model_url
+                          modelURL: newProviderType === "ollama" 
+                            ? "http://localhost:11434"
+                            : "https://api.siliconflow.cn/v1"
+                        }));
+                      }}
                       className="mt-1 w-full px-3 py-2 border border-gray-200 rounded-xl cursor-pointer bg-white appearance-none focus:outline-hidden focus:ring-2 focus:ring-indigo-500 hover:border-indigo-500 transition-colors"
                     >
                       <option value="qwen">Qwen</option>
