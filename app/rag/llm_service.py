@@ -221,7 +221,7 @@ class ChatService:
                 # 构建 LiteLLM 参数
                 litellm_params = {
                     "model": litellm_model,
-                    "messages": json.loads(json.dumps(send_messages, ensure_ascii=False)),
+                    "messages": send_messages,
                     "stream": True,
                 }
                 
