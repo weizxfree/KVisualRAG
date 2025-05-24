@@ -5,6 +5,7 @@ from app.db.mongo import get_mongo
 from app.models.conversation import UserMessage
 from openai import AsyncOpenAI
 
+
 from app.rag.mesage import find_depth_parent_mesage
 from app.core.logging import logger
 from app.db.milvus import milvus_client
@@ -220,7 +221,7 @@ class ChatService:
                 # 构建 LiteLLM 参数
                 litellm_params = {
                     "model": litellm_model,
-                    "messages": send_messages,
+                    "messages": json.loads(json.dumps(send_messages, ensure_ascii=False)),
                     "stream": True,
                 }
                 
@@ -237,8 +238,8 @@ class ChatService:
                 litellm_params["api_base"] = model_url
                 litellm_params["api_key"] = api_key
                 litellm_params["timeout"] = 60
+                
                 print(f"LiteLLM params: model={litellm_model}, messages={len(send_messages)}")
-                print(f"Message content types: {[type(msg.get('content')) for msg in send_messages]}")
 
                 response = await acompletion(**litellm_params)
                 
