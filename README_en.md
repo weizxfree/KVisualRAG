@@ -44,7 +44,7 @@ KVisualRAG is designed for both research and enterprise deployment, featuring:
 
 ## 🚀 Latest Updates
 
-- **(2025.4.6) First Trial Version Released**: Upload PDF documents, ask questions, and get layout-aware answers. See [Roadmap](#-roadmap) for future plans.
+- **(2025.5.26) First Trial Version Released**: Upload PDF documents, ask questions, and get layout-aware answers. See [Roadmap](#-roadmap) for future plans.
 - **Current Features**:
   - PDF batch upload & parsing
   - Visual-driven RAG for document QA
