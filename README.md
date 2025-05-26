@@ -44,14 +44,14 @@ KVisualRAG 专为研究和企业部署而设计，具有以下特性：
 
 ## 🚀 最新更新
 
-- **(2025.5.26) 首个试用版本发布**：上传PDF文档，提问并获得保留布局的答案。未来计划详见[路线图](#-路线图)。
+- **首个版本发布**：上传PDF文档，提问并获得保留布局的答案。未来计划详见[路线图](#-路线图)。
 - **当前特性**：
   - PDF批量上传与解析
   - LiteLLm 集成，支持 Ollama 和 OpenAPI 兼容协议
   - 视觉驱动的RAG文档问答
   - 优化的后端：**FastAPI**、**Milvus**、**Redis**、**MongoDB**、**MinIO**
 - **即将推出**：
-  -更多文档格式（Word、PPT、Excel、图像）
+  - 更多文档格式（Word、PPT、Excel、图像）
   - 更多大语言模型（GPT-4o、Claude）
   - 用于多跳推理的智能代理
 
@@ -231,7 +231,7 @@ npm run dev # http://localhost:3000
 - [x] 基于RAG的对话系统
 - [x] OpenAI兼容API (ollama, sglang, vllm)
 - [ ] 代码模块化与可扩展性
-- [ ]更多视觉/多模态大语言模型
+- [ ] 更多视觉/多模态大语言模型
 - [ ] 更多文档格式（Word、PPT、Excel）
 - [ ] Docker Compose部署
 - [ ] 公共知识库API
