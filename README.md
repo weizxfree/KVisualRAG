@@ -4,40 +4,33 @@
 
 <p align="center">
   <a href="./README.md">English</a> |
-  <a href="./README_zh.md">简体中文</a> 
+  <a href="./README_zh.md">简体中文</a>
 </p>
 
-# 🌌 LAYRA: A Visual-First Retrieval Agent Beyond OCR
+# 🌌 KVisualRAG: Visual-Driven RAG Beyond OCR
 
 > **Forget tokenization. Forget layout loss.**  
-> With pure visual embeddings, LAYRA understands documents like a human — page by page, structure and all.
+> With pure visual embeddings, KVisualRAG understands documents like a human—page by page, structure and all.
 
-**LAYRA** is a next-generation Retrieval-Augmented Generation (RAG) system powered by **pure visual embeddings**. It treats documents not as sequences of tokens but as visually structured artifacts — preserving layout, semantics, and graphical elements like tables, figures, and charts.
+**KVisualRAG** is a next-generation Retrieval-Augmented Generation (RAG) system powered by **pure visual embeddings**. It treats documents as visually structured objects, not just token sequences—preserving layout, semantics, and graphical elements like tables, figures, and charts.
 
-Built for both research exploration and enterprise deployment, LAYRA features:
+KVisualRAG is designed for both research and enterprise deployment, featuring:
 
-- 🧑‍💻 **Modern frontend stack**: TypeScript-based [Next.js 15](https://nextjs.org/blog/next-15) and [TailwindCSS 4.0](https://tailwindcss.com) — delivering a snappy, responsive, and developer-friendly interface.
-- ⚙️ **Async-first backend architecture**: Built on [FastAPI](https://github.com/fastapi/fastapi), seamlessly integrated with fully asynchronous components including **Redis**, **MySQL**, **MongoDB**, and **MinIO**, optimized for high-performance data flow and scalability.
-- 🧠 **Visual-first multimodal foundation**: Uses [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) series  as the current default large language model, with plans to support **GPT-4o**, **Claude**, **Gemini**, and other multimodal models in future releases.
-- 🎯 **Image-level embedding**: Document parsing and visual embedding is powered by the [Colpali](https://github.com/illuin-tech/colpali) project — using the [colqwen2.5](https://huggingface.co/vidore/colqwen2.5-v0.2) to convert pages into rich semantic vectors stored in [Milvus](https://milvus.io/).
+- 🧑‍💻 **Modern Frontend**: [Next.js 15](https://nextjs.org/blog/next-15), [TailwindCSS 4.0](https://tailwindcss.com), TypeScript
+- ⚙️ **Async Backend**: [FastAPI](https://github.com/fastapi/fastapi), async stack with **Redis**, **MySQL**, **MongoDB**, **MinIO**
+- 🧠 **Visual Multimodal Foundation**: [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) as default LLM, with future support for **GPT-4o**, **Claude**, **Gemini**
+- 🎯 **Image-level Embedding**: [Colpali](https://github.com/illuin-tech/colpali) + [colqwen2.5](https://huggingface.co/vidore/colqwen2.5-v0.2) for rich semantic vectors, stored in [Milvus](https://milvus.io/)
 
-> LAYRA aims to be an **enterprise-ready, plug-and-play visual RAG platform**, bridging unstructured document understanding with multimodal AI.
-
-🚧 **Currently in active development**:  
-The first test version is now available for trial, with support for **PDF documents only**.  
-📚 Future releases will add support for more document types (e.g., Word, PPT, Excel, images, Markdown).  
-📈 For details, see the [Roadmap](#-roadmap).
+> KVisualRAG aims to be an **enterprise-ready, plug-and-play visual RAG platform**, bridging unstructured document understanding with multimodal AI.
 
 ---
 
 ## 📚 Table of Contents
 
 - [Latest Updates](#-latest-updates)
-- [Why LAYRA?](#-why-layra)
-- [First Trial Version Available](#-first-trial-version-available)
+- [Why KVisualRAG?](#-why-kvisualrag)
+- [First Trial Version](#-first-trial-version)
 - [System Architecture](#-system-architecture)
-- [Query Flow](#-query-flow)
-- [Upload & Indexing Flow](#-upload--indexing-flow)
 - [Key Features](#-key-features)
 - [Tech Stack](#-tech-stack)
 - [Deployment](#-deployment)
@@ -45,114 +38,102 @@ The first test version is now available for trial, with support for **PDF docume
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
 - [Contact](#-contact)
-- [Star History](#-star-history)
 - [License](#-license)
 
 ---
 
 ## 🚀 Latest Updates
 
-- **(2025.4.6) First Trial Version Now Available**:  
-  The first testable version of LAYRA has been released! Users can now upload PDF documents, ask questions, and receive layout-aware answers. We’re excited to see how this feature can help with real-world document understanding.
-
-- **Current Features**:  
-  - PDF batch upload and parsing functionality
-  - Visual-first retrieval-augmented generation (RAG) for querying document content
-  - Backend fully optimized for scalable data flow with **FastAPI**, **Milvus**, **Redis**, **MongoDB**, and **MinIO**
-
-- **Upcoming Features**:  
-  - Expanded document format support (Word, PPT, Excel, and images)
-  - Support for additional large models, including **GPT-4o** and **Claude**
-  - Integration of intelligent agent for multi-hop reasoning and advanced document analysis
-
-Stay tuned for future updates and feature releases!
----
-
-
-## ❓ Why LAYRA?
-
-Most RAG systems rely on OCR or text-based parsing to process documents. But these approaches:
-
-- ❌ **Lose layout fidelity** (columns, tables, hierarchy collapse)
-- ❌ **Struggle with non-text visuals** (charts, diagrams, figures)
-- ❌ **Break semantic continuity** due to poor OCR segmentation
-
-**LAYRA changes this.**
-
-> 🔍 It sees each page of the document as a whole — just like a human reader.
-
-By using **pure visual embeddings**, LAYRA preserves:
-- ✅ Layout structure (headers, lists, sections)
-- ✅ Tabular integrity (rows, columns, merged cells)
-- ✅ Embedded visuals (plots, graphs, stamps, handwriting)
-- ✅ Multi-modal consistency between layout and content
+- **(2025.4.6) First Trial Version Released**: Upload PDF documents, ask questions, and get layout-aware answers. See [Roadmap](#-roadmap) for future plans.
+- **Current Features**:
+  - PDF batch upload & parsing
+  - Visual-driven RAG for document QA
+  - Optimized backend: **FastAPI**, **Milvus**, **Redis**, **MongoDB**, **MinIO**
+- **Upcoming**:
+  - More document formats (Word, PPT, Excel, images)
+  - More LLMs (GPT-4o, Claude)
+  - Intelligent Agent for multi-hop reasoning
 
 ---
 
-## 🧪 First Trial Version Available
+## ❓ Why KVisualRAG?
 
-> ✅ **The first testable version of LAYRA is now available!**  
-> Upload your own PDF documents, ask questions, and receive layout-aware answers.
+Most RAG systems rely on OCR or text parsing, which leads to:
 
-You can now explore the first version, which supports PDF uploads and returns questions about your documents with visual layout context.
+- ❌ **Loss of layout** (columns, tables, hierarchy)
+- ❌ **No support for non-text visuals** (charts, images)
+- ❌ **Semantic breaks from OCR segmentation**
 
-### Screenshots:
+**KVisualRAG changes this.**
 
-1. **Homepage — Get start**
-   ![Demo Screenshot](./assets/homepage.png)
+> 🔍 It understands each page holistically, like a human reader.
 
-2. **Knowledge Base — Upload your document and view files**
-   ![Demo Screenshot](./assets/knowledgebase.png)
-
-3. **Interactive Dialogue — Ask and get layout-preserving answers**
-   ![Demo Screenshot](./assets/dialog1.png)
-   ![Demo Screenshot](./assets/dialog.png)
+With **pure visual embeddings**, KVisualRAG preserves:
+- ✅ Layout (headers, lists, paragraphs)
+- ✅ Table integrity (rows, columns, merged cells)
+- ✅ Visual elements (charts, handwriting)
+- ✅ Consistency between layout and content
 
 ---
 
+## 🧪 First Trial Version
+
+> ✅ **First version released!**  
+> Upload your PDF, ask questions, and get layout-preserving answers.
+
+### Screenshots
+
+1. **Homepage**
+   ![Homepage](./assets/homepage.png)
+2. **Knowledge Base**
+   ![Knowledgebase](./assets/knowledgebase.png)
+3. **Interactive QA**
+   ![Dialog1](./assets/dialog1.png)
+   ![Dialog](./assets/dialog.png)
+
+---
 
 ## 🧠 System Architecture
 
-LAYRA’s pipeline is designed for **async-first**, **visual-native**, and **scalable document retrieval and generation**.
+KVisualRAG's pipeline is **async-first**, **visual-driven**, and **scalable**.
 
-### 🔍 Query Flow
-The query goes through embedding → vector retrieval → anser generation:
+### Query Flow
+Embedding → Vector Retrieval → Answer Generation
 
 ![Query Architecture](./assets/query.png)
 
-### 📤 Upload & Indexing Flow
-PDFs are parsed into images and embedded visually via ColQwen2.5, with metadata and files stored in appropriate databases:
+### Upload & Indexing Flow
+PDFs → Images → Visual Embedding (ColQwen2.5) → Metadata & Storage
 
 ![Upload Architecture](./assets/upload.png)
-
 
 ---
 
 ## ✨ Key Features
 
-| Feature | Description |
-|--------|-------------|
-| 🧠 **Visual-First RAG** | Embeds raw document images without relying on OCR |
-| 🧾 **Layout-Preserving QA** | Understands tables, headers, and multi-column layouts |
-| 📊 **Visual Content Support** | Parses and reasons over plots, diagrams, and charts |
-| ⚙️ **Async Document Parsing** | Background document processing via Kafka |
-| 🔍 **Fast Vector Search** | Powered by Milvus for scalable dense retrieval |
-| 🤖 **Flexible LLM Backend** | Supports Qwen2.5-VL series, and extensible to GPT-4o, Claude 3, etc. |
-| 🌐 **Modern Web UI** | Built with Next.js + Typescript + TailwindCSS + Zustand |
+| Feature                | Description                                      |
+|-----------------------|--------------------------------------------------|
+| 🧠 Visual-Driven RAG   | No OCR needed, direct image embedding            |
+| 🧾 Layout-Preserving QA| Understands tables, headers, multi-column layout |
+| 📊 Visual Content      | Handles charts, diagrams, non-text elements      |
+| ⚙️ Async Parsing       | Background doc processing via Kafka              |
+| 🔍 Fast Vector Search  | Scalable dense retrieval with Milvus             |
+| 🤖 Flexible LLM Backend| Qwen2.5-VL, extensible to GPT-4o, Claude, etc.   |
+| 🌐 Modern Web UI       | Next.js + TypeScript + TailwindCSS + Zustand     |
 
 ---
 
 ## 🧰 Tech Stack
 
 **Frontend**:  
-- `Next.js`, `TypeScript`, `TailwindCSS`, `Zustand`
+Next.js, TypeScript, TailwindCSS, Zustand
 
-**Backend & Infrastructure**:  
-- `FastAPI`, `Kafka`, `Redis`, `MySQL`, `MongoDB`, `MinIO`, `Milvus`
+**Backend**:  
+FastAPI, Kafka, Redis, MySQL, MongoDB, MinIO, Milvus
 
-**Models & RAG**:  
-- Embedding: `colqwen2.5-v0.2`  
-- LLM Serving: `VLM  (Qwen2.5-VL series)`
+**Models**:  
+Embedding: colqwen2.5-v0.2  
+LLM: Qwen2.5-VL series
 
 ---
 
@@ -162,39 +143,34 @@ PDFs are parsed into images and embedded visually via ColQwen2.5, with metadata 
 
 ```bash
 # Clone the repo
-git clone https://github.com/liweiphys/layra.git
-cd layra
+git clone https://github.com/weizxfree/KVisualRAG
+cd KVisualRAG
 
-# Set up database and FastAPI environment configuration
+# Configure environment
 vim .env
-vim web/.env.local 
+vim web/.env.local
 vim gunicorn_config.py
-# Or use default settings
+# Or use defaults
 
-# Launch Milvus, Redis, MongoDB, Kafka, and MinIO via Docker Compose.
+# Start dependencies (Milvus, Redis, MongoDB, Kafka, MinIO)
 cd docker
 sudo docker-compose -f milvus-standalone-docker-compose.yml -f docker-compose.yml up -d
-
-# Back to project root
 cd ../
 
-# Install Python 3.10.6 and create virtual environment (optional)
+# Python env (optional)
 # python -m venv venv && source venv/bin/activate
-# Or install with conda
-conda create --name layra python=3.10
-conda activate layra
+# Or with conda
+conda create --name KVisualRAG python=3.10
+conda activate KVisualRAG
 
-# Install system dependencies
-# For Ubuntu/Debian:
+# System dependencies (Ubuntu/Debian)
 sudo apt-get update && sudo apt-get install -y poppler-utils
-# For Fedora/CentOS:
+# Fedora/CentOS:
 # sudo dnf install -y poppler-utils
 
-# Install dependencies
+# Install Python deps
 pip install -r requirements.txt
 
-# Download ColQwen2.5 model weights
-# ⚠️ If Git LFS not installed, run:
 git lfs install
 
 # Download base model weights
@@ -220,89 +196,68 @@ cp env.py migrations
 alembic revision --autogenerate -m "Init Mysql"
 alembic upgrade head
 
-# Start backend with Gunicorn
+# Start backend
 gunicorn -c gunicorn_config.py app.main:app
+# or: nohup gunicorn -c gunicorn_config.py app.main:app > gunicorn.log 2>&1 &
 # http://localhost:8000
 
-# Start ColBERT embedding model server
+# Start embedding server
 python model_server.py
 
-# Frontend development
-cd web
+# Frontend
+d cd web
 npm install
-npm run dev  
-# http://localhost:3000
-
-# Or build frontend (recommended)
-# cd web
-# npm install
-# npm run build
-# npm start  # http://localhost:3000
+npm run dev  # http://localhost:3000
+# Or build: npm run build && npm start
 ```
 
-> 🧪 Note: Milvus, Redis, MongoDB, Kafka, and MinIO are expected to run locally or via Docker.
-
-#### 🎉 Enjoy!
-Now that everything is up and running, enjoy exploring and building with Layra! 🚀
-
-### ▶️ Future Deployment Options
-
-In the future, we will support multiple deployment methods including Docker, Kubernetes (K8s), and other containerized environments. More details will be provided when these deployment options are available.
+> 🧪 Note: Milvus, Redis, MongoDB, Kafka, MinIO must be running locally or via Docker.
 
 ---
 
 ## 📚 Use Cases
 
-- 🧾 **Intelligent document QA**: Contracts, invoices, scanned reports  
-- 🏛 **Policy/legal documents**: Structure-rich PDF understanding  
-- 🏭 **Industrial manuals**: OCR-unfriendly layouts, tables, flowcharts  
-- 📈 **Visual analytics**: Trend analysis from plots and charts  
+- 🧾 **Intelligent Document QA**: contracts, invoices, scanned reports
+- 🏛 **Policy/Legal Docs**: complex PDF parsing
+- 🏭 **Industrial Manuals**: OCR-unfriendly layouts, tables, diagrams
+- 📈 **Visual Analytics**: trend mining from charts
 
 ---
 
 ## 📦 Roadmap
 
-- [x] Knowledge Base PDF batch upload and parsing functionality
-- [x] RAG-based dialogue system for querying and answering
-- [x] Support openai-compatible API interface（ollama、sglang、vllm）  
-- [ ] Code architecture and modular optimization for scalability  
-- [ ] Support for additional large models
-- [ ] Expanded document format support (e.g., Word, PPT, Excel)  
-- [ ] Integration of intelligent Agent for multi-hop reasoning  
-- [ ] Integration with knowledge graph  
-- [ ] Deployment with Docker Compose  
-- [ ] Public Knowledge Base API access  
+- [x] PDF batch upload & parsing
+- [x] RAG-based dialogue system
+- [x] OpenAI-compatible API (ollama, sglang, vllm)
+- [ ] Code modularity & scalability
+- [ ] More visual/multimodal LLMs
+- [ ] More doc formats (Word, PPT, Excel)
+- [ ] Intelligent Agent for multi-hop reasoning
+- [ ] Knowledge graph integration
+- [ ] Docker Compose deployment
+- [ ] Public Knowledge Base API
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to open an issue or pull request if you’d like to contribute.  
-We are in the process of creating a CONTRIBUTING.md file, which will provide guidelines for code contributions, issue reporting, and best practices. Stay tuned!
+Contributions welcome! Please open issues or pull requests.  
+A CONTRIBUTING.md is coming soon for guidelines and best practices.
 
 ---
 
 ## 📫 Contact
 
-**liweiphys**  
-📧 liweixmu@foxmail.com  
-🐙 [github.com/liweiphys/layra](https://github.com/liweiphys/layra)  
-📺 [bilibili: Biggestbiaoge](https://www.bilibili.com/video/BV17BRUYCEGt?vd_source=8a1b7271cd2e9a7f6a1ae7a781b2e688)  
-🔍 微信公众号：LAYRA项目  
-💼 *Available for hire — open to new opportunities!*
-
----
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=liweiphys/layra&type=Date)](https://www.star-history.com/#liweiphys/layra&Date)
+**KnowFlow 企业知识库**  
+🐙 [github.com/weizxfree/KVisualRAG](https://github.com/weizxfree/KVisualRAG)  
+🔍 微信公众号：KnowFlow 企业知识库
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **Apache License 2.0**. See the [LICENSE](./LICENSE) file for more details.
+This project is licensed under the **Apache 2.0 License**. See [LICENSE](./LICENSE) for details.
 
 ---
 
-> _LAYRA sees what OCR cannot. It reads documents like we do — visually, structurally, holistically._
+> _KVisualRAG sees what OCR cannot. It reads documents like we do—visually, structurally, holistically._
