@@ -7,246 +7,246 @@
   <a href="./README_zh.md">简体中文</a>
 </p>
 
-# 🌌 KVisualRAG: Visual-Driven RAG Beyond OCR
+# 🌌 KVisualRAG：视觉驱动的RAG，超越OCR
 
-> **Forget tokenization. Forget layout loss.**  
-> With pure visual embeddings, KVisualRAG understands documents like a human—page by page, structure and all.
+> **忘记分词。忘记布局丢失。**  
+> 借助纯视觉嵌入，KVisualRAG 能像人一样理解文档——逐页扫描，理解结构及所有内容。
 
-**KVisualRAG** is a next-generation Retrieval-Augmented Generation (RAG) system powered by **pure visual embeddings**. It treats documents as visually structured objects, not just token sequences—preserving layout, semantics, and graphical elements like tables, figures, and charts.
+**KVisualRAG** 是一款由**纯视觉嵌入**驱动的下一代检索增强生成（RAG）系统。它将文档视为视觉结构化对象，而不仅仅是token序列，从而保留布局、语义以及表格、图表等图形元素。
 
-KVisualRAG is designed for both research and enterprise deployment, featuring:
+KVisualRAG 专为研究和企业部署而设计，具有以下特性：
 
-- 🧑‍💻 **Modern Frontend**: [Next.js 15](https://nextjs.org/blog/next-15), [TailwindCSS 4.0](https://tailwindcss.com), TypeScript
-- ⚙️ **Async Backend**: [FastAPI](https://github.com/fastapi/fastapi), async stack with **Redis**, **MySQL**, **MongoDB**, **MinIO**
-- 🧠 **Visual Multimodal Foundation**: [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) as default LLM, with future support for **GPT-4o**, **Claude**, **Gemini**
-- 🎯 **Image-level Embedding**: [Colpali](https://github.com/illuin-tech/colpali) + [colqwen2.5](https://huggingface.co/vidore/colqwen2.5-v0.2) for rich semantic vectors, stored in [Milvus](https://milvus.io/)
+- 🧑‍💻 **现代前端**：[Next.js 15](https://nextjs.org/blog/next-15)、[TailwindCSS 4.0](https://tailwindcss.com)、TypeScript
+- ⚙️ **异步后端**：[FastAPI](https://github.com/fastapi/fastapi)，采用 **Redis**、**MySQL**、**MongoDB**、**MinIO** 的异步堆栈
+- 🧠 **视觉多模态基础**：默认使用 [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) 作为大语言模型，未来支持 **GPT-4o**、**Claude**、**Gemini**
+- 🎯 **图像级嵌入**：通过 [Colpali](https://github.com/illuin-tech/colpali) + [colqwen2.5](https://huggingface.co/vidore/colqwen2.5-v0.2) 生成丰富的语义向量，存储于 [Milvus](https://milvus.io/)
 
-> KVisualRAG aims to be an **enterprise-ready, plug-and-play visual RAG platform**, bridging unstructured document understanding with multimodal AI.
-
----
-
-## 📚 Table of Contents
-
-- [Latest Updates](#-latest-updates)
-- [Why KVisualRAG?](#-why-kvisualrag)
-- [First Trial Version](#-first-trial-version)
-- [System Architecture](#-system-architecture)
-- [Key Features](#-key-features)
-- [Tech Stack](#-tech-stack)
-- [Deployment](#-deployment)
-- [Use Cases](#-use-cases)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [Contact](#-contact)
-- [License](#-license)
+> KVisualRAG 旨在成为一个**企业级、即插即用的视觉RAG平台**，连接非结构化文档理解与多模态AI。
 
 ---
 
-## 🚀 Latest Updates
+## 📚 目录
 
-- **(2025.4.6) First Trial Version Released**: Upload PDF documents, ask questions, and get layout-aware answers. See [Roadmap](#-roadmap) for future plans.
-- **Current Features**:
-  - PDF batch upload & parsing
-  - Visual-driven RAG for document QA
-  - Optimized backend: **FastAPI**, **Milvus**, **Redis**, **MongoDB**, **MinIO**
-- **Upcoming**:
-  - More document formats (Word, PPT, Excel, images)
-  - More LLMs (GPT-4o, Claude)
-  - Intelligent Agent for multi-hop reasoning
-
----
-
-## ❓ Why KVisualRAG?
-
-Most RAG systems rely on OCR or text parsing, which leads to:
-
-- ❌ **Loss of layout** (columns, tables, hierarchy)
-- ❌ **No support for non-text visuals** (charts, images)
-- ❌ **Semantic breaks from OCR segmentation**
-
-**KVisualRAG changes this.**
-
-> 🔍 It understands each page holistically, like a human reader.
-
-With **pure visual embeddings**, KVisualRAG preserves:
-- ✅ Layout (headers, lists, paragraphs)
-- ✅ Table integrity (rows, columns, merged cells)
-- ✅ Visual elements (charts, handwriting)
-- ✅ Consistency between layout and content
+- [最新更新](#-最新更新)
+- [为何选择KVisualRAG？](#-为何选择kvisualrag)
+- [首个试用版本](#-首个试用版本)
+- [系统架构](#-系统架构)
+- [主要特性](#-主要特性)
+- [技术栈](#-技术栈)
+- [部署](#-部署)
+- [应用场景](#-应用场景)
+- [路线图](#-路线图)
+- [贡献](#-贡献)
+- [联系方式](#-联系方式)
+- [许可证](#-许可证)
 
 ---
 
-## 🧪 First Trial Version
+## 🚀 最新更新
 
-> ✅ **First version released!**  
-> Upload your PDF, ask questions, and get layout-preserving answers.
-
-### Screenshots
-
-1. **Homepage**
-   ![Homepage](./assets/homepage.png)
-2. **Knowledge Base**
-   ![Knowledgebase](./assets/knowledgebase.png)
-3. **Interactive QA**
-   ![Dialog1](./assets/dialog1.png)
-   ![Dialog](./assets/dialog.png)
+- **(2025.4.6) 首个试用版本发布**：上传PDF文档，提问并获得保留布局的答案。未来计划详见[路线图](#-路线图)。
+- **当前特性**：
+  - PDF批量上传与解析
+  - 视觉驱动的RAG文档问答
+  - 优化的后端：**FastAPI**、**Milvus**、**Redis**、**MongoDB**、**MinIO**
+- **即将推出**：
+  -更多文档格式（Word、PPT、Excel、图像）
+  - 更多大语言模型（GPT-4o、Claude）
+  - 用于多跳推理的智能代理
 
 ---
 
-## 🧠 System Architecture
+## ❓ 为何选择KVisualRAG？
 
-KVisualRAG's pipeline is **async-first**, **visual-driven**, and **scalable**.
+大多数RAG系统依赖OCR或文本解析，这会导致：
 
-### Query Flow
-Embedding → Vector Retrieval → Answer Generation
+- ❌ **布局丢失**（列、表格、层次结构）
+- ❌ **不支持非文本视觉元素**（图表、图像）
+- ❌ **OCR分段导致的语义中断**
 
-![Query Architecture](./assets/query.png)
+**KVisualRAG改变了这一切。**
 
-### Upload & Indexing Flow
-PDFs → Images → Visual Embedding (ColQwen2.5) → Metadata & Storage
+> 🔍 它能像人类读者一样，从整体上理解每个页面。
 
-![Upload Architecture](./assets/upload.png)
-
----
-
-## ✨ Key Features
-
-| Feature                | Description                                      |
-|-----------------------|--------------------------------------------------|
-| 🧠 Visual-Driven RAG   | No OCR needed, direct image embedding            |
-| 🧾 Layout-Preserving QA| Understands tables, headers, multi-column layout |
-| 📊 Visual Content      | Handles charts, diagrams, non-text elements      |
-| ⚙️ Async Parsing       | Background doc processing via Kafka              |
-| 🔍 Fast Vector Search  | Scalable dense retrieval with Milvus             |
-| 🤖 Flexible LLM Backend| Qwen2.5-VL, extensible to GPT-4o, Claude, etc.   |
-| 🌐 Modern Web UI       | Next.js + TypeScript + TailwindCSS + Zustand     |
+借助**纯视觉嵌入**，KVisualRAG能够保留：
+- ✅ 布局（标题、列表、段落）
+- ✅ 表格完整性（行、列、合并单元格）
+- ✅ 视觉元素（图表、手写内容）
+- ✅ 布局与内容的一致性
 
 ---
 
-## 🧰 Tech Stack
+## 🧪 首个试用版本
 
-**Frontend**:  
-Next.js, TypeScript, TailwindCSS, Zustand
+> ✅ **首个版本已发布！**  
+> 上传您的PDF，提问并获得保留布局的答案。
 
-**Backend**:  
-FastAPI, Kafka, Redis, MySQL, MongoDB, MinIO, Milvus
+### 截图
 
-**Models**:  
-Embedding: colqwen2.5-v0.2  
-LLM: Qwen2.5-VL series
+1. **首页**
+   ![首页](./assets/homepage.png)
+2. **知识库**
+   ![知识库](./assets/knowledgebase.png)
+3. **交互式问答**
+   ![对话1](./assets/dialog1.png)
+   ![对话](./assets/dialog.png)
 
 ---
 
-## 🚀 Deployment
+## 🧠 系统架构
 
-### ▶️ Local Development
+KVisualRAG的流程设计遵循**异步优先**、**视觉驱动**和**可扩展**的原则。
+
+### 查询流程
+嵌入 → 向量检索 → 答案生成
+
+![查询架构](./assets/query.png)
+
+### 上传与索引流程
+PDF → 图像 → 视觉嵌入 (ColQwen2.5) → 元数据与存储
+
+![上传架构](./assets/upload.png)
+
+---
+
+## ✨ 主要特性
+
+| 特性                 | 描述                                       |
+|------------------------|--------------------------------------------|
+| 🧠 视觉驱动的RAG        | 无需OCR，直接进行图像嵌入                   |
+| 🧾 保留布局的问答       | 理解表格、标题、多栏布局                      |
+| 📊 视觉内容支持         | 处理图表、图示、非文本元素                    |
+| ⚙️ 异步解析            | 通过Kafka进行后台文档处理                   |
+| 🔍 快速向量搜索         | 使用Milvus实现可扩展的密集向量检索             |
+| 🤖 灵活的LLM后端       | Qwen2.5-VL，可扩展至GPT-4o、Claude等        |
+| 🌐 现代Web UI          | Next.js + TypeScript + TailwindCSS + Zustand |
+
+---
+
+## 🧰 技术栈
+
+**前端**：  
+Next.js、TypeScript、TailwindCSS、Zustand
+
+**后端**：  
+FastAPI、Kafka、Redis、MySQL、MongoDB、MinIO、Milvus
+
+**模型**：  
+嵌入：colqwen2.5-v0.2  
+大语言模型：Qwen2.5-VL系列
+
+---
+
+## 🚀 部署
+
+### ▶️ 本地开发
 
 ```bash
-# Clone the repo
+# 克隆仓库
 git clone https://github.com/weizxfree/KVisualRAG
 cd KVisualRAG
 
-# Configure environment
-vim .env
-vim web/.env.local
-vim gunicorn_config.py
-# Or use defaults
+# 配置环境
+nvim .env
+nvim web/.env.local
+nvim gunicorn_config.py
+# 或使用默认设置
 
-# Start dependencies (Milvus, Redis, MongoDB, Kafka, MinIO)
+# 启动依赖项 (Milvus, Redis, MongoDB, Kafka, MinIO)
 cd docker
 sudo docker-compose -f milvus-standalone-docker-compose.yml -f docker-compose.yml up -d
 cd ../
 
-# Python env (optional)
+# Python 环境 (可选)
 # python -m venv venv && source venv/bin/activate
-# Or with conda
+# 或使用 conda
 conda create --name KVisualRAG python=3.10
 conda activate KVisualRAG
 
-# System dependencies (Ubuntu/Debian)
+# 系统依赖 (Ubuntu/Debian)
 sudo apt-get update && sudo apt-get install -y poppler-utils
 # Fedora/CentOS:
 # sudo dnf install -y poppler-utils
 
-# Install Python deps
+# 安装Python依赖
 pip install -r requirements.txt
 
 git lfs install
 
-# Download base model weights
+# 下载基础模型权重
 git clone https://huggingface.co/vidore/colqwen2.5-base
-# For users in China:
+# 中国用户：
 # git clone https://hf-mirror.com/vidore/colqwen2.5-base
 
-# Download LoRA fine-tuned weights
+# 下载LoRA微调权重
 git clone https://huggingface.co/vidore/colqwen2.5-v0.2
-# For users in China:
+# 中国用户：
 # git clone https://hf-mirror.com/vidore/colqwen2.5-v0.2
 
-# Modify the `base_model_name_or_path` field in `colqwen2.5-v0.2/adapter_config.json`
+# 修改 \`colqwen2.5-v0.2/adapter_config.json\` 中的 \`base_model_name_or_path\` 字段
 base_model_name_or_path="/absolute/path/to/colqwen2.5-base"
-# Set it to local path of colqwen2.5-base
+# 设置为colqwen2.5-base的本地路径
 
-# Set the following in your .env file
+# 在您的 .env 文件中设置以下内容
 COLBERT_MODEL_PATH="/absolute/path/to/colqwen2.5-v0.2"
 
-# Initialize MySQL database
+# 初始化MySQL数据库
 alembic init migrations
 cp env.py migrations
 alembic revision --autogenerate -m "Init Mysql"
 alembic upgrade head
 
-# Start backend
+# 启动后端
 gunicorn -c gunicorn_config.py app.main:app
-# or: nohup gunicorn -c gunicorn_config.py app.main:app > gunicorn.log 2>&1 &
+# 或: nohup gunicorn -c gunicorn_config.py app.main:app > gunicorn.log 2>&1 &
 # http://localhost:8000
 
-# Start embedding server
+# 启动嵌入服务器
 python model_server.py
 
-# Frontend
-d cd web
+# 前端
+cd web
 npm install
-npm run dev  # http://localhost:3000
-# Or build: npm run build && npm start
+npm run dev # http://localhost:3000
+# 或构建: npm run build && npm start
 ```
 
-> 🧪 Note: Milvus, Redis, MongoDB, Kafka, MinIO must be running locally or via Docker.
+> 🧪 注意：Milvus、Redis、MongoDB、Kafka、MinIO 必须在本地或通过Docker运行。
 
 ---
 
-## 📚 Use Cases
+## 📚 应用场景
 
-- 🧾 **Intelligent Document QA**: contracts, invoices, scanned reports
-- 🏛 **Policy/Legal Docs**: complex PDF parsing
-- 🏭 **Industrial Manuals**: OCR-unfriendly layouts, tables, diagrams
-- 📈 **Visual Analytics**: trend mining from charts
-
----
-
-## 📦 Roadmap
-
-- [x] PDF batch upload & parsing
-- [x] RAG-based dialogue system
-- [x] OpenAI-compatible API (ollama, sglang, vllm)
-- [ ] Code modularity & scalability
-- [ ] More visual/multimodal LLMs
-- [ ] More doc formats (Word, PPT, Excel)
-- [ ] Intelligent Agent for multi-hop reasoning
-- [ ] Knowledge graph integration
-- [ ] Docker Compose deployment
-- [ ] Public Knowledge Base API
+- 🧾 **智能文档问答**：合同、发票、扫描报告
+- 🏛 **政策/法律文件**：复杂PDF解析
+- 🏭 **工业手册**：OCR不友好的布局、表格、图表
+- 📈 **视觉分析**：从图表中挖掘趋势
 
 ---
 
-## 🤝 Contributing
+## 📦 路线图
 
-Contributions welcome! Please open issues or pull requests.  
-A CONTRIBUTING.md is coming soon for guidelines and best practices.
+- [x] PDF批量上传与解析
+- [x] 基于RAG的对话系统
+- [x] OpenAI兼容API (ollama, sglang, vllm)
+- [ ] 代码模块化与可扩展性
+- [ ]更多视觉/多模态大语言模型
+- [ ] 更多文档格式（Word、PPT、Excel）
+- [ ] 用于多跳推理的智能代理
+- [ ] 知识图谱集成
+- [ ] Docker Compose部署
+- [ ] 公共知识库API
 
 ---
 
-## 📫 Contact
+## 🤝 贡献
+
+欢迎贡献！请随时提出issue或pull request。  
+CONTRIBUTING.md 即将推出，其中包含代码贡献指南和最佳实践。
+
+---
+
+## 📫 联系方式
 
 **KnowFlow 企业知识库**  
 🐙 [github.com/weizxfree/KVisualRAG](https://github.com/weizxfree/KVisualRAG)  
@@ -254,10 +254,10 @@ A CONTRIBUTING.md is coming soon for guidelines and best practices.
 
 ---
 
-## 📄 License
+## 📄 许可证
 
-This project is licensed under the **Apache 2.0 License**. See [LICENSE](./LICENSE) for details.
+本项目采用 **Apache 2.0 许可证**。详情请参阅[LICENSE](./LICENSE)文件。
 
 ---
 
-> _KVisualRAG sees what OCR cannot. It reads documents like we do—visually, structurally, holistically._
+> _KVisualRAG能识别OCR无法识别的内容。它像我们一样阅读文档——视觉化、结构化、整体化。_
