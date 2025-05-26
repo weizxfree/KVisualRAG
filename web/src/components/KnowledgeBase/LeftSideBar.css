@@ -1,0 +1,91 @@
+.k-left-container {
+  background: #FFFFFF;
+  box-shadow: 0px 3 8px 0px rgba(0,0,0,0.06);
+  padding: 12px 16px;
+  width: 180px;
+}
+.k-left-c-title {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  color: #212121;
+  line-height: 19px;
+}
+.k-new-chat {
+  margin-top: 15px;
+  margin-bottom: 18px;
+  width: 100%;
+  background: #1570EF;
+  /* background-image: url('@/assets/knowledge/addbg.png');
+  background-repeat: no-repeat;
+  background-position: center; */
+  /* background-size: 100% 100%; */
+  border-radius: 5px 5px 5px 5px;
+  height: 27px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.k-new-chat-icon {
+  width: 12px;
+  height: 12px;
+  background-image: url('@/assets/knowledge/doc.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  margin-right: 5px;
+}
+.k-new-chat-text {
+  font-weight: 400;
+  font-size: 11px;
+  color: #FFFFFF;
+  line-height: 15px;
+  cursor: pointer;
+}
+.k-chat-inactive {
+  height: 38px;
+  background: #F8F8F8;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+.k-chat-active {
+  height: 38px;
+  background: rgba(21,112,239,0.1);
+  border-radius: 5px 5px 5px 5px;
+}
+.k-chat-img {
+  width: 23px;
+  height: 23px;
+  border-radius: 100%;
+}
+.chat-text-active {
+  font-weight: 400;
+  font-size: 11px;
+  color: #1570EF;
+  line-height: 15px;
+  white-space: nowrap; /* 确保文本在一行内显示 */
+  overflow: hidden; /* 隐藏溢出的内容 */
+  text-overflow: ellipsis; /* 使用省略号表示文字被截断 */
+}
+.chat-text-inactive {
+  font-weight: 400;
+  font-size: 11px;
+  color: #0D1C2E;
+  line-height: 15px;
+  white-space: nowrap; /* 确保文本在一行内显示 */
+  overflow: hidden; /* 隐藏溢出的内容 */
+  text-overflow: ellipsis; /* 使用省略号表示文字被截断 */
+}
+.k-chat-edit-icon {
+  background: #fff;
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  margin-top: 6px;
+  margin-left: 5px;
+}
+.k-search {
+  font-size: 12px;
+}
