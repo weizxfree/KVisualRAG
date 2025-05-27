@@ -10,7 +10,7 @@ import hashlib
 
 async def test_image_quality():
     # 图片URL
-    image_url = "http://127.0.0.1:9110/ai-chat/tom1_2024年历史类本科批在辽宁招生计划(1)_6830569c7aa10aa5332c73d7.png"
+    image_url = "http://127.0.0.1:9110/ai-chat/tom1_%E5%85%AC%E8%B7%AF%E6%A1%A5%E6%A2%81%E6%8A%97%E9%9C%87%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83JTG%20T%202231%2001%202020_2020%E6%8A%97%E9%9C%87%E8%A7%84%E8%8C%83_68300594f3e6ee576d92003e.png?AWSAccessKeyId=miniouser&Signature=p8L%2BYG4M66HCjn0hGYnQhVlYUrw%3D&Expires=4901577620"
     
     # 下载图片
     async with httpx.AsyncClient() as client:
@@ -47,7 +47,7 @@ async def test_image_quality():
                     },
                     {
                         "type": "text",
-                        "text": "北京航空航天大学招收专业"
+                        "text": "桥梁抗震设防目标"
                     }
                 ]
             }
@@ -72,11 +72,11 @@ async def test_image_quality():
         except Exception as e:
             print(f"Error in local version: {str(e)}")
 
-    print("Final messages sent to model:", json.dumps(messages, indent=2))
 
-    # print("Retrieved file scores:", [f["score"] for f in file_used])
 
-    print("Combined system prompt:", combined_system_prompt)
+
+
+
 
 if __name__ == "__main__":
     asyncio.run(test_image_quality()) 

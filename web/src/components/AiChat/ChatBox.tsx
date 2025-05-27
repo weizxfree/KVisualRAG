@@ -548,9 +548,9 @@ const ChatBox: React.FC<ChatBoxProps> = ({
         <button
           className={`min-w-[14%] flex gap-1 ${
             isSendDisabled || sendDisabled
-              ? "bg-indigo-300 cursor-not-allowed"
-              : "bg-indigo-500 hover:bg-indigo-600"
-          } rounded-full text-base item-center justify-center px-5 py-2 text-white`}
+              ? "bg-[#A5B4FC] cursor-not-allowed"
+              : "bg-[#4F46E5] hover:bg-[#4338CA] active:bg-[#3730A3]"
+          } rounded-full text-base item-center justify-center px-5 py-2 text-white transition-colors duration-200`}
           onClick={handleSend}
           disabled={isSendDisabled || sendDisabled}
         >

@@ -65,7 +65,7 @@ const AddKnowledgeBase: React.FC<AddKnowledgeBaseProps> = ({
           </button>
           <button
             onClick={onCreateConfirm}
-            className="px-4 py-2 text-white bg-indigo-500 rounded-full hover:bg-indigo-700 cursor-pointer"
+            className="px-4 py-2 text-white bg-[#4F46E5] rounded-full hover:bg-[#4338CA] active:bg-[#3730A3] cursor-pointer"
           >
             Yes
           </button>

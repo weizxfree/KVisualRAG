@@ -247,11 +247,11 @@ const KnowledgeBaseDetails: React.FC<KnowledgeBaseDetailsProps> = ({
             />
             <label
               htmlFor="file-upload"
-              className={`cursor-pointer inline-block px-6 py-2 rounded-full transition-colors
+              className={`cursor-pointer inline-block px-6 py-2 rounded-full transition-colors duration-200
                     ${
                       dragActive
-                        ? "bg-indigo-700"
-                        : "bg-indigo-500 hover:bg-indigo-700"
+                        ? "bg-[#3730A3]"
+                        : "bg-[#4F46E5] hover:bg-[#4338CA] active:bg-[#3730A3]"
                     } text-white`}
             >
               <div className="flex items-center gap-2">

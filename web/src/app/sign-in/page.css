@@ -4,7 +4,7 @@
 .login-page {
   display: flex;
   background-color: rgba(255, 255, 255, 0.1);
-  background-image: url('@/assets/login-bg.png');
+  background-image: url('/assets/login-bg.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -36,7 +36,7 @@
   width: 31px;
   height: 36px;
   margin-right: 10px;
-  background-image: url('@/assets/logo/logo.png');
+  background-image: url('/assets/logo/logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;

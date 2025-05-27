@@ -26,7 +26,7 @@
 .new-chat-icon {
   width: 12px;
   height: 12px;
-  background-image: url('@/assets/chat/addAssistant.png');
+  background-image: url('../../assets/chat/addAssistant.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;

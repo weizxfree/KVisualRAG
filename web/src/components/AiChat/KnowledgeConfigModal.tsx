@@ -887,7 +887,7 @@ const KnowledgeConfigModal: React.FC<ConfigModalProps> = ({
           </button>
           <button
             onClick={handleSubmit}
-            className="px-4 py-2 bg-indigo-500 text-white rounded-full hover:bg-indigo-700 cursor-pointer"
+            className="px-4 py-2 bg-[#4F46E5] text-white rounded-full hover:bg-[#4338CA] active:bg-[#3730A3] cursor-pointer"
           >
             保存
           </button>

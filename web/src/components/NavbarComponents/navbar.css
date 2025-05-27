@@ -6,7 +6,7 @@
   width: 31px;
   height: 36px;
   margin-top: 10px;
-  background-image: url('@/assets/logo/logo.png');
+  background-image: url('../../assets/logo/logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -27,27 +27,27 @@
 }
 .user-icon {
   margin-top: 10px;
-  background-image: url('@/assets/user.png');
+  background-image: url('../../assets/user.png');
   background-size: 100% 100%;
 }
 .chat-icon {
   margin-top: 10px;
-  background-image: url('@/assets/navbar/chat.svg');
+  background-image: url('../../assets/navbar/chat.svg');
   background-size: 100% 100%;
 }
 .chat-icon-active {
   margin-top: 10px;
-  background-image: url('@/assets/navbar/chatActive.svg');
+  background-image: url('../../assets/navbar/chatActive.svg');
   background-size: 100% 100%;
 }
 .know-icon {
   margin-top: 10px;
-  background-image: url('@/assets/navbar/knowledge.svg');
+  background-image: url('../../assets/navbar/knowledge.svg');
   background-size: 100% 100%;
 }
 .know-icon-active {
   margin-top: 10px;
-  background-image: url('@/assets/navbar/knowledgeActive.svg');
+  background-image: url('../../assets/navbar/knowledgeActive.svg');
   background-size: 100% 100%;
 }
 .logout-c {

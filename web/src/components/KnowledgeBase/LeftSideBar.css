@@ -31,7 +31,7 @@
 .k-new-chat-icon {
   width: 12px;
   height: 12px;
-  background-image: url('@/assets/knowledge/doc.png');
+  background-image: url('../../assets/knowledge/doc.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;

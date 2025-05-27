@@ -128,7 +128,7 @@ const ShowFiles: React.FC<ShowFilesProps> = ({
           <button
             onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
             disabled={currentPage === 1}
-            className="cursor-pointer disabled:cursor-not-allowed px-3 py-1 border border-gray-200 disabled:opacity-50 bg-indigo-500 text-white hover:bg-indigo-700 rounded-full"
+            className="cursor-pointer disabled:cursor-not-allowed px-3 py-1 border border-gray-200 disabled:opacity-50 bg-[#4F46E5] text-white hover:bg-[#4338CA] active:bg-[#3730A3] rounded-full"
           >
             Previous
           </button>
@@ -138,7 +138,7 @@ const ShowFiles: React.FC<ShowFilesProps> = ({
           <button
             onClick={() => setCurrentPage(currentPage + 1)}
             disabled={currentPage >= Math.ceil(totalFiles / pageSize)}
-            className="cursor-pointer disabled:cursor-not-allowed px-6 py-1 border border-gray-200 disabled:opacity-50 bg-indigo-500 text-white hover:bg-indigo-700 rounded-full"
+            className="cursor-pointer disabled:cursor-not-allowed px-6 py-1 border border-gray-200 disabled:opacity-50 bg-[#4F46E5] text-white hover:bg-[#4338CA] active:bg-[#3730A3] rounded-full"
           >
             Next
           </button>
